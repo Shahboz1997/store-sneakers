@@ -1,0 +1,29 @@
+{
+  "name": "store-sneakers",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack --config webpack.config.js",
+    "start": "webpack serve --open"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Shahboz1997/store-sneakers.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Shahboz1997/store-sneakers/issues"
+  },
+  "homepage": "https://github.com/Shahboz1997/store-sneakers#readme",
+  "dependencies": {
+    "webpack": "^5.101.3",
+    "webpack-cli": "^6.0.1"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4.17",
+    "webpack-dev-server": "^5.2.2"
+  }
+}
