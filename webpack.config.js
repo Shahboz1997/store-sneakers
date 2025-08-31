@@ -1,23 +1,33 @@
-module.exports = {
-    mode: 'production',
-}
 const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+
 module.exports = {
-    mode: 'production',
-    entry: {
-        filename: path.resolve(__dirname, 'src/index.js')
-    },
-    output: {
-        path: path.resolve(__dirname, 'dist'),
-        filename: 'index.js',
-        assetModuleFilename: '[name][ext]'
-    },
-    devServer: {
-        port: 9000,
-        compress: true,
-        hot: true,
-        static: {
-            directory: path.join(__dirname, 'dist')
-        }
-    },
-}
+  entry: './src/index.js',
+  mode: 'development',
+  output: {
+    path: path.resolve(__dirname, 'dist'),
+    filename: 'bundle.js',
+  },
+  module: {
+    rules: [
+      {
+        test: /.css$/i,
+        use: [MiniCssExtractPlugin.loader, 'css-loader', 'postcss-loader'],
+      },
+    ],
+  },
+  plugins: [
+    new HtmlWebpackPlugin({
+      template: './src/index.html',
+    }),
+    new MiniCssExtractPlugin({
+      filename: 'styles.css', // Будет styles.css вместо output.css
+    }),
+  ],
+  devServer: {
+    static: './dist',
+    port: 9000,
+  },
+};
+
