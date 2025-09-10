@@ -26,7 +26,7 @@ eval("{__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _ma
   \************************/
 /***/ (() => {
 
-eval("{// console.log('Hello world');\r\n// const sample = function getValue(){\r\n//     document.getElementById('sample').innerHTML = sort;\r\n// }\n\n//# sourceURL=webpack://store-sneakers/./src/js/main.js?\n}");
+eval("{// Данные\r\nconst productData = [\r\n    {\r\n        id: 0,\r\n        img: 'img/1.webp',\r\n        name: 'nike',\r\n        price: 500,\r\n        description: 'It is the best of the best',\r\n    },\r\n    {\r\n        id: 1,\r\n        img: 'img/2.webp',\r\n        name: 'Nike',\r\n        price: 600,\r\n        description: 'It is the best of the best',\r\n    },\r\n       {\r\n        id: 2,\r\n        img: 'img/1.webp',\r\n        name: 'nike',\r\n        price: 500,\r\n        description: 'It is the best of the best',\r\n    },\r\n    {\r\n        id: 3,\r\n        img: 'img/2.webp',\r\n        name: 'Nike',\r\n        price: 600,\r\n        description: 'It is the best of the best',\r\n    },\r\n       {\r\n        id: 4,\r\n        img: 'img/1.webp',\r\n        name: 'nike',\r\n        price: 500,\r\n        description: 'It is the best of the best',\r\n    },\r\n    {\r\n        id: 5,\r\n        img: 'img/2.webp',\r\n        name: 'Nike',\r\n        price: 600,\r\n        description: 'It is the best of the best',\r\n    },\r\n]\r\n// Функция, которая создаст карточку\r\nfunction createCard() {\r\n    \r\n}\r\n\r\n\r\n\r\n//Функция, которая добавит карточки в контейнер\r\nfunction addCardToContainer() {\r\n\r\n}\r\n\r\n\r\n// При загрузке страницы \r\n\n\n//# sourceURL=webpack://store-sneakers/./src/js/main.js?\n}");
 
 /***/ }),
 
