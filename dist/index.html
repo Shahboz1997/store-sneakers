@@ -4,11 +4,66 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <title>
         Shop sneakers
     </title>
 <script defer src="bundle.js"></script><link href="styles.css" rel="stylesheet"></head>
-<body>
+<body class="font-serif ...">
+    <style type="text/css">
+    .input-cnt {
+      display: flex;
+      width: 40%;
+    }
+    .input-cnt > i {
+      min-width: 20px;
+      padding: 10px;
+      text-align: center;
+      background: lightgrey;
+      border-top-left-radius: 20px;
+      border-bottom-left-radius: 20px;
+    }
+    .input-cnt > input {
+      outline: none;
+      border: none;
+      border: 1px solid lightgrey;
+      border-top-right-radius: 20px;
+      border-top-left-radius: 0px;
+      border-bottom-right-radius: 20px;
+      border-bottom-left-radius: 0px;
+      width: 50%;
+      transition: width .5s;
+    }
+    .input-cnt:hover > input {
+      border: 2px solid hsl(239, 94%, 40%);
+      width: 60%;
+    }
+    .input-cnt:hover > i {
+      background: hsl(239, 94%, 40%);
+      color: white;
+    }
+    .swiper {
+      width: 200px;
+      height: 100%;
+    }
+
+    .swiper-slide {
+      text-align: center;
+      font-size: 18px;
+      background: #444;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .swiper-slide img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    </style>
 <!-- Include this script tag or install `@tailwindplus/elements` via npm: -->
 <!-- <script src="https://cdn.jsdelivr.net/npm/@tailwindplus/elements@1" type="module"></script> -->
 <div>
@@ -29,31 +84,24 @@
                         </svg>
                     </a>
         </div>
-        <div class="flex min-w-20 p-10 text-center bg-gray-500 rounded-bl-[20] rounded-tl-[20]    ">
-            <input type="text" placeholder="Последные поиски" name="" id="demo">
+      </div>
+        <div class="input-cnt">
+            <i class="material-icons">search</i>
+            <input type="text" placeholder="Поиск здесь......" />
         </div>
-      </div>
-      <div class="flex lg:hidden">
-        <button type="button" command="show-modal" commandfor="mobile-menu" class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-200">
-          <span class="sr-only text-black" >Open main menu</span>
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="#ffffff" d="M24 7.8L6.442 15.276q-2.184.925-3.668.925q-1.68 0-2.437-1.177q-.475-.756-.28-1.918q.196-1.162 1.036-2.478q.7-1.065 2.297-2.8a6.1 6.1 0 0 0-.784 1.848q-.42 1.792.756 2.632q.56.392 1.54.392q.783 0 1.764-.252z"/></svg>
-          <!-- <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" data-slot="icon" aria-hidden="true" class="size-6">
-            <path d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" stroke-linecap="round" stroke-linejoin="round" />
-          </svg> -->
-        </button>
-      </div>
-      <div class="hidden lg:flex lg:gap-x-12">
-        <a href="#" class="text-sm/6 font-semibold text-black">Магазины</a>
-        <a href="#" class="text-sm/6 font-semibold text-black">Акции</a>
-        <a href="#" class="text-sm/6 font-semibold text-black">Распродажа</a>
-        <a href="#" class="text-sm/6 font-semibold text-black">Образы</a>
-      </div>
+        <div class="hidden lg:flex lg:gap-x-12">
+            <a href="#" class="text-sm/6 font-semibold text-black">Магазины</a>
+            <a href="#" class="text-sm/6 font-semibold text-black">Акции</a>
+            <a href="#" class="text-sm/6 font-semibold text-black">Распродажа</a>
+            <a href="#" class="text-sm/6 font-semibold text-black">Образы</a>
+        </div>
       <div class="hidden lg:flex lg:flex-1 lg:justify-end">
         <a href="#" class="text-sm/6 font-semibold text-black">Вход <span aria-hidden="true">&rarr;</span></a>
       </div>
     </nav>
-  <main class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-    <div class="flex items-baseline justify-between border-b border-gray-200 pt-24 pb-6">
+  </header>
+<main class="mx-auto  px-4 sm:px-6 pt-20">
+    <div class="flex items-baseline justify-between border-b border-gray-200 pt-10 pb-6">
       <h1 class="text-4xl font-bold tracking-tight text-gray-900">Кроссовки - NIKE</h1>
       <div class="flex items-center gap-2s">
         <div class="relative inline-block ">
@@ -73,7 +121,6 @@
             </form>
                 
             </div>
-            
          <!-- Selected: "font-medium text-gray-900", Not Selected: "text-gray-500" -->
                                     
         </div>
@@ -101,21 +148,31 @@
               <a href="#">Тренировки</a>
             </li>
           </ul>
-          <div class="border-b border-gray-200 py-6">
+          <div id="d-flex" class="border-b border-gray-200 py-6">
             <h3 class="-my-3 flow-root">
-              <button type="button" command="--toggle" commandfor="filter-section-color" class="flex w-full items-center justify-between bg-white py-3 text-sm text-gray-400 hover:text-gray-500">
+              <button id="color" type="button" command="--toggle" command for="filter-section-color" class="flex w-full items-center justify-between bg-white py-3 text-sm text-gray-400 hover:text-gray-500">
                 <span class="font-medium text-gray-900">Цвет</span>
-                <span class="ml-6 flex items-center">
-                  <svg viewBox="0 0 20 20" fill="currentColor" data-slot="icon" aria-hidden="true" class="size-5 in-aria-expanded:hidden">
-                    <path d="M10.75 4.75a.75.75 0 0 0-1.5 0v4.5h-4.5a.75.75 0 0 0 0 1.5h4.5v4.5a.75.75 0 0 0 1.5 0v-4.5h4.5a.75.75 0 0 0 0-1.5h-4.5v-4.5Z" />
+                <span id="d-none" class="ml-6 flex items-center">
+                  <svg 
+                        viewBox="0 0 20 20" 
+                        fill="currentColor" 
+                        data-slot="icon" 
+                        aria-hidden="true" 
+                        class="size-5 in-aria-expanded:hidden">
+                        <path d="M10.75 4.75a.75.75 0 0 0-1.5 0v4.5h-4.5a.75.75 0 0 0 0 1.5h4.5v4.5a.75.75 0 0 0 1.5 0v-4.5h4.5a.75.75 0 0 0 0-1.5h-4.5v-4.5Z" />
                   </svg>
-                  <svg viewBox="0 0 20 20" fill="currentColor" data-slot="icon" aria-hidden="true" class="size-5 not-in-aria-expanded:hidden">
-                    <path d="M4 10a.75.75 0 0 1 .75-.75h10.5a.75.75 0 0 1 0 1.5H4.75A.75.75 0 0 1 4 10Z" clip-rule="evenodd" fill-rule="evenodd" />
+                  <svg 
+                        viewBox="0 0 20 20" 
+                        fill="currentColor" 
+                        data-slot="icon" 
+                        aria-hidden="true" 
+                        class="size-5 not-in-aria-expanded:hidden">
+                        <path d="M4 10a.75.75 0 0 1 .75-.75h10.5a.75.75 0 0 1 0 1.5H4.75A.75.75 0 0 1 4 10Z" clip-rule="evenodd" fill-rule="evenodd" />
                   </svg>
                 </span>
               </button>
             </h3>
-            <div id="filter-section-color" hidden class="block pt-6">
+            <div id="filter-section-color"  class="hidden block pt-6 d-none">
               <div class="space-y-4">
                 <div class="flex gap-3">
                   <div class="flex h-5 shrink-0 items-center">
@@ -206,7 +263,7 @@
                 </span>
               </button>
             </h3>
-            <el-disclosure id="filter-section-category" hidden class="block pt-6">
+            <div id="filter-section-category" class="hidden  block pt-6">
               <div class="space-y-4">
                 <div class="flex gap-3">
                   <div class="flex h-5 shrink-0 items-center">
@@ -269,7 +326,7 @@
                   <label for="filter-category-4" class="text-sm text-gray-600">Аксессуары</label>
                 </div>
               </div>
-            </el-disclosure>
+            </div>
           </div>
           <div class="border-b border-gray-200 py-6">
             <h3 class="-my-3 flow-root">
@@ -285,7 +342,7 @@
                 </span>
               </button>
             </h3>
-            <el-disclosure id="filter-section-size" hidden class="block pt-6">
+            <el-disclosure id="filter-section-size"  class="hidden  block pt-6">
               <div class="space-y-4">
                 <div class="flex gap-3">
                   <div class="flex h-5 shrink-0 items-center">
@@ -366,9 +423,19 @@
         <!-- Product grid -->
         <div class="lg:col-span-3">
           <!-- Your content -->
-           <div class="flex justify-center gap-2 flex-wrap mx-auto px-0s" > 
+            <div class="flex justify-center gap-2 flex-wrap mx-auto px-0s" > 
                 <div class="flex flex-col shadow-2xl" >
-                        <img src="img/1.webp" width="200" class="rounded-lg" class="rounded-lg">
+                        <div class="swiper mySwiper">
+                            <div class="swiper-wrapper">
+                            <div class="swiper-slide"> <img src="img/1.webp"></div>
+                            <div class="swiper-slide"> <img src="img/2.webp"></div>
+                            <div class="swiper-slide"><img src="img/3.webp"></div>
+                            <div class="swiper-slide"><img src="img/4.webp"></div>
+                            <div class="swiper-slide"><img src="img/5.webp"></div>
+                            <div class="swiper-slide"><img src="img/6.webp"></div>
+                            </div>
+                                <div class="swiper-pagination"></div>
+                        </div>
                     <div class="px-2  pt-2">
                         <div>
                             <span class="text-red-800 decoration-3 leading-tight">999$</span> 
@@ -408,7 +475,7 @@
                                                 </span>
                                 </div>
                     </div>
-                    <div class="flex justify-center items-center mb-0.5 outline-none border-2 rounded-2xl mb-2.5 bg-pink-500" >   
+                    <div class="flex justify-center items-center mb-0.5 outline-none border-2 rounded-2xl mb-2.5 bg-pink-500 hover:bg-red-400" >   
                                          <button class="flex justify-center items-center outline-slate-50 pt-2 gap-2">
                                            <span class="mb-1.5 text-white">
                                             <svg 
@@ -425,10 +492,18 @@
                                             </span>
                                             
                                         </button>
-                                    </div>
+                    </div>
                 </div>
                 <div class="flex flex-col shadow-2xl rounded-lg" >
-                        <img src="img/11.webp" width="200" class="rounded-lg">
+                         <div class="swiper mySwiper">
+                            <div class="swiper-wrapper">
+                            <div class="swiper-slide"> <img src="img/11.webp"></div>
+                            <div class="swiper-slide"> <img src="img/12.webp"></div>
+                            <div class="swiper-slide"><img src="img/13.webp"></div>
+                            <div class="swiper-slide"><img src="img/14.webp"></div>
+                            </div>
+                                <div class="swiper-pagination"></div>
+                        </div>
                     <div class="px-2  pt-2">
                         <div>
                             <span class="text-red-800 decoration-3 leading-tight">999$</span> 
@@ -467,7 +542,7 @@
                                                     51 отзыв
                                                 </span>
                                 </div>
-                                <div class="flex justify-center items-center mb-0.5 outline-none border-2 rounded-2xl mb-2.5 bg-pink-500" >   
+                                <div class="flex justify-center items-center mb-0.5 outline-none border-2 rounded-2xl mb-2.5 bg-pink-500 hover:bg-red-400" >   
                                          <button class="flex justify-center items-center outline-slate-50 pt-2 gap-2">
                                            <span class="mb-1.5 text-white">
                                             <svg 
@@ -488,7 +563,15 @@
                     </div>
                 </div>
                 <div class="flex flex-col shadow-2xl rounded-lg" >
-                    <img src="img/15.webp"  alt="" width="200" class="rounded-lg">
+                     <div class="swiper mySwiper">
+                            <div class="swiper-wrapper">
+                            <div class="swiper-slide"> <img src="img/15.webp"></div>
+                            <div class="swiper-slide"> <img src="img/16.webp"></div>
+                            <div class="swiper-slide"><img src="img/17.webp"></div>
+                            <div class="swiper-slide"><img src="img/18.webp"></div>
+                            </div>
+                                <div class="swiper-pagination"></div>
+                        </div>
                     <div class="px-2  pt-2">
                         <div>
                         <span class="text-red-800 decoration-3 leading-tight">999$</span> 
@@ -525,7 +608,7 @@
                         </span>
                         <span class="text-slate-400">51 отзыв</span>
                     </div>
-                    <div class="flex justify-center items-center mb-0.5 outline-none border-2 rounded-2xl mb-2.5 bg-pink-500 gap-1" >   
+                    <div class="flex justify-center items-center mb-0.5 outline-none border-2 rounded-2xl mb-2.5 bg-pink-500 hover:bg-red-500 gap-1" >   
                                          <button class="flex justify-center items-center outline-slate-50 pt-2 gap-2">
                                            <span class="mb-1.5 text-white">
                                             <svg 
@@ -546,7 +629,15 @@
                     </div>
                 </div>
                 <div class="flex flex-col shadow-2xl rounded-lg" >
-                    <img src="img/19.webp" alt="" width="200" class="rounded-lg">
+                    <div class="swiper mySwiper">
+                            <div class="swiper-wrapper">
+                            <div class="swiper-slide"> <img src="img/19.webp"></div>
+                            <div class="swiper-slide"> <img src="img/20.webp"></div>
+                            <div class="swiper-slide"><img src="img/21.webp"></div>
+                            <div class="swiper-slide"><img src="img/22.webp"></div>
+                            </div>
+                                <div class="swiper-pagination"></div>
+                        </div>
                     <div class="px-2  pt-2">
                         <div>
                         <span class="text-red-800 decoration-3 leading-tight">999$</span> 
@@ -584,7 +675,7 @@
                         <span class="text-slate-400">51 отзыв</span>
                     </div>
                     </div>
-                    <div class="flex justify-center items-center mb-0.5 outline-none border-2 rounded-2xl mb-2.5 bg-pink-500" >   
+                    <div class="flex justify-center items-center mb-0.5 outline-none border-2 rounded-2xl mb-2.5 bg-pink-500 hover:bg-red-400" >   
                                          <button class="flex justify-center items-center outline-slate-50 pt-2 gap-2">
                                            <span class="mb-1.5 text-white">
                                             <svg 
@@ -602,139 +693,31 @@
                                             
                                         </button>
                                     </div>
-                </div>
-                <div class="flex flex-col shadow-2xl rounded-lg" >
-                    <img src="img/23.webp"  alt="" width="200" class="rounded-lg">
-                    <div class="px-2  pt-2">
-                        <div>
-                        <span class="text-red-800 decoration-3 leading-tight">999$</span> 
-                        <span><s>3000$</s></span>
-                        <span class="text-red-700" decoration-1>-88%</span>
-                    </div>
-                    <div class="text-red-800">
-                    90 штук осталось 
-                    </div>
-                    <div class="text-slate-400 decoration-1">
-                Кроссовки -NIKE <br/>
-                    Для бега и прогулок <br/>по городу
-                    </div>
-                    <div class="flex indent-px pb-2 gap-1">
-                        <svg 
-                            xmlns="http://www.w3.org/2000/svg" 
-                            width="24" 
-                            height="24" 
-                            viewBox="0 0 64 64">
-                            <path fill="#ffce31" 
-                            d="M62 25.2H39.1L32 3l-7.1 22.2H2l18.5 13.7l-7 22.1L32 47.3L50.5 61l-7.1-22.2z"/>
-                        </svg>
-                        <span class="text-black">4.5</span>
-                        <span>
-                            <svg 
-                                xmlns="http://www.w3.org/2000/svg" 
-                                width="24" 
-                                height="24" 
-                                viewBox="0 0 24 24">
-                                <path 
-                                fill="##0d0d0e" 
-                                d="M12 2C6.486 2 2 5.589 2 10c0 2.908 1.898 5.516 5 6.934V22l5.34-4.005C17.697 17.852 22 14.32 22 10c0-4.411-4.486-8-10-8m0 14h-.333L9 18v-2.417l-.641-.247C5.67 14.301 4 12.256 4 10c0-3.309 3.589-6 8-6s8 2.691 8 6s-3.589 6-8 6"/>
-                            </svg>
-                        </span>
-                        <span class="text-slate-400">51 отзыв</span>
-                    </div>
-                    </div>
-                    <div class="flex justify-center items-center mb-0.5 outline-none border-2 rounded-2xl mb-2.5 bg-pink-500" >   
-                                         <button class="flex justify-center items-center outline-slate-50 pt-2 gap-2">
-                                           <span class="mb-1.5 text-white">
-                                            <svg 
-                                                xmlns="http://www.w3.org/2000/svg" 
-                                                width="24" 
-                                                height="24" 
-                                                viewBox="0 0 24 24">
-                                                <path 
-                                                d="M21.822 7.431A1 1 0 0 0 21 7H7.333L6.179 4.23A1.994 1.994 0 0 0 4.333 3H2v2h2.333l4.744 11.385A1 1 0 0 0 10 17h8c.417 0 .79-.259.937-.648l3-8a1 1 0 0 0-.115-.921z" fill="#ffffff"/><circle cx="10.5" cy="19.5" r="1.5" fill="#ffffff"/><circle cx="17.5" cy="19.5" r="1.5" fill="#ffffff"/>
-                                            </svg>
-                                           </span> 
-                                            <span class="mb-1.5 text-white font-semibold"> 
-                                                Послезавтра
-                                            </span>
-                                            
-                                        </button>
-                                    </div>
-                </div>
-                <div class="flex flex-col shadow-2xl rounded-lg" >
-                    <img src="img/27.webp" alt="" width="200" class="rounded-lg">
-                    <div class="px-2  pt-2">
-                        <div>
-                        <span class="text-red-800 decoration-3 leading-tight">999$</span> 
-                        <span><s>3000$</s></span>
-                        <span class="text-red-700" decoration-1>-88%</span>
-                    </div>
-                    <div class="text-red-800">
-                    90 штук осталось 
-                    </div>
-                    <div class="text-slate-400 decoration-1">
-                        Кроссовки -NIKE <br/>
-                        Для бега и прогулок <br/>по городу 
-                    </div>
-                    <div class="flex indent-px pb-2 gap-1">
-                        <svg 
-                            xmlns="http://www.w3.org/2000/svg" 
-                            width="24" 
-                            height="24" 
-                            viewBox="0 0 64 64">
-                            <path fill="#ffce31" 
-                            d="M62 25.2H39.1L32 3l-7.1 22.2H2l18.5 13.7l-7 22.1L32 47.3L50.5 61l-7.1-22.2z"/>
-                        </svg>
-                        <span class="text-black">4.5</span>
-                        <span>
-                            <svg 
-                                xmlns="http://www.w3.org/2000/svg" 
-                                width="24" 
-                                height="24" 
-                                viewBox="0 0 24 24">
-                                <path 
-                                fill="##0d0d0e" 
-                                d="M12 2C6.486 2 2 5.589 2 10c0 2.908 1.898 5.516 5 6.934V22l5.34-4.005C17.697 17.852 22 14.32 22 10c0-4.411-4.486-8-10-8m0 14h-.333L9 18v-2.417l-.641-.247C5.67 14.301 4 12.256 4 10c0-3.309 3.589-6 8-6s8 2.691 8 6s-3.589 6-8 6"/>
-                            </svg>
-                        </span>
-                        <span class="text-slate-400">51 отзыв</span>
-                    </div>
-                    </div>
-                    <div class="flex justify-center items-center mb-0.5 outline-none border-2 rounded-2xl mb-2.5 bg-pink-500" >   
-                                         <button class="flex justify-center items-center outline-slate-50 pt-2 gap-2">
-                                           <span class="mb-1.5 text-white">
-                                            <svg 
-                                                xmlns="http://www.w3.org/2000/svg" 
-                                                width="24" 
-                                                height="24" 
-                                                viewBox="0 0 24 24">
-                                                <path 
-                                                d="M21.822 7.431A1 1 0 0 0 21 7H7.333L6.179 4.23A1.994 1.994 0 0 0 4.333 3H2v2h2.333l4.744 11.385A1 1 0 0 0 10 17h8c.417 0 .79-.259.937-.648l3-8a1 1 0 0 0-.115-.921z" fill="#ffffff"/><circle cx="10.5" cy="19.5" r="1.5" fill="#ffffff"/><circle cx="17.5" cy="19.5" r="1.5" fill="#ffffff"/>
-                                            </svg>
-                                           </span> 
-                                            <span class="mb-1.5 text-white font-semibold"> 
-                                                Послезавтра
-                                            </span>
-                                            
-                                        </button>
-                                    </div>
-                </div>
-                <div class="flex flex-col shadow-2xl rounded-lg" >
-                    <img src="img/31.webp"  alt="" width="200" class="rounded-lg">
+                </div>    
+                <div class="flex flex-col shadow-2xl" >
+                        <div class="swiper mySwiper">
+                            <div class="swiper-wrapper">
+                            <div class="swiper-slide"> <img src="img/10.jpg"></div>
+                            <div class="swiper-slide"> <img src="img/9.jpg"></div>
+                            <div class="swiper-slide"><img src="img/35.webp"></div>
+                            <div class="swiper-slide"><img src="img/36.webp"></div>
+                            </div>
+                                <div class="swiper-pagination"></div>
+                        </div>
                     <div class="px-2  pt-2">
                         <div>
                             <span class="text-red-800 decoration-3 leading-tight">999$</span> 
                             <span><s>3000$</s></span>
                             <span class="text-red-700" decoration-1>-88%</span>
                         </div>
-                            <div class="text-red-800">
+                        <div class="text-red-800">
                             90 штук осталось 
+                        </div>
+                            <div class="text-slate-400 decoration-1">
+                                Кроссовки -NIKE <br/>
+                                Для бега и прогулок <br/>по городу 
                             </div>
-                                <div class="text-slate-400 decoration-1 flex-wrap">
-                                                    Кроссовки -NIKE <br/>
-                                                        Для бега и прогулок<br/>по городу
-                                </div>
-                                    <div class="flex indent-px pb-2 gap-1">
+                                <div class="flex indent-px pb-2 gap-1">
                                         <svg 
                                             xmlns="http://www.w3.org/2000/svg" 
                                             width="24" 
@@ -743,21 +726,90 @@
                                             <path fill="#ffce31" 
                                             d="M62 25.2H39.1L32 3l-7.1 22.2H2l18.5 13.7l-7 22.1L32 47.3L50.5 61l-7.1-22.2z"/>
                                         </svg>
-                                        <span class="text-black">4.5</span>
-                                        <span>
+                                            <span class="text-black">4.5</span>
+                                            <span>
+                                                <svg 
+                                                    xmlns="http://www.w3.org/2000/svg" 
+                                                    width="24" 
+                                                    height="24" 
+                                                    viewBox="0 0 24 24">
+                                                    <path 
+                                                    fill="#0d0d0e" 
+                                                    d="M12 2C6.486 2 2 5.589 2 10c0 2.908 1.898 5.516 5 6.934V22l5.34-4.005C17.697 17.852 22 14.32 22 10c0-4.411-4.486-8-10-8m0 14h-.333L9 18v-2.417l-.641-.247C5.67 14.301 4 12.256 4 10c0-3.309 3.589-6 8-6s8 2.691 8 6s-3.589 6-8 6"/>
+                                                </svg>
+                                            </span>
+                                                <span class="text-slate-400">
+                                                    51 отзыв
+                                                </span>
+                                </div>
+                    </div>
+                    <div class="flex justify-center items-center mb-0.5 outline-none border-2 rounded-2xl mb-2.5 bg-pink-500 hover:bg-red-400" >   
+                                         <button class="flex justify-center items-center outline-slate-50 pt-2 gap-2">
+                                           <span class="mb-1.5 text-white">
                                             <svg 
                                                 xmlns="http://www.w3.org/2000/svg" 
                                                 width="24" 
                                                 height="24" 
                                                 viewBox="0 0 24 24">
                                                 <path 
-                                                fill="##0d0d0e" 
-                                                d="M12 2C6.486 2 2 5.589 2 10c0 2.908 1.898 5.516 5 6.934V22l5.34-4.005C17.697 17.852 22 14.32 22 10c0-4.411-4.486-8-10-8m0 14h-.333L9 18v-2.417l-.641-.247C5.67 14.301 4 12.256 4 10c0-3.309 3.589-6 8-6s8 2.691 8 6s-3.589 6-8 6"/>
+                                                d="M21.822 7.431A1 1 0 0 0 21 7H7.333L6.179 4.23A1.994 1.994 0 0 0 4.333 3H2v2h2.333l4.744 11.385A1 1 0 0 0 10 17h8c.417 0 .79-.259.937-.648l3-8a1 1 0 0 0-.115-.921z" fill="#ffffff"/><circle cx="10.5" cy="19.5" r="1.5" fill="#ffffff"/><circle cx="17.5" cy="19.5" r="1.5" fill="#ffffff"/>
                                             </svg>
-                                        </span>
-                                        <span class="text-slate-400">51 отзыв</span>
-                                    </div>
-                                    <div class="flex justify-center items-center mb-0.5 outline-none border-2 rounded-2xl mb-2.5 bg-pink-500" >   
+                                           </span> 
+                                            <span class="mb-1.5 text-white font-semibold "> 
+                                                Послезавтра
+                                            </span>
+                                            
+                                        </button>
+                    </div>
+                </div>
+                <div class="flex flex-col shadow-2xl rounded-lg" >
+                    <div class="swiper mySwiper">
+                            <div class="swiper-wrapper">
+                            <div class="swiper-slide"> <img src="img/23.webp"></div>
+                            <div class="swiper-slide"> <img src="img/24.webp"></div>
+                            <div class="swiper-slide"><img src="img/25.webp"></div>
+                            <div class="swiper-slide"><img src="img/26.webp"></div>
+                            </div>
+                                <div class="swiper-pagination"></div>
+                        </div>
+                    <div class="px-2  pt-2">
+                        <div>
+                        <span class="text-red-800 decoration-3 leading-tight">999$</span> 
+                        <span><s>3000$</s></span>
+                        <span class="text-red-700" decoration-1>-88%</span>
+                    </div>
+                    <div class="text-red-800">
+                    90 штук осталось 
+                    </div>
+                    <div class="text-slate-400 decoration-1">
+                            Кроссовки -NIKE <br/>
+                            Для бега и прогулок <br/>по городу 
+                    </div>
+                    <div class="flex indent-px pb-2 gap-1">
+                        <svg 
+                            xmlns="http://www.w3.org/2000/svg" 
+                            width="24" 
+                            height="24" 
+                            viewBox="0 0 64 64">
+                            <path fill="#ffce31" 
+                            d="M62 25.2H39.1L32 3l-7.1 22.2H2l18.5 13.7l-7 22.1L32 47.3L50.5 61l-7.1-22.2z"/>
+                        </svg>
+                        <span class="text-black">4.5</span>
+                        <span>
+                            <svg 
+                                xmlns="http://www.w3.org/2000/svg" 
+                                width="24" 
+                                height="24" 
+                                viewBox="0 0 24 24">
+                                <path 
+                                fill="##0d0d0e" 
+                                d="M12 2C6.486 2 2 5.589 2 10c0 2.908 1.898 5.516 5 6.934V22l5.34-4.005C17.697 17.852 22 14.32 22 10c0-4.411-4.486-8-10-8m0 14h-.333L9 18v-2.417l-.641-.247C5.67 14.301 4 12.256 4 10c0-3.309 3.589-6 8-6s8 2.691 8 6s-3.589 6-8 6"/>
+                            </svg>
+                        </span>
+                        <span class="text-slate-400">51 отзыв</span>
+                    </div>
+                    </div>
+                    <div class="flex justify-center items-center mb-0.5 outline-none border-2 rounded-2xl mb-2.5 bg-pink-500 hover:bg-red-400" >   
                                          <button class="flex justify-center items-center outline-slate-50 pt-2 gap-2">
                                            <span class="mb-1.5 text-white">
                                             <svg 
@@ -775,11 +827,217 @@
                                             
                                         </button>
                                     </div>
-                                   
-                    </div>     
+                </div>  
+                <div class="flex flex-col shadow-2xl rounded-lg" >
+                    <div class="swiper mySwiper">
+                            <div class="swiper-wrapper">
+                            <div class="swiper-slide"> <img src="img/27.webp"></div>
+                            <div class="swiper-slide"> <img src="img/28.webp"></div>
+                            <div class="swiper-slide"><img src="img/29.webp"></div>
+                            <div class="swiper-slide"><img src="img/30.webp"></div>
+                            </div>
+                                <div class="swiper-pagination"></div>
+                        </div>
+                    <div class="px-2  pt-2">
+                        <div>
+                        <span class="text-red-800 decoration-3 leading-tight">999$</span> 
+                        <span><s>3000$</s></span>
+                        <span class="text-red-700" decoration-1>-88%</span>
+                    </div>
+                    <div class="text-red-800">
+                    90 штук осталось 
+                    </div>
+                    <div class="text-slate-400 decoration-1">
+                            Кроссовки -NIKE <br/>
+                            Для бега и прогулок <br/>по городу 
+                    </div>
+                    <div class="flex indent-px pb-2 gap-1">
+                        <svg 
+                            xmlns="http://www.w3.org/2000/svg" 
+                            width="24" 
+                            height="24" 
+                            viewBox="0 0 64 64">
+                            <path fill="#ffce31" 
+                            d="M62 25.2H39.1L32 3l-7.1 22.2H2l18.5 13.7l-7 22.1L32 47.3L50.5 61l-7.1-22.2z"/>
+                        </svg>
+                        <span class="text-black">4.5</span>
+                        <span>
+                            <svg 
+                                xmlns="http://www.w3.org/2000/svg" 
+                                width="24" 
+                                height="24" 
+                                viewBox="0 0 24 24">
+                                <path 
+                                fill="##0d0d0e" 
+                                d="M12 2C6.486 2 2 5.589 2 10c0 2.908 1.898 5.516 5 6.934V22l5.34-4.005C17.697 17.852 22 14.32 22 10c0-4.411-4.486-8-10-8m0 14h-.333L9 18v-2.417l-.641-.247C5.67 14.301 4 12.256 4 10c0-3.309 3.589-6 8-6s8 2.691 8 6s-3.589 6-8 6"/>
+                            </svg>
+                        </span>
+                        <span class="text-slate-400">51 отзыв</span>
+                    </div>
+                    </div>
+                    <div class="flex justify-center items-center mb-0.5 outline-none border-2 rounded-2xl mb-2.5 bg-pink-500 hover:bg-red-400" >   
+                                         <button class="flex justify-center items-center outline-slate-50 pt-2 gap-2">
+                                           <span class="mb-1.5 text-white">
+                                            <svg 
+                                                xmlns="http://www.w3.org/2000/svg" 
+                                                width="24" 
+                                                height="24" 
+                                                viewBox="0 0 24 24">
+                                                <path 
+                                                d="M21.822 7.431A1 1 0 0 0 21 7H7.333L6.179 4.23A1.994 1.994 0 0 0 4.333 3H2v2h2.333l4.744 11.385A1 1 0 0 0 10 17h8c.417 0 .79-.259.937-.648l3-8a1 1 0 0 0-.115-.921z" fill="#ffffff"/><circle cx="10.5" cy="19.5" r="1.5" fill="#ffffff"/><circle cx="17.5" cy="19.5" r="1.5" fill="#ffffff"/>
+                                            </svg>
+                                           </span> 
+                                            <span class="mb-1.5 text-white font-semibold"> 
+                                                Послезавтра
+                                            </span>
+                                            
+                                        </button>
+                                    </div>
+                </div>   
+                <div class="flex flex-col shadow-2xl rounded-lg" >
+                    <div class="swiper mySwiper">
+                            <div class="swiper-wrapper">
+                            <div class="swiper-slide"> <img src="img/31.webp"></div>
+                            <div class="swiper-slide"> <img src="img/32.webp"></div>
+                            <div class="swiper-slide"><img src="img/33.webp"></div>
+                            <div class="swiper-slide"><img src="img/34.webp"></div>
+                            </div>
+                                <div class="swiper-pagination"></div>
+                        </div>
+                    <div class="px-2  pt-2">
+                        <div>
+                        <span class="text-red-800 decoration-3 leading-tight">999$</span> 
+                        <span><s>3000$</s></span>
+                        <span class="text-red-700" decoration-1>-88%</span>
+                    </div>
+                    <div class="text-red-800">
+                    90 штук осталось 
+                    </div>
+                    <div class="text-slate-400 decoration-1">
+                            Кроссовки -NIKE <br/>
+                            Для бега и прогулок <br/>по городу 
+                    </div>
+                    <div class="flex indent-px pb-2 gap-1">
+                        <svg 
+                            xmlns="http://www.w3.org/2000/svg" 
+                            width="24" 
+                            height="24" 
+                            viewBox="0 0 64 64">
+                            <path fill="#ffce31" 
+                            d="M62 25.2H39.1L32 3l-7.1 22.2H2l18.5 13.7l-7 22.1L32 47.3L50.5 61l-7.1-22.2z"/>
+                        </svg>
+                        <span class="text-black">4.5</span>
+                        <span>
+                            <svg 
+                                xmlns="http://www.w3.org/2000/svg" 
+                                width="24" 
+                                height="24" 
+                                viewBox="0 0 24 24">
+                                <path 
+                                fill="##0d0d0e" 
+                                d="M12 2C6.486 2 2 5.589 2 10c0 2.908 1.898 5.516 5 6.934V22l5.34-4.005C17.697 17.852 22 14.32 22 10c0-4.411-4.486-8-10-8m0 14h-.333L9 18v-2.417l-.641-.247C5.67 14.301 4 12.256 4 10c0-3.309 3.589-6 8-6s8 2.691 8 6s-3.589 6-8 6"/>
+                            </svg>
+                        </span>
+                        <span class="text-slate-400">51 отзыв</span>
+                    </div>
+                    </div>
+                    <div class="flex justify-center items-center mb-0.5 outline-none border-2 rounded-2xl mb-2.5 bg-pink-500 hover:bg-red-400" >   
+                                         <button class="flex justify-center items-center outline-slate-50 pt-2 gap-2">
+                                           <span class="mb-1.5 text-white">
+                                            <svg 
+                                                xmlns="http://www.w3.org/2000/svg" 
+                                                width="24" 
+                                                height="24" 
+                                                viewBox="0 0 24 24">
+                                                <path 
+                                                d="M21.822 7.431A1 1 0 0 0 21 7H7.333L6.179 4.23A1.994 1.994 0 0 0 4.333 3H2v2h2.333l4.744 11.385A1 1 0 0 0 10 17h8c.417 0 .79-.259.937-.648l3-8a1 1 0 0 0-.115-.921z" fill="#ffffff"/><circle cx="10.5" cy="19.5" r="1.5" fill="#ffffff"/><circle cx="17.5" cy="19.5" r="1.5" fill="#ffffff"/>
+                                            </svg>
+                                           </span> 
+                                            <span class="mb-1.5 text-white font-semibold"> 
+                                                Послезавтра
+                                            </span>
+                                            
+                                        </button>
+                                    </div>
+                </div> 
+                <div class="flex flex-col shadow-2xl" >
+                        <div class="swiper mySwiper">
+                            <div class="swiper-wrapper">
+                            <div class="swiper-slide"> <img src="img/5.jpg"></div>
+                            <div class="swiper-slide"> <img src="img/6.jpg"></div>
+                            <div class="swiper-slide"><img src="img/7.jpg"></div>
+                            <div class="swiper-slide"><img src="img/8.jpg"></div>
+                            </div>
+                                <div class="swiper-pagination"></div>
+                        </div>
+                    <div class="px-2  pt-2">
+                        <div>
+                            <span class="text-red-800 decoration-3 leading-tight">999$</span> 
+                            <span><s>3000$</s></span>
+                            <span class="text-red-700" decoration-1>-88%</span>
+                        </div>
+                        <div class="text-red-800">
+                            90 штук осталось 
+                        </div>
+                            <div class="text-slate-400 decoration-1">
+                                Кроссовки -NIKE <br/>
+                                Для бега и прогулок <br/>по городу 
+                            </div>
+                                <div class="flex indent-px pb-2 gap-1">
+                                        <svg 
+                                            xmlns="http://www.w3.org/2000/svg" 
+                                            width="24" 
+                                            height="24" 
+                                            viewBox="0 0 64 64">
+                                            <path fill="#ffce31" 
+                                            d="M62 25.2H39.1L32 3l-7.1 22.2H2l18.5 13.7l-7 22.1L32 47.3L50.5 61l-7.1-22.2z"/>
+                                        </svg>
+                                            <span class="text-black">4.5</span>
+                                            <span>
+                                                <svg 
+                                                    xmlns="http://www.w3.org/2000/svg" 
+                                                    width="24" 
+                                                    height="24" 
+                                                    viewBox="0 0 24 24">
+                                                    <path 
+                                                    fill="#0d0d0e" 
+                                                    d="M12 2C6.486 2 2 5.589 2 10c0 2.908 1.898 5.516 5 6.934V22l5.34-4.005C17.697 17.852 22 14.32 22 10c0-4.411-4.486-8-10-8m0 14h-.333L9 18v-2.417l-.641-.247C5.67 14.301 4 12.256 4 10c0-3.309 3.589-6 8-6s8 2.691 8 6s-3.589 6-8 6"/>
+                                                </svg>
+                                            </span>
+                                                <span class="text-slate-400">
+                                                    51 отзыв
+                                                </span>
+                                </div>
+                    </div>
+                    <div class="flex justify-center items-center mb-0.5 outline-none border-2 rounded-2xl mb-2.5 bg-pink-500 hover:bg-red-400" >   
+                                         <button class="flex justify-center items-center outline-slate-50 pt-2 gap-2">
+                                           <span class="mb-1.5 text-white">
+                                            <svg 
+                                                xmlns="http://www.w3.org/2000/svg" 
+                                                width="24" 
+                                                height="24" 
+                                                viewBox="0 0 24 24">
+                                                <path 
+                                                d="M21.822 7.431A1 1 0 0 0 21 7H7.333L6.179 4.23A1.994 1.994 0 0 0 4.333 3H2v2h2.333l4.744 11.385A1 1 0 0 0 10 17h8c.417 0 .79-.259.937-.648l3-8a1 1 0 0 0-.115-.921z" fill="#ffffff"/><circle cx="10.5" cy="19.5" r="1.5" fill="#ffffff"/><circle cx="17.5" cy="19.5" r="1.5" fill="#ffffff"/>
+                                            </svg>
+                                           </span> 
+                                            <span class="mb-1.5 text-white font-semibold "> 
+                                                Послезавтра
+                                            </span>
+                                            
+                                        </button>
+                    </div>
                 </div>
                 <div class="flex flex-col shadow-2xl" >
-                        <img src="img/1.webp" width="200" class="rounded-lg" class="rounded-lg">
+                        <div class="swiper mySwiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide"> <img src="img/1.jpg"></div>
+                                <div class="swiper-slide"> <img src="img/2.jpg"></div>
+                                <div class="swiper-slide"><img src="img/3.jpg"></div>
+                                <div class="swiper-slide"><img src="img/4.jpg"></div>
+                            </div>
+                                <div class="swiper-pagination"></div>
+                        </div>
                     <div class="px-2  pt-2">
                         <div>
                             <span class="text-red-800 decoration-3 leading-tight">999$</span> 
@@ -810,7 +1068,7 @@
                                                     height="24" 
                                                     viewBox="0 0 24 24">
                                                     <path 
-                                                    fill="##0d0d0e" 
+                                                    fill="#0d0d0e" 
                                                     d="M12 2C6.486 2 2 5.589 2 10c0 2.908 1.898 5.516 5 6.934V22l5.34-4.005C17.697 17.852 22 14.32 22 10c0-4.411-4.486-8-10-8m0 14h-.333L9 18v-2.417l-.641-.247C5.67 14.301 4 12.256 4 10c0-3.309 3.589-6 8-6s8 2.691 8 6s-3.589 6-8 6"/>
                                                 </svg>
                                             </span>
@@ -819,7 +1077,7 @@
                                                 </span>
                                 </div>
                     </div>
-                    <div class="flex justify-center items-center mb-0.5 outline-none border-2 rounded-2xl mb-2.5 bg-pink-500" >   
+                    <div class="flex justify-center items-center mb-0.5 outline-none border-2 rounded-2xl mb-2.5 bg-pink-500 hover:bg-red-400" >   
                                          <button class="flex justify-center items-center outline-slate-50 pt-2 gap-2">
                                            <span class="mb-1.5 text-white">
                                             <svg 
@@ -831,252 +1089,16 @@
                                                 d="M21.822 7.431A1 1 0 0 0 21 7H7.333L6.179 4.23A1.994 1.994 0 0 0 4.333 3H2v2h2.333l4.744 11.385A1 1 0 0 0 10 17h8c.417 0 .79-.259.937-.648l3-8a1 1 0 0 0-.115-.921z" fill="#ffffff"/><circle cx="10.5" cy="19.5" r="1.5" fill="#ffffff"/><circle cx="17.5" cy="19.5" r="1.5" fill="#ffffff"/>
                                             </svg>
                                            </span> 
-                                            <span class="mb-1.5 text-white font-semibold"> 
+                                            <span class="mb-1.5 text-white font-semibold "> 
                                                 Послезавтра
                                             </span>
                                             
                                         </button>
-                                    </div>
-                </div>
-                  <div class="flex flex-col shadow-2xl rounded-lg" >
-                        <img src="img/11.webp" width="200" class="rounded-lg">
-                    <div class="px-2  pt-2">
-                        <div>
-                            <span class="text-red-800 decoration-3 leading-tight">999$</span> 
-                            <span><s>3000$</s></span>
-                            <span class="text-red-700" decoration-1>-88%</span>
-                        </div>
-                        <div class="text-red-800">
-                            90 штук осталось 
-                        </div>
-                            <div class="text-slate-400 decoration-1">
-                                Кроссовки -NIKE <br/>
-                                Для бега и прогулок <br/>по городу 
-                            </div>
-                                <div class="flex indent-px pb-2 gap-1">
-                                        <svg 
-                                            xmlns="http://www.w3.org/2000/svg" 
-                                            width="24" 
-                                            height="24" 
-                                            viewBox="0 0 64 64">
-                                            <path fill="#ffce31" 
-                                            d="M62 25.2H39.1L32 3l-7.1 22.2H2l18.5 13.7l-7 22.1L32 47.3L50.5 61l-7.1-22.2z"/>
-                                        </svg>
-                                            <span class="text-black">4.5</span>
-                                            <span>
-                                                <svg 
-                                                    xmlns="http://www.w3.org/2000/svg" 
-                                                    width="24" 
-                                                    height="24" 
-                                                    viewBox="0 0 24 24">
-                                                    <path 
-                                                    fill="##0d0d0e" 
-                                                    d="M12 2C6.486 2 2 5.589 2 10c0 2.908 1.898 5.516 5 6.934V22l5.34-4.005C17.697 17.852 22 14.32 22 10c0-4.411-4.486-8-10-8m0 14h-.333L9 18v-2.417l-.641-.247C5.67 14.301 4 12.256 4 10c0-3.309 3.589-6 8-6s8 2.691 8 6s-3.589 6-8 6"/>
-                                                </svg>
-                                            </span>
-                                                <span class="text-slate-400">
-                                                    51 отзыв
-                                                </span>
-                                </div>
-                                <div class="flex justify-center items-center mb-0.5 outline-none border-2 rounded-2xl mb-2.5 bg-pink-500" >   
-                                         <button class="flex justify-center items-center outline-slate-50 pt-2 gap-2">
-                                           <span class="mb-1.5 text-white">
-                                            <svg 
-                                                xmlns="http://www.w3.org/2000/svg" 
-                                                width="24" 
-                                                height="24" 
-                                                viewBox="0 0 24 24">
-                                                <path 
-                                                d="M21.822 7.431A1 1 0 0 0 21 7H7.333L6.179 4.23A1.994 1.994 0 0 0 4.333 3H2v2h2.333l4.744 11.385A1 1 0 0 0 10 17h8c.417 0 .79-.259.937-.648l3-8a1 1 0 0 0-.115-.921z" fill="#ffffff"/><circle cx="10.5" cy="19.5" r="1.5" fill="#ffffff"/><circle cx="17.5" cy="19.5" r="1.5" fill="#ffffff"/>
-                                            </svg>
-                                           </span> 
-                                            <span class="mb-1.5 text-white font-semibold"> 
-                                                Послезавтра
-                                            </span>
-                                            
-                                        </button>
-                                    </div>
                     </div>
                 </div>
-                <div class="flex flex-col shadow-2xl rounded-lg" >
-                    <img src="img/15.webp"  alt="" width="200" class="rounded-lg">
-                    <div class="px-2  pt-2">
-                        <div>
-                        <span class="text-red-800 decoration-3 leading-tight">999$</span> 
-                        <span><s>3000$</s></span>
-                        <span class="text-red-700" decoration-1>-88%</span>
-                    </div>
-                    <div class="text-red-800">
-                    90 штук осталось 
-                    </div>
-                    <div class="text-slate-400 decoration-1">
-                        Кроссовки -NIKE <br/>
-                        Для бега и прогулок <br/>по городу 
-                    </div>
-                    <div class="flex indent-px pb-2 gap-1">
-                        <svg 
-                            xmlns="http://www.w3.org/2000/svg" 
-                            width="24" 
-                            height="24" 
-                            viewBox="0 0 64 64">
-                            <path fill="#ffce31" 
-                            d="M62 25.2H39.1L32 3l-7.1 22.2H2l18.5 13.7l-7 22.1L32 47.3L50.5 61l-7.1-22.2z"/>
-                        </svg>
-                        <span class="text-black">4.5</span>
-                        <span>
-                            <svg 
-                                xmlns="http://www.w3.org/2000/svg" 
-                                width="24" 
-                                height="24" 
-                                viewBox="0 0 24 24">
-                                <path 
-                                fill="##0d0d0e" 
-                                d="M12 2C6.486 2 2 5.589 2 10c0 2.908 1.898 5.516 5 6.934V22l5.34-4.005C17.697 17.852 22 14.32 22 10c0-4.411-4.486-8-10-8m0 14h-.333L9 18v-2.417l-.641-.247C5.67 14.301 4 12.256 4 10c0-3.309 3.589-6 8-6s8 2.691 8 6s-3.589 6-8 6"/>
-                            </svg>
-                        </span>
-                        <span class="text-slate-400">51 отзыв</span>
-                    </div>
-                    <div class="flex justify-center items-center mb-0.5 outline-none border-2 rounded-2xl mb-2.5 bg-pink-500 gap-1" >   
-                                         <button class="flex justify-center items-center outline-slate-50 pt-2 gap-2">
-                                           <span class="mb-1.5 text-white">
-                                            <svg 
-                                                xmlns="http://www.w3.org/2000/svg" 
-                                                width="24" 
-                                                height="24" 
-                                                viewBox="0 0 24 24">
-                                                <path 
-                                                d="M21.822 7.431A1 1 0 0 0 21 7H7.333L6.179 4.23A1.994 1.994 0 0 0 4.333 3H2v2h2.333l4.744 11.385A1 1 0 0 0 10 17h8c.417 0 .79-.259.937-.648l3-8a1 1 0 0 0-.115-.921z" fill="#ffffff"/><circle cx="10.5" cy="19.5" r="1.5" fill="#ffffff"/><circle cx="17.5" cy="19.5" r="1.5" fill="#ffffff"/>
-                                            </svg>
-                                           </span> 
-                                            <span class="mb-1.5 text-white font-semibold"> 
-                                                Послезавтра
-                                            </span>
-                                            
-                                        </button>
-                                    </div>
-                    </div>
-                </div>
-                <div class="flex flex-col shadow-2xl rounded-lg" >
-                    <img src="img/19.webp" alt="" width="200" class="rounded-lg">
-                    <div class="px-2  pt-2">
-                        <div>
-                        <span class="text-red-800 decoration-3 leading-tight">999$</span> 
-                        <span><s>3000$</s></span>
-                        <span class="text-red-700" decoration-1>-88%</span>
-                    </div>
-                    <div class="text-red-800">
-                    90 штук осталось 
-                    </div>
-                    <div class="text-slate-400 decoration-1">
-                            Кроссовки -NIKE <br/>
-                            Для бега и прогулок <br/>по городу 
-                    </div>
-                    <div class="flex indent-px pb-2 gap-1">
-                        <svg 
-                            xmlns="http://www.w3.org/2000/svg" 
-                            width="24" 
-                            height="24" 
-                            viewBox="0 0 64 64">
-                            <path fill="#ffce31" 
-                            d="M62 25.2H39.1L32 3l-7.1 22.2H2l18.5 13.7l-7 22.1L32 47.3L50.5 61l-7.1-22.2z"/>
-                        </svg>
-                        <span class="text-black">4.5</span>
-                        <span>
-                            <svg 
-                                xmlns="http://www.w3.org/2000/svg" 
-                                width="24" 
-                                height="24" 
-                                viewBox="0 0 24 24">
-                                <path 
-                                fill="##0d0d0e" 
-                                d="M12 2C6.486 2 2 5.589 2 10c0 2.908 1.898 5.516 5 6.934V22l5.34-4.005C17.697 17.852 22 14.32 22 10c0-4.411-4.486-8-10-8m0 14h-.333L9 18v-2.417l-.641-.247C5.67 14.301 4 12.256 4 10c0-3.309 3.589-6 8-6s8 2.691 8 6s-3.589 6-8 6"/>
-                            </svg>
-                        </span>
-                        <span class="text-slate-400">51 отзыв</span>
-                    </div>
-                    </div>
-                    <div class="flex justify-center items-center mb-0.5 outline-none border-2 rounded-2xl mb-2.5 bg-pink-500" >   
-                                         <button class="flex justify-center items-center outline-slate-50 pt-2 gap-2">
-                                           <span class="mb-1.5 text-white">
-                                            <svg 
-                                                xmlns="http://www.w3.org/2000/svg" 
-                                                width="24" 
-                                                height="24" 
-                                                viewBox="0 0 24 24">
-                                                <path 
-                                                d="M21.822 7.431A1 1 0 0 0 21 7H7.333L6.179 4.23A1.994 1.994 0 0 0 4.333 3H2v2h2.333l4.744 11.385A1 1 0 0 0 10 17h8c.417 0 .79-.259.937-.648l3-8a1 1 0 0 0-.115-.921z" fill="#ffffff"/><circle cx="10.5" cy="19.5" r="1.5" fill="#ffffff"/><circle cx="17.5" cy="19.5" r="1.5" fill="#ffffff"/>
-                                            </svg>
-                                           </span> 
-                                            <span class="mb-1.5 text-white font-semibold"> 
-                                                Послезавтра
-                                            </span>
-                                            
-                                        </button>
-                                    </div>
-                </div>
-                <div class="flex flex-col shadow-2xl rounded-lg" >
-                    <img src="img/23.webp"  alt="" width="200" class="rounded-lg">
-                    <div class="px-2  pt-2">
-                        <div>
-                        <span class="text-red-800 decoration-3 leading-tight">999$</span> 
-                        <span><s>3000$</s></span>
-                        <span class="text-red-700" decoration-1>-88%</span>
-                    </div>
-                    <div class="text-red-800">
-                    90 штук осталось 
-                    </div>
-                    <div class="text-slate-400 decoration-1">
-                Кроссовки -NIKE <br/>
-                    Для бега и прогулок <br/>по городу
-                    </div>
-                    <div class="flex indent-px pb-2 gap-1">
-                        <svg 
-                            xmlns="http://www.w3.org/2000/svg" 
-                            width="24" 
-                            height="24" 
-                            viewBox="0 0 64 64">
-                            <path fill="#ffce31" 
-                            d="M62 25.2H39.1L32 3l-7.1 22.2H2l18.5 13.7l-7 22.1L32 47.3L50.5 61l-7.1-22.2z"/>
-                        </svg>
-                        <span class="text-black">4.5</span>
-                        <span>
-                            <svg 
-                                xmlns="http://www.w3.org/2000/svg" 
-                                width="24" 
-                                height="24" 
-                                viewBox="0 0 24 24">
-                                <path 
-                                fill="##0d0d0e" 
-                                d="M12 2C6.486 2 2 5.589 2 10c0 2.908 1.898 5.516 5 6.934V22l5.34-4.005C17.697 17.852 22 14.32 22 10c0-4.411-4.486-8-10-8m0 14h-.333L9 18v-2.417l-.641-.247C5.67 14.301 4 12.256 4 10c0-3.309 3.589-6 8-6s8 2.691 8 6s-3.589 6-8 6"/>
-                            </svg>
-                        </span>
-                        <span class="text-slate-400">51 отзыв</span>
-                    </div>
-                    </div>
-                    <div class="flex justify-center items-center mb-0.5 outline-none border-2 rounded-2xl mb-2.5 bg-pink-500" >   
-                                         <button class="flex justify-center items-center outline-slate-50 pt-2 gap-2">
-                                           <span class="mb-1.5 text-white">
-                                            <svg 
-                                                xmlns="http://www.w3.org/2000/svg" 
-                                                width="24" 
-                                                height="24" 
-                                                viewBox="0 0 24 24">
-                                                <path 
-                                                d="M21.822 7.431A1 1 0 0 0 21 7H7.333L6.179 4.23A1.994 1.994 0 0 0 4.333 3H2v2h2.333l4.744 11.385A1 1 0 0 0 10 17h8c.417 0 .79-.259.937-.648l3-8a1 1 0 0 0-.115-.921z" fill="#ffffff"/><circle cx="10.5" cy="19.5" r="1.5" fill="#ffffff"/><circle cx="17.5" cy="19.5" r="1.5" fill="#ffffff"/>
-                                            </svg>
-                                           </span> 
-                                            <span class="mb-1.5 text-white font-semibold"> 
-                                                Послезавтра
-                                            </span>
-                                            
-                                        </button>
-                                    </div>
-                </div>
-            </div> 
-        </div>
-      </div>
+            </div>
     </section>
-  </main>  
+</main>  
   <div class="flex items-center justify-between border-t border-white/10 px-4 py-3 sm:px-6">
   <div class="flex flex-1 justify-between sm:hidden">
     <a href="#" class="relative inline-flex items-center rounded-md border border-white/10 bg-white/5 px-4 py-2 text-sm font-medium text-gray-200 hover:bg-white/10">Previous</a>
@@ -1095,7 +1117,7 @@
       </p>
     </div>
     <div>
-      <nav aria-label="Pagination" class="isolate inline-flex -space-x-px rounded-md">
+      <nav aria-label="Pagination" class="isolate inline-flex -space-x-px rounded-md lg:px-8">
         <a href="#" class="relative inline-flex items-center rounded-l-md px-2 py-2 text-gray-400 inset-ring inset-ring-gray-700 hover:bg-white/5 focus:z-20 focus:outline-offset-0">
           <span class="sr-only">Previous</span>
           <svg viewBox="0 0 20 20" fill="currentColor" data-slot="icon" aria-hidden="true" class="size-5">
@@ -1119,10 +1141,20 @@
       </nav>
     </div>
   </div>
-</div>
-     
+    </div>
+    <script src="main.js"></script>
+     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"> </script>
+        <script>
+            const swiper = new Swiper(".mySwiper", {
+                spaceBetween: 30,
+                pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+      },
+    });
+        </script>
+       
+   
 </body>
-<script src="main.js">
-    
-</script>
+
 </html>

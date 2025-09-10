@@ -26,7 +26,7 @@ eval("{__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _ma
   \************************/
 /***/ (() => {
 
-eval("{// console.log('Hello world');\r\n// const sample = function getValue(){\r\n//     document.getElementById('sample').innerHTML = sort;\r\n// }\n\n//# sourceURL=webpack://store-sneakers/./src/js/main.js?\n}");
+eval("{\n\n//# sourceURL=webpack://store-sneakers/./src/js/main.js?\n}");
 
 /***/ }),
 
