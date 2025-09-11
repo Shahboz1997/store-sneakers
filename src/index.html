@@ -6,64 +6,12 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+      <link rel="stylesheet" href="style.css"/>
     <title>
         Shop sneakers
     </title>
 </head>
-<body class="font-serif ...">
-    <style type="text/css">
-    .input-cnt {
-      display: flex;
-      width: 40%;
-    }
-    .input-cnt > i {
-      min-width: 20px;
-      padding: 10px;
-      text-align: center;
-      background: lightgrey;
-      border-top-left-radius: 20px;
-      border-bottom-left-radius: 20px;
-    }
-    .input-cnt > input {
-      outline: none;
-      border: none;
-      border: 1px solid lightgrey;
-      border-top-right-radius: 20px;
-      border-top-left-radius: 0px;
-      border-bottom-right-radius: 20px;
-      border-bottom-left-radius: 0px;
-      width: 50%;
-      transition: width .5s;
-    }
-    .input-cnt:hover > input {
-      border: 2px solid hsl(239, 94%, 40%);
-      width: 60%;
-    }
-    .input-cnt:hover > i {
-      background: hsl(239, 94%, 40%);
-      color: white;
-    }
-    .swiper {
-      width: 200px;
-      height: 100%;
-    }
-
-    .swiper-slide {
-      text-align: center;
-      font-size: 18px;
-      background: #444;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-
-    .swiper-slide img {
-      display: block;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-    </style>
+<body>
 <!-- Include this script tag or install `@tailwindplus/elements` via npm: -->
 <!-- <script src="https://cdn.jsdelivr.net/npm/@tailwindplus/elements@1" type="module"></script> -->
     <template id="product-card-template">
@@ -116,22 +64,24 @@
     <div class="flex items-baseline justify-between border-b border-gray-200 pt-10 pb-6">
       <h1 class="text-4xl font-bold tracking-tight text-gray-900">Кроссовки - NIKE</h1>
       <div class="flex items-center gap-2s">
-        <div class="relative inline-block ">
-            <div class="flex justify-center items-center gap-1">
-            <span class="group inline-flex justify-center text-sm font-medium text-black uppercase font-bold text-base/8 ">
-                    Сортировать по:
+        <div class="relative  ">
+           
+            <span  id="demo" class="flex justify-center items-center inline-flex justify-center text-sm font-medium text-black uppercase font-bold text-base/8 cursor-pointer shadow-xl pr-14 ">
+                    <button id="demo" class="text-2xl" >
+                      Сортировать по
+                    </button>
             </span>
-                <div class="rounded-xl text-red">
-                <select class="none" id="sort">
-                        <option value="По умолчанию">По умолчанию</option>
-                        <option value="Топ продаж">Топ продаж</option>
-                        <option value="Цена:По возрастанию">Цена:По возрастанию</option>
-                        <option value="Цена:По убыванию">Цена:По убыванию</option>
-                        <option value="Новые">Новые</option>
-                </select> 
-                </div>
+                <div class="flex justify-end items-end d-none hidden" id="sort">
+                  <div class="d-none" >
+                      <div value="По умолчанию">По умолчанию</div>
+                      <div value="Топ продаж">Топ продаж</div>
+                      <div value="Цена:По возрастанию">Цена:По возрастанию</div>
+                      <div value="Цена:По убыванию">Цена:По убыванию</div>
+                      <div value="Новые">Новые</div>
+                  </div> 
+              </div>
             </form> 
-            </div>
+            
          <!-- Selected: "font-medium text-gray-900", Not Selected: "text-gray-500" -->
                                     
         </div>
@@ -163,7 +113,7 @@
             <h3 class="-my-3 flow-root">
               <button id="color" type="button" command="--toggle" command for="filter-section-color" class="flex w-full items-center justify-between bg-white py-3 text-sm text-gray-400 hover:text-gray-500">
                 <span class="font-medium text-gray-900">Цвет</span>
-                <span id="d-none" class="ml-6 flex items-center">
+                <!-- <span id="d-none" class="ml-6 flex items-center">
                   <svg 
                         viewBox="0 0 20 20" 
                         fill="currentColor" 
@@ -180,10 +130,10 @@
                         class="size-5 not-in-aria-expanded:hidden">
                         <path d="M4 10a.75.75 0 0 1 .75-.75h10.5a.75.75 0 0 1 0 1.5H4.75A.75.75 0 0 1 4 10Z" clip-rule="evenodd" fill-rule="evenodd" />
                   </svg>
-                </span>
+                </span> -->
               </button>
             </h3>
-            <div id="filter-section-color"  class="hidden block pt-6 d-none">
+            <div id="filter-section-color"  class="block pt-6 d-none">
               <div class="space-y-4">
                 <div class="flex gap-3">
                   <div class="flex h-5 shrink-0 items-center">
@@ -195,7 +145,7 @@
                       </svg>
                     </div>
                   </div>
-                  <label for="filter-color-0" class="text-sm text-gray-600">Белый</label>
+                  <label for="filter-color-0" class="text-sm text-gray-600">Красный</label>
                 </div>
                 <div class="flex gap-3">
                   <div class="flex h-5 shrink-0 items-center">
@@ -207,7 +157,7 @@
                       </svg>
                     </div>
                   </div>
-                  <label for="filter-color-1" class="text-sm text-gray-600">Черный</label>
+                  <label for="filter-color-1" class="text-sm text-gray-600">Зеленый</label>
                 </div>
                 <div class="flex gap-3">
                   <div class="flex h-5 shrink-0 items-center">
@@ -219,7 +169,7 @@
                       </svg>
                     </div>
                   </div>
-                  <label for="filter-color-2" class="text-sm text-gray-600">Голубой</label>
+                  <label for="filter-color-2" class="text-sm text-gray-600">Черный</label>
                 </div>
                 <div class="flex gap-3">
                   <div class="flex h-5 shrink-0 items-center">
@@ -231,7 +181,7 @@
                       </svg>
                     </div>
                   </div>
-                  <label for="filter-color-3" class="text-sm text-gray-600">Красный</label>
+                  <label for="filter-color-3" class="text-sm text-gray-600">Белый</label>
                 </div>
                 <div class="flex gap-3">
                   <div class="flex h-5 shrink-0 items-center">
@@ -243,7 +193,7 @@
                       </svg>
                     </div>
                   </div>
-                  <label for="filter-color-4" class="text-sm text-gray-600">Зеленый</label>
+                  <label for="filter-color-4" class="text-sm text-gray-600">черно-белый</label>
                 </div>
                 <div class="flex gap-3">
                   <div class="flex h-5 shrink-0 items-center">
@@ -255,7 +205,19 @@
                       </svg>
                     </div>
                   </div>
-                  <label for="filter-color-5" class="text-sm text-gray-600">Розовый</label>
+                  <label for="filter-color-5" class="text-sm text-gray-600">Желтый</label>
+                </div>
+                 <div class="flex gap-3">
+                  <div class="flex h-5 shrink-0 items-center">
+                    <div class="group grid size-4 grid-cols-1">
+                      <input id="filter-color-5" type="checkbox" name="color[]" value="purple" class="col-start-1 row-start-1 appearance-none rounded-sm border border-gray-300 bg-white checked:border-indigo-600 checked:bg-indigo-600 indeterminate:border-indigo-600 indeterminate:bg-indigo-600 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 disabled:border-gray-300 disabled:bg-gray-100 disabled:checked:bg-gray-100 forced-colors:appearance-auto" />
+                      <svg viewBox="0 0 14 14" fill="none" class="pointer-events-none col-start-1 row-start-1 size-3.5 self-center justify-self-center stroke-white group-has-disabled:stroke-gray-950/25">
+                        <path d="M3 8L6 11L11 3.5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="opacity-0 group-has-checked:opacity-100" />
+                        <path d="M3 7H11" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="opacity-0 group-has-indeterminate:opacity-100" />
+                      </svg>
+                    </div>
+                  </div>
+                  <label for="filter-color-5" class="text-sm text-gray-600">Голубой</label>
                 </div>
               </div>
             </div>
@@ -264,17 +226,17 @@
             <h3 class="-my-3 flow-root">
               <button type="button" command="--toggle" commandfor="filter-section-category" class="flex w-full items-center justify-between bg-white py-3 text-sm text-gray-400 hover:text-gray-500">
                 <span class="font-medium text-gray-900">Категория</span>
-                <span class="ml-6 flex items-center">
+                <!-- <span class="ml-6 flex items-center">
                   <svg viewBox="0 0 20 20" fill="currentColor" data-slot="icon" aria-hidden="true" class="size-5 in-aria-expanded:hidden">
                     <path d="M10.75 4.75a.75.75 0 0 0-1.5 0v4.5h-4.5a.75.75 0 0 0 0 1.5h4.5v4.5a.75.75 0 0 0 1.5 0v-4.5h4.5a.75.75 0 0 0 0-1.5h-4.5v-4.5Z" />
                   </svg>
                   <svg viewBox="0 0 20 20" fill="currentColor" data-slot="icon" aria-hidden="true" class="size-5 not-in-aria-expanded:hidden">
                     <path d="M4 10a.75.75 0 0 1 .75-.75h10.5a.75.75 0 0 1 0 1.5H4.75A.75.75 0 0 1 4 10Z" clip-rule="evenodd" fill-rule="evenodd" />
                   </svg>
-                </span>
+                </span> -->
               </button>
             </h3>
-            <div id="filter-section-category" class="hidden  block pt-6">
+            <div id="filter-section-category" class="block pt-6">
               <div class="space-y-4">
                 <div class="flex gap-3">
                   <div class="flex h-5 shrink-0 items-center">
@@ -291,6 +253,42 @@
                 <div class="flex gap-3">
                   <div class="flex h-5 shrink-0 items-center">
                     <div class="group grid size-4 grid-cols-1">
+                      <input id="filter-category-0" type="checkbox" name="category[]" value="new-arrivals" class="col-start-1 row-start-1 appearance-none rounded-sm border border-gray-300 bg-white checked:border-indigo-600 checked:bg-indigo-600 indeterminate:border-indigo-600 indeterminate:bg-indigo-600 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 disabled:border-gray-300 disabled:bg-gray-100 disabled:checked:bg-gray-100 forced-colors:appearance-auto" />
+                      <svg viewBox="0 0 14 14" fill="none" class="pointer-events-none col-start-1 row-start-1 size-3.5 self-center justify-self-center stroke-white group-has-disabled:stroke-gray-950/25">
+                        <path d="M3 8L6 11L11 3.5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="opacity-0 group-has-checked:opacity-100" />
+                        <path d="M3 7H11" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="opacity-0 group-has-indeterminate:opacity-100" />
+                      </svg>
+                    </div>
+                  </div>
+                  <label for="filter-category-0" class="text-sm text-gray-600">Кроссовки для взрослых</label>
+                </div>
+                <div class="flex gap-3">
+                  <div class="flex h-5 shrink-0 items-center">
+                    <div class="group grid size-4 grid-cols-1">
+                      <input id="filter-category-0" type="checkbox" name="category[]" value="new-arrivals" class="col-start-1 row-start-1 appearance-none rounded-sm border border-gray-300 bg-white checked:border-indigo-600 checked:bg-indigo-600 indeterminate:border-indigo-600 indeterminate:bg-indigo-600 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 disabled:border-gray-300 disabled:bg-gray-100 disabled:checked:bg-gray-100 forced-colors:appearance-auto" />
+                      <svg viewBox="0 0 14 14" fill="none" class="pointer-events-none col-start-1 row-start-1 size-3.5 self-center justify-self-center stroke-white group-has-disabled:stroke-gray-950/25">
+                        <path d="M3 8L6 11L11 3.5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="opacity-0 group-has-checked:opacity-100" />
+                        <path d="M3 7H11" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="opacity-0 group-has-indeterminate:opacity-100" />
+                      </svg>
+                    </div>
+                  </div>
+                  <label for="filter-category-0" class="text-sm text-gray-600">Кроссовки для детей</label>
+                </div>
+                <div class="flex gap-3">
+                  <div class="flex h-5 shrink-0 items-center">
+                    <div class="group grid size-4 grid-cols-1">
+                      <input id="filter-category-0" type="checkbox" name="category[]" value="new-arrivals" class="col-start-1 row-start-1 appearance-none rounded-sm border border-gray-300 bg-white checked:border-indigo-600 checked:bg-indigo-600 indeterminate:border-indigo-600 indeterminate:bg-indigo-600 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 disabled:border-gray-300 disabled:bg-gray-100 disabled:checked:bg-gray-100 forced-colors:appearance-auto" />
+                      <svg viewBox="0 0 14 14" fill="none" class="pointer-events-none col-start-1 row-start-1 size-3.5 self-center justify-self-center stroke-white group-has-disabled:stroke-gray-950/25">
+                        <path d="M3 8L6 11L11 3.5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="opacity-0 group-has-checked:opacity-100" />
+                        <path d="M3 7H11" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="opacity-0 group-has-indeterminate:opacity-100" />
+                      </svg>
+                    </div>
+                  </div>
+                  <label for="filter-category-0" class="text-sm text-gray-600">Из-за рубежа</label>
+                </div>
+                <div class="flex gap-3">
+                  <div class="flex h-5 shrink-0 items-center">
+                    <div class="group grid size-4 grid-cols-1">
                       <input id="filter-category-1" type="checkbox" name="category[]" value="sale" class="col-start-1 row-start-1 appearance-none rounded-sm border border-gray-300 bg-white checked:border-indigo-600 checked:bg-indigo-600 indeterminate:border-indigo-600 indeterminate:bg-indigo-600 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 disabled:border-gray-300 disabled:bg-gray-100 disabled:checked:bg-gray-100 forced-colors:appearance-auto" />
                       <svg viewBox="0 0 14 14" fill="none" class="pointer-events-none col-start-1 row-start-1 size-3.5 self-center justify-self-center stroke-white group-has-disabled:stroke-gray-950/25">
                         <path d="M3 8L6 11L11 3.5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="opacity-0 group-has-checked:opacity-100" />
@@ -299,6 +297,30 @@
                     </div>
                   </div>
                   <label for="filter-category-1" class="text-sm text-gray-600">Распродажа</label>
+                </div>
+                <div class="flex gap-3">
+                  <div class="flex h-5 shrink-0 items-center">
+                    <div class="group grid size-4 grid-cols-1">
+                      <input id="filter-category-0" type="checkbox" name="category[]" value="new-arrivals" class="col-start-1 row-start-1 appearance-none rounded-sm border border-gray-300 bg-white checked:border-indigo-600 checked:bg-indigo-600 indeterminate:border-indigo-600 indeterminate:bg-indigo-600 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 disabled:border-gray-300 disabled:bg-gray-100 disabled:checked:bg-gray-100 forced-colors:appearance-auto" />
+                      <svg viewBox="0 0 14 14" fill="none" class="pointer-events-none col-start-1 row-start-1 size-3.5 self-center justify-self-center stroke-white group-has-disabled:stroke-gray-950/25">
+                        <path d="M3 8L6 11L11 3.5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="opacity-0 group-has-checked:opacity-100" />
+                        <path d="M3 7H11" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="opacity-0 group-has-indeterminate:opacity-100" />
+                      </svg>
+                    </div>
+                  </div>
+                  <label for="filter-category-0" class="text-sm text-gray-600">Повседневные</label>
+                </div>
+                <div class="flex gap-3">
+                  <div class="flex h-5 shrink-0 items-center">
+                    <div class="group grid size-4 grid-cols-1">
+                      <input id="filter-category-0" type="checkbox" name="category[]" value="new-arrivals" class="col-start-1 row-start-1 appearance-none rounded-sm border border-gray-300 bg-white checked:border-indigo-600 checked:bg-indigo-600 indeterminate:border-indigo-600 indeterminate:bg-indigo-600 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 disabled:border-gray-300 disabled:bg-gray-100 disabled:checked:bg-gray-100 forced-colors:appearance-auto" />
+                      <svg viewBox="0 0 14 14" fill="none" class="pointer-events-none col-start-1 row-start-1 size-3.5 self-center justify-self-center stroke-white group-has-disabled:stroke-gray-950/25">
+                        <path d="M3 8L6 11L11 3.5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="opacity-0 group-has-checked:opacity-100" />
+                        <path d="M3 7H11" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="opacity-0 group-has-indeterminate:opacity-100" />
+                      </svg>
+                    </div>
+                  </div>
+                  <label for="filter-category-0" class="text-sm text-gray-600">Фитнес</label>
                 </div>
                 <div class="flex gap-3">
                   <div class="flex h-5 shrink-0 items-center">
@@ -342,18 +364,18 @@
           <div class="border-b border-gray-200 py-6">
             <h3 class="-my-3 flow-root">
               <button type="button" command="--toggle" commandfor="filter-section-size" class="flex w-full items-center justify-between bg-white py-3 text-sm text-gray-400 hover:text-gray-500">
-                <span class="font-medium text-gray-900">Размер</span>
-                <span class="ml-6 flex items-center">
+                <span class="font-medium text-gray-900">Размер обуви</span>
+                <!-- <span class="ml-6 flex items-center">
                   <svg viewBox="0 0 20 20" fill="currentColor" data-slot="icon" aria-hidden="true" class="size-5 in-aria-expanded:hidden">
                     <path d="M10.75 4.75a.75.75 0 0 0-1.5 0v4.5h-4.5a.75.75 0 0 0 0 1.5h4.5v4.5a.75.75 0 0 0 1.5 0v-4.5h4.5a.75.75 0 0 0 0-1.5h-4.5v-4.5Z" />
                   </svg>
                   <svg viewBox="0 0 20 20" fill="currentColor" data-slot="icon" aria-hidden="true" class="size-5 not-in-aria-expanded:hidden">
                     <path d="M4 10a.75.75 0 0 1 .75-.75h10.5a.75.75 0 0 1 0 1.5H4.75A.75.75 0 0 1 4 10Z" clip-rule="evenodd" fill-rule="evenodd" />
                   </svg>
-                </span>
+                </span> -->
               </button>
             </h3>
-            <el-disclosure id="filter-section-size"  class="hidden  block pt-6">
+            <el-disclosure id="filter-section-size"  class="block pt-6">
               <div class="space-y-4">
                 <div class="flex gap-3">
                   <div class="flex h-5 shrink-0 items-center">
@@ -365,7 +387,7 @@
                       </svg>
                     </div>
                   </div>
-                  <label for="filter-size-0" class="text-sm text-gray-600">2L</label>
+                  <label for="filter-size-0" class="text-sm text-gray-600">36</label>
                 </div>
                 <div class="flex gap-3">
                   <div class="flex h-5 shrink-0 items-center">
@@ -377,7 +399,7 @@
                       </svg>
                     </div>
                   </div>
-                  <label for="filter-size-1" class="text-sm text-gray-600">6L</label>
+                  <label for="filter-size-1" class="text-sm text-gray-600">38</label>
                 </div>
                 <div class="flex gap-3">
                   <div class="flex h-5 shrink-0 items-center">
@@ -389,7 +411,7 @@
                       </svg>
                     </div>
                   </div>
-                  <label for="filter-size-2" class="text-sm text-gray-600">12L</label>
+                  <label for="filter-size-2" class="text-sm text-gray-600">40</label>
                 </div>
                 <div class="flex gap-3">
                   <div class="flex h-5 shrink-0 items-center">
@@ -401,7 +423,7 @@
                       </svg>
                     </div>
                   </div>
-                  <label for="filter-size-3" class="text-sm text-gray-600">18L</label>
+                  <label for="filter-size-3" class="text-sm text-gray-600">42</label>
                 </div>
                 <div class="flex gap-3">
                   <div class="flex h-5 shrink-0 items-center">
@@ -413,7 +435,7 @@
                       </svg>
                     </div>
                   </div>
-                  <label for="filter-size-4" class="text-sm text-gray-600">20L</label>
+                  <label for="filter-size-4" class="text-sm text-gray-600">44</label>
                 </div>
                 <div class="flex gap-3">
                   <div class="flex h-5 shrink-0 items-center">
@@ -425,10 +447,17 @@
                       </svg>
                     </div>
                   </div>
-                  <label for="filter-size-5" class="text-sm text-gray-600">40L</label>
+                  <label for="filter-size-5" class="text-sm text-gray-600">46</label>
                 </div>
               </div>
             </el-disclosure>
+          </div>
+          <div class="">
+              Цена, ₽
+          </div>
+          <div class="flex">
+            <input type="number"  min="500" max="1400"  placeholder="от 500" />
+            <input type="number"  min="500" max="1400"  placeholder="до 1400" />
           </div>
         </form>
         <!-- Product grid -->
@@ -449,8 +478,8 @@
                         </div>
                     <div class="px-2  pt-2">
                         <div>
-                            <span class="text-red-800 decoration-3 leading-tight">999$</span> 
-                            <span><s>3000$</s></span>
+                            <span class="text-red-800 decoration-3 leading-tight">500 ₽</span> 
+                            <span><s>3000 ₽</s></span>
                             <span class="text-red-700" decoration-1>-88%</span>
                         </div>
                         <div class="text-red-800">
@@ -469,7 +498,7 @@
                                             <path fill="#ffce31" 
                                             d="M62 25.2H39.1L32 3l-7.1 22.2H2l18.5 13.7l-7 22.1L32 47.3L50.5 61l-7.1-22.2z"/>
                                         </svg>
-                                            <span class="text-black">4.5</span>
+                                            <span class="text-black">4</span>
                                             <span>
                                                 <svg 
                                                     xmlns="http://www.w3.org/2000/svg" 
@@ -517,8 +546,8 @@
                         </div>
                     <div class="px-2  pt-2">
                         <div>
-                            <span class="text-red-800 decoration-3 leading-tight">999$</span> 
-                            <span><s>3000$</s></span>
+                            <span class="text-red-800 decoration-3 leading-tight">600 ₽</span> 
+                            <span><s>3000 ₽</s></span>
                             <span class="text-red-700" decoration-1>-88%</span>
                         </div>
                         <div class="text-red-800">
@@ -585,8 +614,8 @@
                         </div>
                     <div class="px-2  pt-2">
                         <div>
-                        <span class="text-red-800 decoration-3 leading-tight">999$</span> 
-                        <span><s>3000$</s></span>
+                        <span class="text-red-800 decoration-3 leading-tight">700 ₽</span> 
+                        <span><s>3000 ₽</s></span>
                         <span class="text-red-700" decoration-1>-88%</span>
                     </div>
                     <div class="text-red-800">
@@ -605,7 +634,7 @@
                             <path fill="#ffce31" 
                             d="M62 25.2H39.1L32 3l-7.1 22.2H2l18.5 13.7l-7 22.1L32 47.3L50.5 61l-7.1-22.2z"/>
                         </svg>
-                        <span class="text-black">4.5</span>
+                        <span class="text-black">2.5</span>
                         <span>
                             <svg 
                                 xmlns="http://www.w3.org/2000/svg" 
@@ -651,8 +680,8 @@
                         </div>
                     <div class="px-2  pt-2">
                         <div>
-                        <span class="text-red-800 decoration-3 leading-tight">999$</span> 
-                        <span><s>3000$</s></span>
+                        <span class="text-red-800 decoration-3 leading-tight">800 ₽</span> 
+                        <span><s>3000 ₽</s></span>
                         <span class="text-red-700" decoration-1>-88%</span>
                     </div>
                     <div class="text-red-800">
@@ -671,7 +700,7 @@
                             <path fill="#ffce31" 
                             d="M62 25.2H39.1L32 3l-7.1 22.2H2l18.5 13.7l-7 22.1L32 47.3L50.5 61l-7.1-22.2z"/>
                         </svg>
-                        <span class="text-black">4.5</span>
+                        <span class="text-black">4.6</span>
                         <span>
                             <svg 
                                 xmlns="http://www.w3.org/2000/svg" 
@@ -717,8 +746,8 @@
                         </div>
                     <div class="px-2  pt-2">
                         <div>
-                            <span class="text-red-800 decoration-3 leading-tight">999$</span> 
-                            <span><s>3000$</s></span>
+                            <span class="text-red-800 decoration-3 leading-tight">900 ₽</span> 
+                            <span><s>3000 ₽</s></span>
                             <span class="text-red-700" decoration-1>-88%</span>
                         </div>
                         <div class="text-red-800">
@@ -737,7 +766,7 @@
                                             <path fill="#ffce31" 
                                             d="M62 25.2H39.1L32 3l-7.1 22.2H2l18.5 13.7l-7 22.1L32 47.3L50.5 61l-7.1-22.2z"/>
                                         </svg>
-                                            <span class="text-black">4.5</span>
+                                            <span class="text-black">3.4</span>
                                             <span>
                                                 <svg 
                                                     xmlns="http://www.w3.org/2000/svg" 
@@ -785,8 +814,8 @@
                         </div>
                     <div class="px-2  pt-2">
                         <div>
-                        <span class="text-red-800 decoration-3 leading-tight">999$</span> 
-                        <span><s>3000$</s></span>
+                        <span class="text-red-800 decoration-3 leading-tight">1000 ₽</span> 
+                        <span><s>3000 ₽</s></span>
                         <span class="text-red-700" decoration-1>-88%</span>
                     </div>
                     <div class="text-red-800">
@@ -805,7 +834,7 @@
                             <path fill="#ffce31" 
                             d="M62 25.2H39.1L32 3l-7.1 22.2H2l18.5 13.7l-7 22.1L32 47.3L50.5 61l-7.1-22.2z"/>
                         </svg>
-                        <span class="text-black">4.5</span>
+                        <span class="text-black">4.9</span>
                         <span>
                             <svg 
                                 xmlns="http://www.w3.org/2000/svg" 
@@ -851,8 +880,8 @@
                         </div>
                     <div class="px-2  pt-2">
                         <div>
-                        <span class="text-red-800 decoration-3 leading-tight">999$</span> 
-                        <span><s>3000$</s></span>
+                        <span class="text-red-800 decoration-3 leading-tight">1100 ₽</span> 
+                        <span><s>3000 ₽</s></span>
                         <span class="text-red-700" decoration-1>-88%</span>
                     </div>
                     <div class="text-red-800">
@@ -871,7 +900,7 @@
                             <path fill="#ffce31" 
                             d="M62 25.2H39.1L32 3l-7.1 22.2H2l18.5 13.7l-7 22.1L32 47.3L50.5 61l-7.1-22.2z"/>
                         </svg>
-                        <span class="text-black">4.5</span>
+                        <span class="text-black">5</span>
                         <span>
                             <svg 
                                 xmlns="http://www.w3.org/2000/svg" 
@@ -917,8 +946,8 @@
                         </div>
                     <div class="px-2  pt-2">
                         <div>
-                        <span class="text-red-800 decoration-3 leading-tight">999$</span> 
-                        <span><s>3000$</s></span>
+                        <span class="text-red-800 decoration-3 leading-tight">1200 ₽</span> 
+                        <span><s>3000 ₽</s></span>
                         <span class="text-red-700" decoration-1>-88%</span>
                     </div>
                     <div class="text-red-800">
@@ -937,7 +966,7 @@
                             <path fill="#ffce31" 
                             d="M62 25.2H39.1L32 3l-7.1 22.2H2l18.5 13.7l-7 22.1L32 47.3L50.5 61l-7.1-22.2z"/>
                         </svg>
-                        <span class="text-black">4.5</span>
+                        <span class="text-black">4.8</span>
                         <span>
                             <svg 
                                 xmlns="http://www.w3.org/2000/svg" 
@@ -983,8 +1012,8 @@
                         </div>
                     <div class="px-2  pt-2">
                         <div>
-                            <span class="text-red-800 decoration-3 leading-tight">999$</span> 
-                            <span><s>3000$</s></span>
+                            <span class="text-red-800 decoration-3 leading-tight">1300 ₽</span> 
+                            <span><s>3000 ₽</s></span>
                             <span class="text-red-700" decoration-1>-88%</span>
                         </div>
                         <div class="text-red-800">
@@ -1003,7 +1032,7 @@
                                             <path fill="#ffce31" 
                                             d="M62 25.2H39.1L32 3l-7.1 22.2H2l18.5 13.7l-7 22.1L32 47.3L50.5 61l-7.1-22.2z"/>
                                         </svg>
-                                            <span class="text-black">4.5</span>
+                                            <span class="text-black">3.4</span>
                                             <span>
                                                 <svg 
                                                     xmlns="http://www.w3.org/2000/svg" 
@@ -1051,8 +1080,8 @@
                         </div>
                     <div class="px-2  pt-2">
                         <div>
-                            <span class="text-red-800 decoration-3 leading-tight">999$</span> 
-                            <span><s>3000$</s></span>
+                            <span class="text-red-800 decoration-3 leading-tight">1400 ₽</span> 
+                            <span><s>3000 ₽</s></span>
                             <span class="text-red-700" decoration-1>-88%</span>
                         </div>
                         <div class="text-red-800">
@@ -1071,7 +1100,7 @@
                                             <path fill="#ffce31" 
                                             d="M62 25.2H39.1L32 3l-7.1 22.2H2l18.5 13.7l-7 22.1L32 47.3L50.5 61l-7.1-22.2z"/>
                                         </svg>
-                                            <span class="text-black">4.5</span>
+                                            <span class="text-black">2.4</span>
                                             <span>
                                                 <svg 
                                                     xmlns="http://www.w3.org/2000/svg" 
@@ -1153,6 +1182,158 @@
     </div>
   </div>
     </div>
+    <footer class="footer">
+            <div class="flex gap-60 pb-10">
+              <div>
+                 <h1 class="text-4xl pl-4 pb-5">
+                      Покупайте в приложении, <br/> так удобнее
+                </h1>
+                <ul class="flex justify-start items-center gap-4 pl-4 pb-10">
+                        <li>
+                          <a href="https://logo-teka.com/rustore/">
+                          <img src="https://logo-teka.com/wp-content/uploads/2025/07/rustore-sign-logo.svg" alt="SVG logo RuStore" width="64" />
+                        </a>
+                        </li>
+                        <li>
+                          <a href="https://logo-teka.com/apple/">
+                            <img src="https://logo-teka.com/wp-content/uploads/2025/06/apple-logo.png" alt="PNG logo Apple" width="64" />
+                          </a>
+                        </li>
+                        <li>
+                          <a href="https://logo-teka.com/google-play/">
+                            <img src="https://logo-teka.com/wp-content/uploads/2025/06/google-play-sign-logo.svg" alt="SVG logo Google Play" width="64" />
+                           </a>
+                        </li>
+                        <li>
+                          <a href="https://logo-teka.com/huawei/">
+                            <img src="https://logo-teka.com/wp-content/uploads/2025/06/huawei-logo.png" alt="PNG logo Huawei" width="64" />
+                          </a>
+                        </li>
+                </ul>
+                <ul>
+                  <li class="pl-4">
+                    <img src="img/qr.svg" alt="" width="150">
+                  </li>
+                  <li class="pl-4 pb-4 text-gray-400">
+                    Наведите камеру на QR-код,<br/>
+                    чтобы скачать приложение
+                  </li>
+                </ul>
+              </div>       
+              <div class="gap-x-16">
+                <ul class="justify-start items-end text-left">
+                   <li class="text-2xl pb-5">
+                      Покупателям
+                  </li>
+                  <li class="hover:text-red-600 text-gray-400">
+                   <a href="">
+                    Как выбрать товар
+                  </a> 
+                  </li>
+                  <li class="hover:text-red-600 text-gray-400">
+                    <a href="">
+                       Оплата и доставка
+                    </a>
+                  </li>
+                  <li class="hover:text-red-600 text-gray-400">
+                    <a href="">
+                      Обратная связь
+                    </a>
+                  </li>
+                  <li class="hover:text-red-600 text-gray-400">
+                    <a href="">
+                       О сервисе
+                    </a>
+                  </li>
+                  <li class="hover:text-red-600 text-gray-400">
+                    <a href="">
+                      Возвраты
+                    </a>
+                  </li>
+                  <li class="hover:text-red-600 text-gray-400">
+                    <a href="">
+                       Журнал Маркета
+                    </a>
+                  </li>
+                </ul>
+                <ul>
+                  <li class="text-2xl pb-5 pt-10" >
+                  Сотрудничество
+                  </li>
+                  <li class="hover:text-red-600 text-gray-400">
+                    Новости компании
+                  </li>
+                  <li class="hover:text-red-600 text-gray-400">
+                    Партнёрская программа
+                  </li>
+                  <li class="hover:text-red-600 text-gray-400">
+                    Производителям
+                  </li>
+                  <li class="hover:text-red-600 text-gray-400">
+                    <a href="">
+                      Пункт выдачи заказов
+                    </a>
+                  </li>
+                   <li class="hover:text-red-600 text-gray-400">
+                    <a href="">
+                    Маркет нанимает
+                    </a>
+                  </li>
+                </ul>
+              </div>
+               <div class="gap-x-16">
+                <ul class="justify-start items-end text-left pb-12">
+                   <li class="text-2xl pb-5">
+                     Продавцам
+                  </li>
+                  <li class="hover:text-red-600 text-gray-400">
+                   <a href="">
+                  Личный кабинет продавца
+                  </a> 
+                  </li>
+                  <li class="hover:text-red-600 text-gray-400">
+                    <a href="">
+                      Продавайте на Маркете
+                    </a>
+                  </li>
+                  <li class="hover:text-red-600 text-gray-400">
+                    <a href="">
+                      Документация для партнёров
+                    </a>
+                  </li>
+                  <li class="hover:text-red-600 text-gray-400">
+                    <a href="">
+                      Сайт для партнёров
+                    </a>
+                  </li>
+                </ul>
+                <ul>
+                  <li class="text-2xl pb-5 pt-10 " >
+                  Мы в соцсетях
+                  </li>
+                  <li class="flex justify-start items-center gap-1">
+                      <a href="https://logo-teka.com/vk/">
+                        <img src="https://logo-teka.com/wp-content/uploads/2025/06/vk-logo.svg" alt="SVG logo VK" width="42" />
+                      </a>
+                      <a href="" src="https://logo-teka.com/wp-content/uploads/2025/06/vk-logo.svg" class="hover:text-gray-600  text-gray-400">
+                        Вконтакте
+                      </a>
+                  </li>
+                </ul>
+              </div>
+            </div>         
+            <div class="flex justify-center items-center text-2xl pb-6 pt-6 gap-10 pl-6 bg-gray-300 ">
+                <h2 class="hover:text-red-600">
+                  Статистика
+                </h2>
+                <h2 class="hover:text-red-600">
+                Пользовательское соглашение
+                </h2>
+                  <h2 class="hover:text-red-600">
+                © 2025  ООО «Mic retail»
+                </h2>
+            </div>  
+</footer>
     <script src="main.js"></script>
      <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"> </script>
         <script>
@@ -1164,8 +1345,5 @@
       },
     });
         </script>
-       
-   
-</body>
-
+      </body>
 </html>
