@@ -615,6 +615,12 @@ video {
 .shrink-0 {
   flex-shrink: 0;
 }
+<<<<<<< HEAD
+=======
+.cursor-pointer {
+  cursor: pointer;
+}
+>>>>>>> a5611d6 (SHOP)
 .appearance-none {
   -webkit-appearance: none;
      -moz-appearance: none;
@@ -629,12 +635,27 @@ video {
 .flex-wrap {
   flex-wrap: wrap;
 }
+<<<<<<< HEAD
+=======
+.items-end {
+  align-items: flex-end;
+}
+>>>>>>> a5611d6 (SHOP)
 .items-center {
   align-items: center;
 }
 .items-baseline {
   align-items: baseline;
 }
+<<<<<<< HEAD
+=======
+.justify-start {
+  justify-content: flex-start;
+}
+.justify-end {
+  justify-content: flex-end;
+}
+>>>>>>> a5611d6 (SHOP)
 .justify-center {
   justify-content: center;
 }
@@ -650,6 +671,19 @@ video {
 .gap-3 {
   gap: 0.75rem;
 }
+<<<<<<< HEAD
+=======
+.gap-4 {
+  gap: 1rem;
+}
+.gap-60 {
+  gap: 15rem;
+}
+.gap-x-16 {
+  -moz-column-gap: 4rem;
+       column-gap: 4rem;
+}
+>>>>>>> a5611d6 (SHOP)
 .gap-x-8 {
   -moz-column-gap: 2rem;
        column-gap: 2rem;
@@ -719,6 +753,13 @@ video {
 .border-white\/10 {
   border-color: rgb(255 255 255 / 0.1);
 }
+<<<<<<< HEAD
+=======
+.bg-gray-300 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(209 213 219 / var(--tw-bg-opacity, 1));
+}
+>>>>>>> a5611d6 (SHOP)
 .bg-indigo-500 {
   --tw-bg-opacity: 1;
   background-color: rgb(99 102 241 / var(--tw-bg-opacity, 1));
@@ -763,15 +804,42 @@ video {
   padding-top: 1.5rem;
   padding-bottom: 1.5rem;
 }
+<<<<<<< HEAD
+=======
+.pb-10 {
+  padding-bottom: 2.5rem;
+}
+.pb-12 {
+  padding-bottom: 3rem;
+}
+>>>>>>> a5611d6 (SHOP)
 .pb-2 {
   padding-bottom: 0.5rem;
 }
 .pb-24 {
   padding-bottom: 6rem;
 }
+<<<<<<< HEAD
 .pb-6 {
   padding-bottom: 1.5rem;
 }
+=======
+.pb-5 {
+  padding-bottom: 1.25rem;
+}
+.pb-6 {
+  padding-bottom: 1.5rem;
+}
+.pl-10 {
+  padding-left: 2.5rem;
+}
+.pl-6 {
+  padding-left: 1.5rem;
+}
+.pr-14 {
+  padding-right: 3.5rem;
+}
+>>>>>>> a5611d6 (SHOP)
 .pt-10 {
   padding-top: 2.5rem;
 }
@@ -784,12 +852,25 @@ video {
 .pt-6 {
   padding-top: 1.5rem;
 }
+<<<<<<< HEAD
+=======
+.text-left {
+  text-align: left;
+}
+>>>>>>> a5611d6 (SHOP)
 .indent-px {
   text-indent: 1px;
 }
 .font-serif {
   font-family: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
 }
+<<<<<<< HEAD
+=======
+.text-2xl {
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+>>>>>>> a5611d6 (SHOP)
 .text-4xl {
   font-size: 2.25rem;
   line-height: 2.5rem;
@@ -879,6 +960,14 @@ video {
   --tw-shadow-colored: 0 25px 50px -12px var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
+<<<<<<< HEAD
+=======
+.shadow-xl {
+  --tw-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+  --tw-shadow-colored: 0 20px 25px -5px var(--tw-shadow-color), 0 8px 10px -6px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+>>>>>>> a5611d6 (SHOP)
 .outline-none {
   outline: 2px solid transparent;
   outline-offset: 2px;
@@ -894,7 +983,11 @@ video {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
 }
+<<<<<<< HEAD
     .input-cnt {
+=======
+.input-cnt {
+>>>>>>> a5611d6 (SHOP)
       display: flex;
       width: 40%;
     }
