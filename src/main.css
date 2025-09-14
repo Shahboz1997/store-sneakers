@@ -1,7 +1,11 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+<<<<<<< HEAD
     .input-cnt {
+=======
+.input-cnt {
+>>>>>>> a5611d6 (SHOP)
       display: flex;
       width: 40%;
     }
