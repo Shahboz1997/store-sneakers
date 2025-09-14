@@ -665,6 +665,9 @@ video {
 .gap-1 {
   gap: 0.25rem;
 }
+.gap-10 {
+  gap: 2.5rem;
+}
 .gap-2 {
   gap: 0.5rem;
 }
@@ -820,18 +823,24 @@ video {
   padding-bottom: 6rem;
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 .pb-6 {
   padding-bottom: 1.5rem;
 }
 =======
+=======
+.pb-4 {
+  padding-bottom: 1rem;
+}
+>>>>>>> 9927887 (SHOP)
 .pb-5 {
   padding-bottom: 1.25rem;
 }
 .pb-6 {
   padding-bottom: 1.5rem;
 }
-.pl-10 {
-  padding-left: 2.5rem;
+.pl-4 {
+  padding-left: 1rem;
 }
 .pl-6 {
   padding-left: 1.5rem;
@@ -1081,6 +1090,16 @@ video {
     .hover\:text-gray-500:hover {
   --tw-text-opacity: 1;
   color: rgb(107 114 128 / var(--tw-text-opacity, 1));
+}
+
+    .hover\:text-gray-600:hover {
+  --tw-text-opacity: 1;
+  color: rgb(75 85 99 / var(--tw-text-opacity, 1));
+}
+
+    .hover\:text-red-600:hover {
+  --tw-text-opacity: 1;
+  color: rgb(220 38 38 / var(--tw-text-opacity, 1));
 }
 
     .focus\:z-20:focus {
