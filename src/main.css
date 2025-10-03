@@ -1,0 +1,141 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.input-cnt {
+      display: flex;
+      width: 40%;
+    }
+    .input-cnt > i {
+      min-width: 20px; 
+      padding: 10px; 
+      text-align: center; 
+      background: lightgrey; 
+      border-top-left-radius: 20px;
+      border-bottom-left-radius: 20px;
+    }
+    .input-cnt > input {
+      outline: none;
+      border: none;
+      border: 1px solid lightgrey;
+      border-top-right-radius: 20px;
+      border-top-left-radius: 0px;
+      border-bottom-right-radius: 20px;
+      border-bottom-left-radius: 0px;
+      width: 50%;
+      transition: width .5s;
+    }
+     .input-cnt:hover > input {
+      border: 2px solid rgb(37 99 235 / var(--tw-bg-opacity, 1));
+      width: 60%;
+    }
+    .input-cnt:hover > i {
+      background: rgb(37 99 235 / var(--tw-bg-opacity, 1));
+      color: white; 
+    } 
+     /* .swiper {
+      width: 200px;
+      height: 100%;
+    }
+
+    .swiper-slide {
+      text-align: center;
+      font-size: 18px;
+      background: #444;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .swiper-slide img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }  */
+    .demo{
+      position: relative;
+    }
+    .btn {
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  column-gap: var(--gap);
+  padding: 0.6rem;
+  cursor: pointer;
+  border-radius: var(--radius);
+  border: none;
+  box-shadow: var(--shadow);
+  position: relative;
+}
+
+.bx {
+  font-size: 1.1rem;
+}
+.bl {
+  font-size: 1.1rem;
+}
+
+.dropdown {
+  position: absolute;
+  width: 250px;
+  box-shadow: var(--shadow);
+  border-radius: var(--radius);
+  margin-top: 0.3rem;
+  background: white;
+}
+.demodown{
+  position: absolute;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.dropdown a {
+  display: flex;
+  align-items: center;
+  column-gap: var(--gap);
+  padding: 0.8rem 1rem;
+  text-decoration: none;
+  color: black;
+}
+
+.dropdown a:hover {
+  background-color:aqua;
+  color: rgb(231, 4, 4);
+}
+.dropdown {
+  position: absolute;
+  box-shadow: var(--shadow);
+  border-radius: var(--radius);
+  margin-top: 0.3rem;
+  background: white;
+  transition: all 0.1s cubic-bezier(0.16, 1, 0.5, 1);
+  transform: translateY(0.5rem);
+  visibility: hidden;
+  opacity: 0;
+}
+
+.show {
+  transform: translateY(0rem);
+  visibility: visible;
+  opacity: 1;
+}
+.shown {
+  transform: translateY(0rem);
+  visibility: visible;
+  opacity: 1;
+}
+.arrow {
+  transform: rotate(180deg);
+  transition: 0.2s ease;
+}
+.arrowlist {
+  transform: rotate(180deg);
+  transition: 0.2s ease;
+}
+
+.bx {
+  font-size: 1.1rem;
+}
+
