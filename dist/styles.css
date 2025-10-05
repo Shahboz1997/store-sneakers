@@ -1026,24 +1026,22 @@ video {
   transition-duration: 150ms;
 }
 
+
+header{
+  background-color: #3498DB;
+}
 .input-cnt {
       display: flex;
       width: 40%;
     }
-  /* .circle {
-  background:white;
-  border: 1px solid black;
-  border-radius: 50%;
-  height: 18px;
-  width: 18px;
-} */
     .input-cnt > i {
       min-width: 20px; 
       padding: 10px; 
       text-align: center; 
-      background: lightgrey; 
+      background: #fff;
       border-top-left-radius: 20px;
       border-bottom-left-radius: 20px;
+      cursor: pointer;
     }
     .input-cnt > input {
       outline: none;
@@ -1060,10 +1058,10 @@ video {
       border: 2px solid rgb(37 99 235 / var(--tw-bg-opacity, 1));
       width: 60%;
     }
-    .input-cnt:hover > i {
+    /* .input-cnt:hover > i {
       background: rgb(37 99 235 / var(--tw-bg-opacity, 1));
       color: white; 
-    } 
+    }  */
      /* .swiper {
       width: 200px;
       height: 100%;
