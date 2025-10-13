@@ -144,3 +144,6 @@ header{
   font-size: 1.1rem;
 }
 
+.pricelist.active {
+  background-color: #3498DB;
+}

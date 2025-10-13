@@ -314,6 +314,9 @@ const dropdownBtn = document.getElementById("btn");
 const dropdownMenu = document.getElementById("dropdown");
 const toggleArrow = document.getElementById("arrow");
 
+const priceListCollection = dropdownMenu.querySelectorAll(".pricelist");
+
+let activeSortType = "notchoice";
 
 const toggleDropdown = function () {
   dropdownMenu.classList.toggle("show");
@@ -330,6 +333,50 @@ document.documentElement.addEventListener("click", function () {
     toggleDropdown();
   }
 });
+
+
+
+function sortProducts(sortType) {
+  const copyProductData = productData.slice();
+  switch (sortType) {
+    case "notchoice":
+      break;
+    case "raiting":
+      //Отсортировать массив по убыванию рейтинга
+      break;
+    case "pricemore":
+      //По возрастанию
+      break;
+    case "priceless":
+      //По убывмнию
+      break;
+    case "sale":
+      //Фильтрация
+      break;
+    case "top":
+      // Фильтрация
+      break;
+  }
+  return copyProductData;
+}
+
+
+priceListCollection.forEach(item => {
+  item.addEventListener("click", (evt) => {
+    const element = evt.target;
+    const elementSortMenu = element.closest(".pricelist");
+    
+    priceListCollection.forEach(item => {
+      item.classList.remove("active");
+    });
+    elementSortMenu.classList.add("active");
+
+    activeSortType = elementSortMenu.id;
+    productData = [...sortProducts(activeSortType)];
+    renderProducts();
+    
+  })
+})
 
 
 
