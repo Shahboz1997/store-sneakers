@@ -1,3 +1,17 @@
+//Словарь
+const categories = {
+  new: "Новые поступления",
+  adults:"Кроссовки для взрослых ",
+  children:"Кроссовки для детей",
+  abroad:"Из-за рубежа",
+  sale:"Распродажа",
+  everyday:"Повседневные",
+  fitness:"Фитнес",
+  travel:"Путешествие",
+  office:"Для офиса",
+  accessories:"Аксессуары",
+  };
+
 
 // Данные
 let productData = [
@@ -5,230 +19,246 @@ let productData = [
         id: 0,
         img: 'img/5.webp',
         name: 'Nike',
-        price: '500 ₽',
+        price: 500,
         stock:'9222 ₽',
         leftover:'90 штук осталось',
         description: 'Для бега и прогулок по городу',
         color:'Цвет ',
-        circle:'#ff0000',
+        circle:"#ff0000",
         // size:['36', '38', '40','42', '44', '46'],
-        category:'Новые поступления',
+        category:'new',
         rating:4,
         overview:'Достоинства: Очень красивые. лучше, чем на фото.',
         review: '51 отзыв',
+        new: true,
     },
     {
         id: 1,
         img:'img/11.webp',
         name: 'Nike',
-        price: '600 ₽ ',
+        price: 300,
         stock:'8222 ₽',
         leftover:'90 штук осталось',
         description: 'Для бега и прогулок по городу',
         color:'Цвет ',
         circle:'#008000',
         // size:['36', '38', '40','42', '44', '46'],
-        category:'Из-за рубежа',
+        category:'abroad',
         rating:4.5,
         overview:'Достоинства: Очень красивые. лучше, чем на фото.',
         review: '51 отзыв',
+        new: false,
     },
        {
         id: 2,
         img: 'img/15.webp',
         name: 'Nike',
-        price: '700 ₽',
+        price: 700,
         stock:'9092 ₽',
         leftover:'90 штук осталось',
         description: 'Для бега и прогулок по городу',
         color:'Цвет ',
         circle:'#2c2929ff',
         // size:['36', '38', '40','42', '44', '46'],
-        category:'Кроссовки для детей',
+        category:'children',
         rating:4.6,
         overview:'Достоинства: Очень красивые. лучше, чем на фото.',
         review: '51 отзыв',
+        new: true,
     },
     {
         id: 3,
         img:'img/19.webp',
         name: 'Nike',
-        price: '800 ₽',
+        price: 800,
         stock:'7222 ₽',
         leftover:'90 штук осталось',
         description: 'Для бега и прогулок по городу',
         color:'Цвет ',
         circle:'#c2b5b5ff',
         // size:['36', '38', '40','42', '44', '46'],
-        category:'Кроссовки для взрослых',
+        category:'adults',
         rating:3.4,
         review: '51 отзыв',
+        new: false,
     },
        {
         id: 4,
         img: 'img/100.JPG',
         name: 'Nike',
-        price: '900 ₽',
+        price: 909,
         stock:'6222 ₽',
         leftover:'90 штук осталось',
         description: 'Для бега и прогулок по городу',
         color:'Цвет ',
         circle:'#a9a9a9',
         // size:['36', '38', '40','42', '44', '46'],
-        category:'Повседневные',
+        category:'everyday',
         rating:4.9,
         review: '51 отзыв',
+        new: true,
         
     },
     {
         id: 5,
         img: 'img/23.webp',
         name: 'Nike',
-        price: '1000 ₽',
+        price: 1000,
         stock:'11222 ₽',
         leftover:'90 штук осталось',
         description: 'Для бега и прогулок по городу',
         color:'Цвет ',
         circle:'#ffff00',
         // size:['36', '38', '40','42', '44', '46'],
-        category:'Фитнес',
+        category:'fitness',
         rating:5,
         review: '51 отзыв',
+        new: true,
+    
     },
      {
         id: 6,
         img: 'img/27.webp',
         name: 'Nike',
-        price: '1100 ₽',
+        price: 1100,
         stock:'6222 ₽',
         leftover:'90 штук осталось',
         description: 'Для бега и прогулок по городу',
         color:'Цвет ',
         circle:'#0a0a63ff',
         // size:['36', '38', '40','42', '44', '46'],
-        category:'Аксессуары',
+        category:'accessories',
         rating:4.8,
         review: '51 отзыв',
+        new: true,
     },
      {
         id: 7,
         img: 'img/114.jpg',
         name: 'Nike',
-        price: '1200 ₽',
+        price: 1200,
         stock:'1922 ₽',
         leftover: '90 штук осталось',
         description: 'Для бега и прогулок по городу',
         color:'Цвет ',
         circle:'#f3ebe3ff',
         // size:['36', '38', '40','42', '44', '46'],
-        category:'Организация',
+        category:'office',
         rating:3.4,
         review: '51 отзыв',
+        new: true,
     },
      {
         id: 8,
         img: 'img/2.jpg',
         name: 'Nike',
-        price: '1300 ₽',
+        price: 1300,
         stock:'10222 ₽',
         leftover:'90 штук осталось',
         description: 'Для бега и прогулок по городу',
         color:'Цвет ',
         circle:'#706f67ff',
         // size:['36', '38', '40','42', '44', '46'],
-        category:'Путешествие',
+        category:'travel',
         rating:2.4,  
         review: '51 отзыв',  
+        new: true,
     },
       {
         id: 9,
         img: 'img/114.webp',
         name: 'Nike',
-        price: '1400 ₽',
+        price: 1400,
         stock:'9322 ₽',
         leftover:'90 штук осталось',
         description: 'Для бега и прогулок по городу',
         color:'Цвет ',
         circle:'#d84e65ff',
         // size:['36', '38', '40','42', '44', '46'],
-        category:'Распродажа',
+        category:'sale',
         rating:2.5,
         review:'51 отзыв',
+        new: true,
     },
          {
         id: 10,
         img: 'img/31.webp',
         name: 'Nike',
-        price: '1400 ₽',
+        price: 1400,
         stock:'13222 ₽',
         leftover:'90 штук осталось',
         description: 'Для бега и прогулок по городу',
         color:'Цвет ',
         circle:'#000000',
         // size:['36', '38', '40','42', '44', '46'],
-        category:'Распродажа',
+        category:'sale',
         rating:1.3,
         review:'51 отзыв',
+        new: false,
     },
          {
         id: 11,
         img: 'img/113.webp',
         name: 'Nike',
-        price: '1400 ₽',
+        price: 1400,
         stock:'14222 ₽',
         leftover:'90 штук осталось',
         description: 'Для бега и прогулок по городу',
         color:'Цвет ',
         circle:'#000000',
         // size:['36', '38', '40','42', '44', '46'],
-        category:'Распродажа',
+        category:'sale',
         rating:2,
         review:'51 отзыв',
+        new: true,
     },
        {
         id: 12,
         img: 'img/113.webp',
         name: 'Nike',
-        price: '1400 ₽',
+        price: 1400,
         stock:'14222 ₽',
         leftover:'90 штук осталось',
         description: 'Для бега и прогулок по городу',
         color:'Цвет ',
         circle:'#000000',
         // size:['36', '38', '40','42', '44', '46'],
-        category:'Распродажа',
+        category:'sale',
         rating:2,
         review:'51 отзыв',
+        new: true,
     },
        {
         id: 13,
         img: 'img/113.webp',
         name: 'Nike',
-        price: '1400 ₽',
+        price: 1400,
         stock:'14222 ₽',
         leftover:'90 штук осталось',
         description: 'Для бега и прогулок по городу',
         color:'Цвет ',
         circle:'#000000',
         // size:['36', '38', '40','42', '44', '46'],
-        category:'Распродажа',
+        category:'sale',
         rating:2,
         review:'51 отзыв',
+        new: true,
     },
        {
         id: 14,
         img: 'img/113.webp',
         name: 'Nike',
-        price: '1400 ₽',
+        price: 1400,
         stock:'14222 ₽',
         leftover:'90 штук осталось',
         description: 'Для бега и прогулок по городу',
         color:'Цвет ',
         circle:'#000000',
         // size:['36', '38', '40','42', '44', '46'],
-        category:'Распродажа',
+        category:'sale',
         rating:2,
         review:'51 отзыв',
+        new: true,
     },
 ]
 const productsContainer = document.querySelector(".products-container");
@@ -244,17 +274,16 @@ function renderProducts() {
             const productImage = imgContainer.querySelector(".image");
             productImage.src = product.img;                 
             productImage.alt = product.name;    
-
             const productInfo = card.querySelector('.info');
 
             productInfo.querySelector('.name').textContent = product.name;                 
-            productInfo.querySelector('.price').textContent = product.price;    
+            productInfo.querySelector('.price').querySelector("span").textContent = product.price;
             productInfo.querySelector('.stock').textContent = product.stock;  
             productInfo.querySelector('.left-over').textContent = product.leftover;               
             productInfo.querySelector('.description').textContent = product.description; 
             productInfo.querySelector('.color').textContent = product.color;  
             productInfo.querySelector('.circle').style.backgroundColor = product.circle;
-            productInfo.querySelector('.category').textContent = product.category;                
+            productInfo.querySelector('.category').textContent = categories[product.category];                
             productInfo.querySelector('.rating').textContent = product.rating;   
             productInfo.querySelector('.re-view').textContent = product. review;   
 
@@ -314,6 +343,12 @@ const dropdownBtn = document.getElementById("btn");
 const dropdownMenu = document.getElementById("dropdown");
 const toggleArrow = document.getElementById("arrow");
 
+const categoryArrow = document.getElementById("category");
+// const categorySection =categoryArrow.getElementById("filter-section-category");
+const categoryNew = document.getElementById("new");
+console.log(categoryNew, "Новые поступления");
+
+
 const priceListCollection = dropdownMenu.querySelectorAll(".pricelist");
 
 let activeSortType = "notchoice";
@@ -333,33 +368,31 @@ document.documentElement.addEventListener("click", function () {
     toggleDropdown();
   }
 });
-
-
-
+//Сортировка
 function sortProducts(sortType) {
-  const copyProductData = productData.slice();
+  let copyArray = copyProductData.slice();
+  console.log(sortType);
   switch (sortType) {
     case "notchoice":
       break;
     case "raiting":
-      //Отсортировать массив по убыванию рейтинга
+      copyArray = copyArray.sort((a, b) => b.rating - a.rating);
       break;
     case "pricemore":
-      //По возрастанию
+      copyArray = copyArray.sort((a, b) => a.price - b.price);
       break;
     case "priceless":
-      //По убывмнию
+      copyArray = copyArray.sort((a, b) => b.price - a.price);
       break;
     case "sale":
-      //Фильтрация
+      copyArray = copyArray.filter(item => item.category == "sale");
       break;
     case "top":
-      // Фильтрация
+      copyArray = copyArray.filter(item => item.new);
       break;
   }
-  return copyProductData;
+  return copyArray;
 }
-
 
 priceListCollection.forEach(item => {
   item.addEventListener("click", (evt) => {
@@ -374,38 +407,36 @@ priceListCollection.forEach(item => {
     activeSortType = elementSortMenu.id;
     productData = [...sortProducts(activeSortType)];
     renderProducts();
-    
   })
 })
 
 
+//Левые фильтры
+const leftFiltersContainer = document.querySelector("#left-filters-container");
+console.log("leftFiltersContainer", leftFiltersContainer );
 
-const demo = document.getElementById("demo");
-console.log(demo);
+const leftFiltersButton = leftFiltersContainer.querySelector("#left-filters-button");
+console.log("leftFilters",leftFiltersButton);
 
-const dropdemo = document.getElementById("demodown");
-console.log(dropdemo);
+const dropLeftFilters = leftFiltersContainer.querySelector("#drop-left-filters");
+console.log("dropLeftFilters", dropLeftFilters);
 
-const togglList = document.getElementById("arrowlist");
-console.log(togglList);
+const arrow = leftFiltersContainer.querySelector("#arrow-list");
 
 
-const togglListD = function () {
-  dropdemo.classList.toggle("shown");
-   togglList.classList.toggle("arrowlist");
+const leftFiltersShow = function () {
+  dropLeftFilters.classList.toggle("show");
+  arrow.classList.toggle("arrow");
 };
 
-demo.addEventListener("click", function (element) {
+leftFiltersButton.addEventListener("click", function (element) {
   element.stopPropagation();
-  togglListD();
+  leftFiltersShow();
 });
 
-document.documentElement.addEventListener("click", function (element) {
-  if (dropdemo.classList.contains("shown")) {
-     togglListD();
-  }
-});
-
-
-
+// document.documentElement.addEventListener("click", function (element) {
+//   if (dropdemo.classList.contains("shown")) {
+//      togglListD();
+//   }
+// });
 
