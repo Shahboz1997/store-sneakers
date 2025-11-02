@@ -53,7 +53,7 @@ let productData = [
         id: 2,
         img: 'img/15.webp',
         name: 'Nike',
-        price: 700,
+        price: 4000,
         stock:'9092 ₽',
         leftover:'90 штук осталось',
         description: 'Для бега и прогулок по городу',
@@ -439,4 +439,59 @@ leftFiltersButton.addEventListener("click", function (element) {
 //      togglListD();
 //   }
 // });
+
+
+const colorButton = document.querySelector("#color-button");
+const colorCollection = document.querySelector("#color-collection");
+
+colorButton.addEventListener("click", function (element) {
+  if(colorCollection.style.display === "none"){
+    colorCollection.style.display = "block";  // показываем список
+  }
+  else{
+    colorCollection.style.display = "none"; // Скрываем список
+  }
+});
+const categoryButton = document.querySelector("#category-button");
+const filterSectionCategory= document.querySelector("#filter-section-category");
+
+categoryButton.addEventListener("click", function(element){
+  if(filterSectionCategory.style.display === "none"){
+    filterSectionCategory.style.display = "block";
+  }
+  else{
+    filterSectionCategory.style.display ="none";
+  }
+})
+
+const sizeSneakers = document.querySelector("#size-sneakers");
+const filterSectionSize= document.querySelector("#filter-section-size");
+
+sizeSneakers.addEventListener("click", function(element){
+  if(filterSectionSize.style.display === "none"){
+    filterSectionSize.style.display = "block";
+  }
+  else{
+    filterSectionSize.style.display ="none";
+  }
+
+})
+const priceButton = document.querySelector("#price-button");
+const priceCollection = document.querySelector("#price-collection");
+
+priceButton.addEventListener("click", function(element){
+  if(priceCollection.style.display === "none"){
+    priceCollection.style.display = "block";
+  }
+  else{
+    priceCollection.style.display ="none";
+  }
+
+})
+
+
+
+
+
+
 

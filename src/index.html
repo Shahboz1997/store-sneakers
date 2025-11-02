@@ -67,14 +67,13 @@
               </span> 
                 <span class="mb-1.5 text-white font-semibold "> 
                     Послезавтра
-                    
                 </span>
               </button>
         </div>
       </div>
   </template>
 <div>
-  <header class="absolute inset-x-0 top-0 z-50">
+  <header class="absolute inset-x-0 top-0 z-50" style="position: fixed;">
     <nav aria-label="Global" class="flex items-center justify-between p-6 lg:px-8">
       <div class="flex lg:flex-1">
         <div class="flex justify-center items-center gap-2">
@@ -116,23 +115,22 @@
     <div class="flex items-baseline justify-between border-b border-gray-200 pt-10 pb-6">
       <h1 class="text-4xl font-bold tracking-tight text-gray-900">Кроссовки - NIKE</h1>
     </div>
-    <div class="flex items-center justify-between">
-         <div class="flex justify-start pt-10 rounded-lg flex flex-col">
-            <div id="left-filters-container" class="inline-block pl-8">
+    <div class="flex items-center justify-between pb-10 pt-10">
+         <div class="flex justify-start rounded-lg flex flex-col">
+            <div id="left-filters-container" class="inline-block pl-8" style="position: fixed;">
                 <button id="left-filters-button" class="demo font-bold px-10 py-2 rounded-2xl bg-gray-200 hover:bg-gray-400 focus:outline-2 focus:outline-offset-2 focus:outline-violet-500 active:bg-gray-700" style="background-color: #3498DB;">
                     Все фильтры
                     <i class="bx bx-chevron-down" id="arrow-list"></i>
                 </button>
                 <div class="demodown block lg:block bg-slate-50 w-[265px]" id="drop-left-filters" >
-                    <div id="color-filters" class="border-b border-gray-200 py-6 shadow-2xl rounded-lg" >
+                    <div id="color-filters" class="border-b border-gray-200 py-4 rounded-lg" >
                       <h3 class="-my-3 flow-root">
-                        <button type="button" class="demo flex w-full items-center justify-between bg-white py-3 text-sm text-gray-400 hover:text-gray-500">
-                          <span class="font-medium text-gray-900 text-3xl">Цвет</span>
-                          <i class="bx bx-chevron-down" id="arrowlist"></i>
+                        <button type="button"  class="demo hover:bg-gray-200 flex w-full items-center justify-between bg-white py-3 text-sm text-gray-400 hover:text-gray-500">
+                          <span class="font-medium text-gray-900 text-2xl" id="color-button">Цвет</span>
                         </button>
                       </h3>
-                      <div class="block pt-6">
-                        <div class="shadow-2xl rounded-lg">
+                      <div class="pt-6" id="color-collection">
+                        <div class="ounded-lg">
                           <div class="flex gap-3 hover:bg-gray-200  px-2 py-2 rounded-2xl">
                             <div class="flex h-5 shrink-0 items-center">
                               <div class="group grid size-4 grid-cols-1">
@@ -220,14 +218,13 @@
                         </div>
                       </div>
                     </div>
-                    <div id="category" class="border-b border-gray-200 py-6  shadow-2xl rounded-lg">
-                      <h3 class="-my-3 flow-root">
-                        <button type="button" command="--toggle" commandfor="filter-section-category" class="flex w-full items-center justify-between bg-white py-3 text-sm text-gray-400 hover:text-gray-500">
-                          <span class="font-medium text-gray-900 text-3xl">Категория</span>
-                            <i class="bx bx-chevron-down" id="arrowlist"></i>
+                    <div id="category" class="border-b border-gray-200 py-4 rounded-lg">
+                      <h3 class="-my-3 flow-root ">
+                        <button type="button" command="--toggle" commandfor="filter-section-category" class="hover:bg-gray-200 flex w-full items-center justify-between bg-white py-3 text-sm text-gray-400 hover:text-gray-500">
+                          <span class="font-medium text-gray-900 text-2xl " id="category-button">Категория</span>
                         </button>
                       </h3>
-                      <div id="filter-section-category" class="block pt-6">
+                      <div id="filter-section-category" class="pt-6">
                         <div class="gap-3">
                           <div class="flex gap-3 hover:bg-gray-200  px-2 py-2 rounded-2xl">
                             <div class="flex h-5 shrink-0 items-center">
@@ -352,14 +349,13 @@
                         </div>
                       </div>
                     </div>
-                    <div id="size" class="border-b border-gray-200 py-6 shadow-2xl rounded-lg">
+                    <div id="size" class="border-b border-gray-200 py-4 rounded-lg">
                       <h3 class="-my-3 flow-root">
-                        <button type="button" command="--toggle" commandfor="filter-section-size" class="flex w-full items-center justify-between bg-white py-3 text-sm text-gray-400 hover:text-gray-500">
-                          <span class="font-medium text-gray-900 text-3xl">Размер обуви</span>
-                          <i class="bx bx-chevron-down" id="arrowlist"></i>
+                        <button type="button" command="--toggle" commandfor="filter-section-size" class="flex hover:bg-gray-200 w-full items-center justify-between bg-white py-3 text-sm text-gray-400 hover:text-gray-500">
+                          <span class="font-medium text-gray-900 text-2xl" id="size-sneakers">Размер обуви</span>
                         </button>
                       </h3>
-                      <div id="filter-section-size" class="block pt-6">
+                      <div id="filter-section-size" class="pt-6">
                         <div class="grid grid-cols-3 gap-2 ">
                           <div class="flex gap-3 hover:bg-gray-200  px-2 py-2 rounded-2xl">
                             <div class="flex h-5 shrink-0 items-center">
@@ -436,46 +432,58 @@
                         </div>
                       </div>
                     </div>
-                    <div id="price-filters" class="border-b border-gray-200 shadow-2xl rounded-lg pt-10">
-                        <div>
-                          Цена, ₽
+                    <div id="price-filters" class="border-b border-gray-200 rounded-lg pt-6">
+                        <div class="-my-3 flow-root">
+                          <h3 class="-my-3 flow-root">
+                            <button type="button" command="--toggle" commandfor="filter-section-size" class="flex hover:bg-gray-200 w-full items-center justify-between bg-white py-3 text-sm text-gray-400 hover:text-gray-500">
+                              <span class="font-medium text-gray-900 text-2xl pb-6" id="price-button">Цена, ₽</span>
+                            </button>
+                          </h3>
                         </div>
-                        <div class="flex pt-4 gap-2 pb-4">
+                        <div class="flex pt-4 gap-2 pb-4" id="price-collection">
                           <input class="hover:bg-gray-200 outline-gray-200 px-2 py-2 rounded-xl max-w-24" min="500" max="1400" placeholder="от 500">
                           <input class="hover:bg-gray-200 outline-gray-200 px-2 py-2 rounded-xl max-w-24" min="500" max="1400" placeholder="до 1400">
+                        </div>
+                    </div>
+                    
+                       <div id="price-filters" class="border-b border-gray-200  rounded-lg pt-4">
+                        <div class="text-center button-filter demo font-bold px-10 py-2 rounded-2xl bg-blue-200 hover:bg-blue-800 focus:outline-2 focus:outline-offset-2 focus:outline-violet-500 active:bg-gray-700" style="background-color: #3498DB;">
+                      <button type="button">Применить</button>
+                    </div>
+                        <div class="flex pt-4 gap-2 pb-4" id="price-collection">
                         </div>
                     </div>
                 </div> 
             </div>
         </div>
-<div style="padding-right: 130px;">
-  <button class="btn" id="btn" style="background-color: #3498DB;">
-     Сортировать по
-       <i class="bx bx-chevron-down" id="arrow"></i>
-  </button>
-<div class="dropdown" id="dropdown" style="background-color: #ffffff;">
-  <a id="notchoice"  class="pricelist active">
-    Не выбрано
-  </a>
-  <a id="raiting" class="pricelist">
-    По рейтингу
-  </a>
-  <a id="pricemore" class="pricelist">
-    Цена: По возрастанию
-  </a>
-  <a id="priceless" class="pricelist">
-    Цена: по убыванию
-  </a>
-  <a id="sale" class="pricelist">
-    Распродажа
-  </a>
-  <a id="top" class="pricelist">
-    Новинки
-  </a>
-</div>
-</div>
+        <div style="padding-right: 170px;" >
+          <button class="btn" id="btn" style="background-color: #3498DB;position: fixed;">
+            Сортировать по
+              <i class="bx bx-chevron-down" id="arrow"></i>
+          </button>
+        <div class="dropdown" id="dropdown" style="background-color: #ffffff;margin-top: 45px;position: fixed;">
+          <a id="notchoice"  class="pricelist active">
+            Не выбрано
+          </a>
+          <a id="raiting" class="pricelist">
+            По рейтингу
+          </a>
+          <a id="pricemore" class="pricelist">
+            Цена: По возрастанию
+          </a>
+          <a id="priceless" class="pricelist">
+            Цена: по убыванию
+          </a>
+          <a id="sale" class="pricelist">
+            Распродажа
+          </a>
+          <a id="top" class="pricelist">
+            Новинки
+          </a>
+        </div>
+        </div>
     </div>
-   <section aria-labelledby="products-heading" class="pt-6 pb-24" >
+   <section aria-labelledby="products-heading" class="pt-10 pb-24" >
       <h2 id="products-heading" class="sr-only">Products</h2>
       <div class="gap-x-1 gap-y- lg:grid-cols-4"> 
         <!-- Filters -->

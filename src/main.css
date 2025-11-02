@@ -147,3 +147,19 @@ header{
 .pricelist.active {
   background-color: #3498DB;
 }
+#color-collection{
+  display: none;
+}
+#filter-section-category{
+  display: none;
+}
+#filter-section-size{
+   display: none;
+}
+#price-collection{
+  display: none;
+}
+header{
+  position: fixed;
+
+}
