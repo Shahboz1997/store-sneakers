@@ -368,6 +368,8 @@ document.documentElement.addEventListener("click", function () {
     toggleDropdown();
   }
 });
+
+
 //Сортировка
 function sortProducts(sortType) {
   let copyArray = copyProductData.slice();
@@ -410,7 +412,6 @@ priceListCollection.forEach(item => {
   })
 })
 
-
 //Левые фильтры
 const leftFiltersContainer = document.querySelector("#left-filters-container");
 console.log("leftFiltersContainer", leftFiltersContainer );
@@ -427,18 +428,13 @@ const arrow = leftFiltersContainer.querySelector("#arrow-list");
 const leftFiltersShow = function () {
   dropLeftFilters.classList.toggle("show");
   arrow.classList.toggle("arrow");
+
 };
 
 leftFiltersButton.addEventListener("click", function (element) {
   element.stopPropagation();
   leftFiltersShow();
 });
-
-// document.documentElement.addEventListener("click", function (element) {
-//   if (dropdemo.classList.contains("shown")) {
-//      togglListD();
-//   }
-// });
 
 
 const colorButton = document.querySelector("#color-button");
@@ -452,6 +448,32 @@ colorButton.addEventListener("click", function (element) {
     colorCollection.style.display = "none"; // Скрываем список
   }
 });
+const collectionInputColor = colorCollection.querySelectorAll(".filter-color-collection-item");
+
+let colorArray = [];
+
+collectionInputColor.forEach((item) => {
+  item.addEventListener("change", function(element){
+    const inputElement = element.target;
+    const inputElementId = inputElement.id;
+
+    const filterColorContainer = inputElement.closest(".filter-color-container");
+    
+    const filterColorLabel = filterColorContainer.querySelector(".filter-color-label");
+
+    const colorValue = filterColorLabel.id;
+    if (inputElement.checked) {
+      colorArray.push(colorValue);
+    }
+    else{
+      let copyArray = colorArray.slice();
+      copyArray = [...colorArray.filter(item => item != colorValue)];
+      colorArray = [...copyArray];
+    }
+      // Нужно фильтровать массив продуктов: Цвет продукта = одному из элементов colorArray 
+      // Нужно использовать методы filter и includes.
+  });
+})
 const categoryButton = document.querySelector("#category-button");
 const filterSectionCategory= document.querySelector("#filter-section-category");
 

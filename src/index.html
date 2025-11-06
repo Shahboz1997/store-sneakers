@@ -115,9 +115,9 @@
     <div class="flex items-baseline justify-between border-b border-gray-200 pt-10 pb-6">
       <h1 class="text-4xl font-bold tracking-tight text-gray-900">Кроссовки - NIKE</h1>
     </div>
-    <div class="flex items-center justify-between pb-10 pt-10">
+    <div class="flex items-center justify-between pt-10 pb-10" style="z-index: 9;">
          <div class="flex justify-start rounded-lg flex flex-col">
-            <div id="left-filters-container" class="inline-block pl-8" style="position: fixed;">
+            <div id="left-filters-container" class="inline-block pl-8">
                 <button id="left-filters-button" class="demo font-bold px-10 py-2 rounded-2xl bg-gray-200 hover:bg-gray-400 focus:outline-2 focus:outline-offset-2 focus:outline-violet-500 active:bg-gray-700" style="background-color: #3498DB;">
                     Все фильтры
                     <i class="bx bx-chevron-down" id="arrow-list"></i>
@@ -131,89 +131,125 @@
                       </h3>
                       <div class="pt-6" id="color-collection">
                         <div class="ounded-lg">
-                          <div class="flex gap-3 hover:bg-gray-200  px-2 py-2 rounded-2xl">
+                          <div class="filter-color-container flex gap-3 hover:bg-gray-200  px-2 py-2 rounded-2xl">
                             <div class="flex h-5 shrink-0 items-center">
                               <div class="group grid size-4 grid-cols-1">
-                                <input id="filter-color-0" type="checkbox" name="color[]" value="white" class="col-start-1 row-start-1 appearance-none rounded-sm border border-gray-300 bg-white checked:border-indigo-600 checked:bg-indigo-600 indeterminate:border-indigo-600 indeterminate:bg-indigo-600 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 disabled:border-gray-300 disabled:bg-gray-100 disabled:checked:bg-gray-100 forced-colors:appearance-auto">
+                                <input 
+                                  id="filter-color-0" 
+                                  type="checkbox" 
+                                  name="color[]" 
+                                  class="filter-color-collection-item col-start-1 row-start-1 appearance-none rounded-sm border border-gray-300 bg-white checked:border-indigo-600 checked:bg-indigo-600 indeterminate:border-indigo-600 indeterminate:bg-indigo-600 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 disabled:border-gray-300 disabled:bg-gray-100 disabled:checked:bg-gray-100 forced-colors:appearance-auto"
+                                >
                                 <svg viewBox="0 0 14 14" fill="none" class="pointer-events-none col-start-1 row-start-1 size-3.5 self-center justify-self-center stroke-white group-has-disabled:stroke-gray-950/25">
                                   <path d="M3 8L6 11L11 3.5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="opacity-0 group-has-checked:opacity-100"></path>
                                   <path d="M3 7H11" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="opacity-0 group-has-indeterminate:opacity-100"></path>
                                 </svg>
                               </div>
                             </div>
-                            <label id="#ff0000" for="filter-color-0" class="text-sm text-gray-600" >Красный</label>
+                            <label id="#ff0000" for="filter-color-0" class="filter-color-label text-sm text-gray-600" >Красный</label>
                           </div>
-                          <div class="flex gap-3 hover:bg-gray-200  px-2 py-2 rounded-2xl">
+                          <div class="filter-color-container flex gap-3 hover:bg-gray-200  px-2 py-2 rounded-2xl">
                             <div class="flex h-5 shrink-0 items-center">
                               <div class="group grid size-4 grid-cols-1">
-                                <input id="filter-color-1" type="checkbox" name="color[]" value="beige" class="col-start-1 row-start-1 appearance-none rounded-sm border border-gray-300 bg-white checked:border-indigo-600 checked:bg-indigo-600 indeterminate:border-indigo-600 indeterminate:bg-indigo-600 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 disabled:border-gray-300 disabled:bg-gray-100 disabled:checked:bg-gray-100 forced-colors:appearance-auto">
+                                <input 
+                                  id="filter-color-1" 
+                                  type="checkbox" 
+                                  name="color[]" 
+                                  class="filter-color-collection-item col-start-1 row-start-1 appearance-none rounded-sm border border-gray-300 bg-white checked:border-indigo-600 checked:bg-indigo-600 indeterminate:border-indigo-600 indeterminate:bg-indigo-600 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 disabled:border-gray-300 disabled:bg-gray-100 disabled:checked:bg-gray-100 forced-colors:appearance-auto"
+                                >
                                 <svg viewBox="0 0 14 14" fill="none" class="pointer-events-none col-start-1 row-start-1 size-3.5 self-center justify-self-center stroke-white group-has-disabled:stroke-gray-950/25">
                                   <path d="M3 8L6 11L11 3.5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="opacity-0 group-has-checked:opacity-100"></path>
                                   <path d="M3 7H11" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="opacity-0 group-has-indeterminate:opacity-100"></path>
                                 </svg>
                               </div>
                             </div>
-                            <label for="filter-color-1" class="text-sm text-gray-600" id="#008000">Зеленый</label>
+                            <label for="filter-color-1" class="filter-color-label text-sm text-gray-600" id="#008000">Зеленый</label>
                           </div>
-                          <div class="flex gap-3 hover:bg-gray-200  px-2 py-2 rounded-2xl">
+                          <div class="filter-color-container flex gap-3 hover:bg-gray-200  px-2 py-2 rounded-2xl">
                             <div class="flex h-5 shrink-0 items-center">
                               <div class="group grid size-4 grid-cols-1">
-                                <input id="filter-color-2" type="checkbox" name="color[]" value="blue" checked="" class="col-start-1 row-start-1 appearance-none rounded-sm border border-gray-300 bg-white checked:border-indigo-600 checked:bg-indigo-600 indeterminate:border-indigo-600 indeterminate:bg-indigo-600 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 disabled:border-gray-300 disabled:bg-gray-100 disabled:checked:bg-gray-100 forced-colors:appearance-auto">
+                                <input 
+                                  id="filter-color-2" 
+                                  type="checkbox" 
+                                  name="color[]" 
+                                  checked="" 
+                                  class="filter-color-collection-item col-start-1 row-start-1 appearance-none rounded-sm border border-gray-300 bg-white checked:border-indigo-600 checked:bg-indigo-600 indeterminate:border-indigo-600 indeterminate:bg-indigo-600 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 disabled:border-gray-300 disabled:bg-gray-100 disabled:checked:bg-gray-100 forced-colors:appearance-auto"
+                                >
                                 <svg viewBox="0 0 14 14" fill="none" class="pointer-events-none col-start-1 row-start-1 size-3.5 self-center justify-self-center stroke-white group-has-disabled:stroke-gray-950/25">
                                   <path d="M3 8L6 11L11 3.5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="opacity-0 group-has-checked:opacity-100"></path>
                                   <path d="M3 7H11" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="opacity-0 group-has-indeterminate:opacity-100"></path>
                                 </svg>
                               </div>
                             </div>
-                            <label for="filter-color-2" class="text-sm text-gray-600" id="#2c2929ff">Черный</label>
+                            <label for="filter-color-2" class="filter-color-label text-sm text-gray-600" id="#2c2929ff">Черный</label>
                           </div>
-                          <div class="flex gap-3 hover:bg-gray-200  px-2 py-2 rounded-2xl">
+                          <div class="filter-color-container flex gap-3 hover:bg-gray-200  px-2 py-2 rounded-2xl">
                             <div class="flex h-5 shrink-0 items-center">
                               <div class="group grid size-4 grid-cols-1">
-                                <input id="filter-color-3" type="checkbox" name="color[]" value="brown" class="col-start-1 row-start-1 appearance-none rounded-sm border border-gray-300 bg-white checked:border-indigo-600 checked:bg-indigo-600 indeterminate:border-indigo-600 indeterminate:bg-indigo-600 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 disabled:border-gray-300 disabled:bg-gray-100 disabled:checked:bg-gray-100 forced-colors:appearance-auto">
+                                <input 
+                                  id="filter-color-3" 
+                                  type="checkbox" 
+                                  name="color[]" 
+                                  class="filter-color-collection-item col-start-1 row-start-1 appearance-none rounded-sm border border-gray-300 bg-white checked:border-indigo-600 checked:bg-indigo-600 indeterminate:border-indigo-600 indeterminate:bg-indigo-600 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 disabled:border-gray-300 disabled:bg-gray-100 disabled:checked:bg-gray-100 forced-colors:appearance-auto"
+                                >
                                 <svg viewBox="0 0 14 14" fill="none" class="pointer-events-none col-start-1 row-start-1 size-3.5 self-center justify-self-center stroke-white group-has-disabled:stroke-gray-950/25">
                                   <path d="M3 8L6 11L11 3.5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="opacity-0 group-has-checked:opacity-100"></path>
                                   <path d="M3 7H11" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="opacity-0 group-has-indeterminate:opacity-100"></path>
                                 </svg>
                               </div>
                             </div>
-                            <label for="filter-color-3" class="text-sm text-gray-600" id="#c2b5b5ff">Белый</label>
+                            <label for="filter-color-3" class="filter-color-label text-sm text-gray-600" id="#c2b5b5ff">Белый</label>
                           </div>
-                          <div class="flex gap-3 hover:bg-gray-200  px-2 py-2 rounded-2xl">
+                          <div class="filter-color-container flex gap-3 hover:bg-gray-200  px-2 py-2 rounded-2xl">
                             <div class="flex h-5 shrink-0 items-center">
                               <div class="group grid size-4 grid-cols-1">
-                                <input id="filter-color-4" type="checkbox" name="color[]" value="green" class="col-start-1 row-start-1 appearance-none rounded-sm border border-gray-300 bg-white checked:border-indigo-600 checked:bg-indigo-600 indeterminate:border-indigo-600 indeterminate:bg-indigo-600 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 disabled:border-gray-300 disabled:bg-gray-100 disabled:checked:bg-gray-100 forced-colors:appearance-auto">
+                                <input 
+                                  id="filter-color-4" 
+                                  type="checkbox" 
+                                  name="color[]" 
+                                  class="filter-color-collection-item col-start-1 row-start-1 appearance-none rounded-sm border border-gray-300 bg-white checked:border-indigo-600 checked:bg-indigo-600 indeterminate:border-indigo-600 indeterminate:bg-indigo-600 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 disabled:border-gray-300 disabled:bg-gray-100 disabled:checked:bg-gray-100 forced-colors:appearance-auto"
+                                >
                                 <svg viewBox="0 0 14 14" fill="none" class="pointer-events-none col-start-1 row-start-1 size-3.5 self-center justify-self-center stroke-white group-has-disabled:stroke-gray-950/25">
                                   <path d="M3 8L6 11L11 3.5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="opacity-0 group-has-checked:opacity-100"></path>
                                   <path d="M3 7H11" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="opacity-0 group-has-indeterminate:opacity-100"></path>
                                 </svg>
                               </div>
                             </div>
-                            <label for="filter-color-4" class="text-sm text-gray-600" id="#a9a9a9">черно-белый</label>
+                            <label for="filter-color-4" class="filter-color-label text-sm text-gray-600" id="#a9a9a9">черно-белый</label>
                           </div>
-                          <div class="flex gap-3 hover:bg-gray-200  px-2 py-2 rounded-2xl">
+                          <div class="filter-color-container flex gap-3 hover:bg-gray-200  px-2 py-2 rounded-2xl">
                             <div class="flex h-5 shrink-0 items-center">
                               <div class="group grid size-4 grid-cols-1">
-                                <input id="filter-color-5" type="checkbox" name="color[]" value="purple" class="col-start-1 row-start-1 appearance-none rounded-sm border border-gray-300 bg-white checked:border-indigo-600 checked:bg-indigo-600 indeterminate:border-indigo-600 indeterminate:bg-indigo-600 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 disabled:border-gray-300 disabled:bg-gray-100 disabled:checked:bg-gray-100 forced-colors:appearance-auto">
+                                <input 
+                                  id="filter-color-5" 
+                                  type="checkbox" 
+                                  name="color[]" 
+                                  class="filter-color-collection-item col-start-1 row-start-1 appearance-none rounded-sm border border-gray-300 bg-white checked:border-indigo-600 checked:bg-indigo-600 indeterminate:border-indigo-600 indeterminate:bg-indigo-600 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 disabled:border-gray-300 disabled:bg-gray-100 disabled:checked:bg-gray-100 forced-colors:appearance-auto"
+                                >
                                 <svg viewBox="0 0 14 14" fill="none" class="pointer-events-none col-start-1 row-start-1 size-3.5 self-center justify-self-center stroke-white group-has-disabled:stroke-gray-950/25">
                                   <path d="M3 8L6 11L11 3.5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="opacity-0 group-has-checked:opacity-100"></path>
                                   <path d="M3 7H11" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="opacity-0 group-has-indeterminate:opacity-100"></path>
                                 </svg>
                               </div>
                             </div>
-                            <label for="filter-color-5" class="text-sm text-gray-600" id="#ffff00">Желтый</label>
+                            <label for="filter-color-5" class="filter-color-label text-sm text-gray-600" id="#ffff00">Желтый</label>
                           </div>
-                          <div class="flex gap-3 hover:bg-gray-200  px-2 py-2 rounded-2xl px-2 py-2 rounded-2xl">
+                          <div class="filter-color-container flex gap-3 hover:bg-gray-200  px-2 py-2 rounded-2xl px-2 py-2 rounded-2xl">
                             <div class="flex h-5 shrink-0 items-center">
                               <div class="group grid size-4 grid-cols-1">
-                                <input id="filter-color-5" type="checkbox" name="color[]" value="purple" class="col-start-1 row-start-1 appearance-none rounded-sm border border-gray-300 bg-white checked:border-indigo-600 checked:bg-indigo-600 indeterminate:border-indigo-600 indeterminate:bg-indigo-600 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 disabled:border-gray-300 disabled:bg-gray-100 disabled:checked:bg-gray-100 forced-colors:appearance-auto">
+                                <input 
+                                  id="filter-color-5" 
+                                  type="checkbox" 
+                                  name="color[]" 
+                                  class="filter-color-collection-item col-start-1 row-start-1 appearance-none rounded-sm border border-gray-300 bg-white checked:border-indigo-600 checked:bg-indigo-600 indeterminate:border-indigo-600 indeterminate:bg-indigo-600 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 disabled:border-gray-300 disabled:bg-gray-100 disabled:checked:bg-gray-100 forced-colors:appearance-auto"
+                                >
                                 <svg viewBox="0 0 14 14" fill="none" class="pointer-events-none col-start-1 row-start-1 size-3.5 self-center justify-self-center stroke-white group-has-disabled:stroke-gray-950/25">
                                   <path d="M3 8L6 11L11 3.5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="opacity-0 group-has-checked:opacity-100"></path>
                                   <path d="M3 7H11" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="opacity-0 group-has-indeterminate:opacity-100"></path>
                                 </svg>
                               </div>
                             </div>
-                            <label for="filter-color-5" class="text-sm text-gray-600" id="#0a0a63ff">Голубой</label>
+                            <label for="filter-color-5" class="filter-color-label text-sm text-gray-600" id="#0a0a63ff">Голубой</label>
                           </div>
                         </div>
                       </div>
@@ -229,7 +265,13 @@
                           <div class="flex gap-3 hover:bg-gray-200  px-2 py-2 rounded-2xl">
                             <div class="flex h-5 shrink-0 items-center">
                               <div class="group grid size-4 grid-cols-1">
-                                <input id="filter-category-0" type="checkbox" name="category[]" value="new-arrivals" class="col-start-1 row-start-1 appearance-none rounded-sm border border-gray-300 bg-white checked:border-indigo-600 checked:bg-indigo-600 indeterminate:border-indigo-600 indeterminate:bg-indigo-600 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 disabled:border-gray-300 disabled:bg-gray-100 disabled:checked:bg-gray-100 forced-colors:appearance-auto">
+                                <input 
+                                  id="filter-category-0" 
+                                  type="checkbox" 
+                                  name="category[]" 
+                                  value="new-arrivals" 
+                                  class="col-start-1 row-start-1 appearance-none rounded-sm border border-gray-300 bg-white checked:border-indigo-600 checked:bg-indigo-600 indeterminate:border-indigo-600 indeterminate:bg-indigo-600 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 disabled:border-gray-300 disabled:bg-gray-100 disabled:checked:bg-gray-100 forced-colors:appearance-auto"
+                                >
                                 <svg viewBox="0 0 14 14" fill="none" class="pointer-events-none col-start-1 row-start-1 size-3.5 self-center justify-self-center stroke-white group-has-disabled:stroke-gray-950/25">
                                   <path d="M3 8L6 11L11 3.5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="opacity-0 group-has-checked:opacity-100"></path>
                                   <path d="M3 7H11" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="opacity-0 group-has-indeterminate:opacity-100"></path>
@@ -241,7 +283,13 @@
                           <div class="flex gap-3 hover:bg-gray-200  px-2 py-2 rounded-2xl">
                             <div class="flex h-5 shrink-0 items-center">
                               <div class="group grid size-4 grid-cols-1">
-                                <input id="filter-category-0" type="checkbox" name="category[]" value="new-arrivals" class="col-start-1 row-start-1 appearance-none rounded-sm border border-gray-300 bg-white checked:border-indigo-600 checked:bg-indigo-600 indeterminate:border-indigo-600 indeterminate:bg-indigo-600 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 disabled:border-gray-300 disabled:bg-gray-100 disabled:checked:bg-gray-100 forced-colors:appearance-auto">
+                                <input 
+                                  id="filter-category-0" 
+                                  type="checkbox" 
+                                  name="category[]" 
+                                  value="new-arrivals" 
+                                  class="col-start-1 row-start-1 appearance-none rounded-sm border border-gray-300 bg-white checked:border-indigo-600 checked:bg-indigo-600 indeterminate:border-indigo-600 indeterminate:bg-indigo-600 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 disabled:border-gray-300 disabled:bg-gray-100 disabled:checked:bg-gray-100 forced-colors:appearance-auto"
+                                >
                                 <svg viewBox="0 0 14 14" fill="none" class="pointer-events-none col-start-1 row-start-1 size-3.5 self-center justify-self-center stroke-white group-has-disabled:stroke-gray-950/25">
                                   <path d="M3 8L6 11L11 3.5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="opacity-0 group-has-checked:opacity-100"></path>
                                   <path d="M3 7H11" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="opacity-0 group-has-indeterminate:opacity-100"></path>
@@ -253,7 +301,13 @@
                           <div class="flex gap-3 hover:bg-gray-200  px-2 py-2 rounded-2xl">
                             <div class="flex h-5 shrink-0 items-center">
                               <div class="group grid size-4 grid-cols-1">
-                                <input id="filter-category-0" type="checkbox" name="category[]" value="new-arrivals" class="col-start-1 row-start-1 appearance-none rounded-sm border border-gray-300 bg-white checked:border-indigo-600 checked:bg-indigo-600 indeterminate:border-indigo-600 indeterminate:bg-indigo-600 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 disabled:border-gray-300 disabled:bg-gray-100 disabled:checked:bg-gray-100 forced-colors:appearance-auto">
+                                <input 
+                                  id="filter-category-0" 
+                                  type="checkbox" 
+                                  name="category[]" 
+                                  value="new-arrivals" 
+                                  class="col-start-1 row-start-1 appearance-none rounded-sm border border-gray-300 bg-white checked:border-indigo-600 checked:bg-indigo-600 indeterminate:border-indigo-600 indeterminate:bg-indigo-600 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 disabled:border-gray-300 disabled:bg-gray-100 disabled:checked:bg-gray-100 forced-colors:appearance-auto"
+                                >
                                 <svg viewBox="0 0 14 14" fill="none" class="pointer-events-none col-start-1 row-start-1 size-3.5 self-center justify-self-center stroke-white group-has-disabled:stroke-gray-950/25">
                                   <path d="M3 8L6 11L11 3.5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="opacity-0 group-has-checked:opacity-100"></path>
                                   <path d="M3 7H11" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="opacity-0 group-has-indeterminate:opacity-100"></path>
@@ -265,7 +319,13 @@
                           <div class="flex gap-3 hover:bg-gray-200  px-2 py-2 rounded-2xl">
                             <div class="flex h-5 shrink-0 items-center">
                               <div class="group grid size-4 grid-cols-1">
-                                <input id="filter-category-0" type="checkbox" name="category[]" value="new-arrivals" class="col-start-1 row-start-1 appearance-none rounded-sm border border-gray-300 bg-white checked:border-indigo-600 checked:bg-indigo-600 indeterminate:border-indigo-600 indeterminate:bg-indigo-600 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 disabled:border-gray-300 disabled:bg-gray-100 disabled:checked:bg-gray-100 forced-colors:appearance-auto">
+                                <input 
+                                  id="filter-category-0" 
+                                  type="checkbox" 
+                                  name="category[]" 
+                                  value="new-arrivals" 
+                                  class="col-start-1 row-start-1 appearance-none rounded-sm border border-gray-300 bg-white checked:border-indigo-600 checked:bg-indigo-600 indeterminate:border-indigo-600 indeterminate:bg-indigo-600 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 disabled:border-gray-300 disabled:bg-gray-100 disabled:checked:bg-gray-100 forced-colors:appearance-auto"
+                                >
                                 <svg viewBox="0 0 14 14" fill="none" class="pointer-events-none col-start-1 row-start-1 size-3.5 self-center justify-self-center stroke-white group-has-disabled:stroke-gray-950/25">
                                   <path d="M3 8L6 11L11 3.5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="opacity-0 group-has-checked:opacity-100"></path>
                                   <path d="M3 7H11" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="opacity-0 group-has-indeterminate:opacity-100"></path>
@@ -277,7 +337,13 @@
                           <div class="flex gap-3 hover:bg-gray-200  px-2 py-2 rounded-2xl">
                             <div class="flex h-5 shrink-0 items-center">
                               <div class="group grid size-4 grid-cols-1">
-                                <input id="filter-category-1" type="checkbox" name="category[]" value="sale" class="col-start-1 row-start-1 appearance-none rounded-sm border border-gray-300 bg-white checked:border-indigo-600 checked:bg-indigo-600 indeterminate:border-indigo-600 indeterminate:bg-indigo-600 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 disabled:border-gray-300 disabled:bg-gray-100 disabled:checked:bg-gray-100 forced-colors:appearance-auto">
+                                <input 
+                                  id="filter-category-1" 
+                                  type="checkbox" 
+                                  name="category[]" 
+                                  value="sale" 
+                                  class="col-start-1 row-start-1 appearance-none rounded-sm border border-gray-300 bg-white checked:border-indigo-600 checked:bg-indigo-600 indeterminate:border-indigo-600 indeterminate:bg-indigo-600 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 disabled:border-gray-300 disabled:bg-gray-100 disabled:checked:bg-gray-100 forced-colors:appearance-auto"
+                                >
                                 <svg viewBox="0 0 14 14" fill="none" class="pointer-events-none col-start-1 row-start-1 size-3.5 self-center justify-self-center stroke-white group-has-disabled:stroke-gray-950/25">
                                   <path d="M3 8L6 11L11 3.5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="opacity-0 group-has-checked:opacity-100"></path>
                                   <path d="M3 7H11" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="opacity-0 group-has-indeterminate:opacity-100"></path>
@@ -289,7 +355,13 @@
                           <div class="flex gap-3 hover:bg-gray-200  px-2 py-2 rounded-2xl">
                             <div class="flex h-5 shrink-0 items-center">
                               <div class="group grid size-4 grid-cols-1">
-                                <input id="filter-category-0" type="checkbox" name="category[]" value="new-arrivals" class="col-start-1 row-start-1 appearance-none rounded-sm border border-gray-300 bg-white checked:border-indigo-600 checked:bg-indigo-600 indeterminate:border-indigo-600 indeterminate:bg-indigo-600 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 disabled:border-gray-300 disabled:bg-gray-100 disabled:checked:bg-gray-100 forced-colors:appearance-auto">
+                                <input 
+                                  id="filter-category-0" 
+                                  type="checkbox" 
+                                  name="category[]" 
+                                  value="new-arrivals" 
+                                  class="col-start-1 row-start-1 appearance-none rounded-sm border border-gray-300 bg-white checked:border-indigo-600 checked:bg-indigo-600 indeterminate:border-indigo-600 indeterminate:bg-indigo-600 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 disabled:border-gray-300 disabled:bg-gray-100 disabled:checked:bg-gray-100 forced-colors:appearance-auto"
+                                >
                                 <svg viewBox="0 0 14 14" fill="none" class="pointer-events-none col-start-1 row-start-1 size-3.5 self-center justify-self-center stroke-white group-has-disabled:stroke-gray-950/25">
                                   <path d="M3 8L6 11L11 3.5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="opacity-0 group-has-checked:opacity-100"></path>
                                   <path d="M3 7H11" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="opacity-0 group-has-indeterminate:opacity-100"></path>
@@ -301,7 +373,13 @@
                           <div id="fitness" class="flex gap-3 hover:bg-gray-200  px-2 py-2 rounded-2xl">
                             <div class="flex h-5 shrink-0 items-center">
                               <div class="group grid size-4 grid-cols-1">
-                                <input id="filter-category-0" type="checkbox" name="category[]" value="new-arrivals" class="col-start-1 row-start-1 appearance-none rounded-sm border border-gray-300 bg-white checked:border-indigo-600 checked:bg-indigo-600 indeterminate:border-indigo-600 indeterminate:bg-indigo-600 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 disabled:border-gray-300 disabled:bg-gray-100 disabled:checked:bg-gray-100 forced-colors:appearance-auto">
+                                <input 
+                                  id="filter-category-0" 
+                                  type="checkbox" 
+                                  name="category[]" 
+                                  value="new-arrivals" 
+                                  class="col-start-1 row-start-1 appearance-none rounded-sm border border-gray-300 bg-white checked:border-indigo-600 checked:bg-indigo-600 indeterminate:border-indigo-600 indeterminate:bg-indigo-600 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 disabled:border-gray-300 disabled:bg-gray-100 disabled:checked:bg-gray-100 forced-colors:appearance-auto"
+                                >
                                 <svg viewBox="0 0 14 14" fill="none" class="pointer-events-none col-start-1 row-start-1 size-3.5 self-center justify-self-center stroke-white group-has-disabled:stroke-gray-950/25">
                                   <path d="M3 8L6 11L11 3.5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="opacity-0 group-has-checked:opacity-100"></path>
                                   <path d="M3 7H11" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="opacity-0 group-has-indeterminate:opacity-100"></path>
@@ -313,7 +391,14 @@
                           <div class="flex gap-3 hover:bg-gray-200  px-2 py-2 rounded-2xl">
                             <div class="flex h-5 shrink-0 items-center">
                               <div class="group grid size-4 grid-cols-1">
-                                <input id="filter-category-2" type="checkbox" name="category[]" value="travel" checked="" class="col-start-1 row-start-1 appearance-none rounded-sm border border-gray-300 bg-white checked:border-indigo-600 checked:bg-indigo-600 indeterminate:border-indigo-600 indeterminate:bg-indigo-600 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 disabled:border-gray-300 disabled:bg-gray-100 disabled:checked:bg-gray-100 forced-colors:appearance-auto">
+                                <input 
+                                  id="filter-category-2" 
+                                  type="checkbox" 
+                                  name="category[]" 
+                                  value="travel" 
+                                  checked="" 
+                                  class="col-start-1 row-start-1 appearance-none rounded-sm border border-gray-300 bg-white checked:border-indigo-600 checked:bg-indigo-600 indeterminate:border-indigo-600 indeterminate:bg-indigo-600 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 disabled:border-gray-300 disabled:bg-gray-100 disabled:checked:bg-gray-100 forced-colors:appearance-auto"
+                                >
                                 <svg viewBox="0 0 14 14" fill="none" class="pointer-events-none col-start-1 row-start-1 size-3.5 self-center justify-self-center stroke-white group-has-disabled:stroke-gray-950/25">
                                   <path d="M3 8L6 11L11 3.5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="opacity-0 group-has-checked:opacity-100"></path>
                                   <path d="M3 7H11" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="opacity-0 group-has-indeterminate:opacity-100"></path>
@@ -325,7 +410,13 @@
                           <div class="flex gap-3 hover:bg-gray-200  px-2 py-2 rounded-2xl">
                             <div class="flex h-5 shrink-0 items-center">
                               <div class="group grid size-4 grid-cols-1">
-                                <input id="filter-category-3" type="checkbox" name="category[]" value="organization" class="col-start-1 row-start-1 appearance-none rounded-sm border border-gray-300 bg-white checked:border-indigo-600 checked:bg-indigo-600 indeterminate:border-indigo-600 indeterminate:bg-indigo-600 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 disabled:border-gray-300 disabled:bg-gray-100 disabled:checked:bg-gray-100 forced-colors:appearance-auto">
+                                <input 
+                                  id="filter-category-3" 
+                                  type="checkbox" 
+                                  name="category[]"
+                                  value="organization" 
+                                  class="col-start-1 row-start-1 appearance-none rounded-sm border border-gray-300 bg-white checked:border-indigo-600 checked:bg-indigo-600 indeterminate:border-indigo-600 indeterminate:bg-indigo-600 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 disabled:border-gray-300 disabled:bg-gray-100 disabled:checked:bg-gray-100 forced-colors:appearance-auto"
+                                >
                                 <svg viewBox="0 0 14 14" fill="none" class="pointer-events-none col-start-1 row-start-1 size-3.5 self-center justify-self-center stroke-white group-has-disabled:stroke-gray-950/25">
                                   <path d="M3 8L6 11L11 3.5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="opacity-0 group-has-checked:opacity-100"></path>
                                   <path d="M3 7H11" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="opacity-0 group-has-indeterminate:opacity-100"></path>
@@ -337,7 +428,13 @@
                           <div class="flex gap-3 hover:bg-gray-200  px-2 py-2 rounded-2xl">
                             <div class="flex h-5 shrink-0 items-center">
                               <div class="group grid size-4 grid-cols-1">
-                                <input id="filter-category-4" type="checkbox" name="category[]" value="accessories" class="col-start-1 row-start-1 appearance-none rounded-sm border border-gray-300 bg-white checked:border-indigo-600 checked:bg-indigo-600 indeterminate:border-indigo-600 indeterminate:bg-indigo-600 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 disabled:border-gray-300 disabled:bg-gray-100 disabled:checked:bg-gray-100 forced-colors:appearance-auto">
+                                <input 
+                                  id="filter-category-4" 
+                                  type="checkbox" 
+                                  name="category[]" 
+                                  value="accessories" 
+                                  class="col-start-1 row-start-1 appearance-none rounded-sm border border-gray-300 bg-white checked:border-indigo-600 checked:bg-indigo-600 indeterminate:border-indigo-600 indeterminate:bg-indigo-600 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 disabled:border-gray-300 disabled:bg-gray-100 disabled:checked:bg-gray-100 forced-colors:appearance-auto"
+                                >
                                 <svg viewBox="0 0 14 14" fill="none" class="pointer-events-none col-start-1 row-start-1 size-3.5 self-center justify-self-center stroke-white group-has-disabled:stroke-gray-950/25">
                                   <path d="M3 8L6 11L11 3.5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="opacity-0 group-has-checked:opacity-100"></path>
                                   <path d="M3 7H11" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="opacity-0 group-has-indeterminate:opacity-100"></path>
@@ -456,28 +553,28 @@
                 </div> 
             </div>
         </div>
-        <div style="padding-right: 170px;" >
-          <button class="btn" id="btn" style="background-color: #3498DB;position: fixed;">
-            Сортировать по
+        <div style="padding-right:170px;" >
+          <button class="btn" id="btn" style="background-color: #3498DB;">
+                Сортировать по
               <i class="bx bx-chevron-down" id="arrow"></i>
           </button>
-        <div class="dropdown" id="dropdown" style="background-color: #ffffff;margin-top: 45px;position: fixed;">
-          <a id="notchoice"  class="pricelist active">
+        <div class="dropdown" id="dropdown" style="background-color: #ffffff;">
+          <a id="notchoice" class="pricelist active" style="cursor: pointer;">
             Не выбрано
           </a>
-          <a id="raiting" class="pricelist">
+          <a id="raiting" class="pricelist" style="cursor: pointer;">
             По рейтингу
           </a>
-          <a id="pricemore" class="pricelist">
+          <a id="pricemore" class="pricelist" style="cursor: pointer;">
             Цена: По возрастанию
           </a>
-          <a id="priceless" class="pricelist">
+          <a id="priceless" class="pricelist" style="cursor: pointer;">
             Цена: по убыванию
           </a>
-          <a id="sale" class="pricelist">
+          <a id="sale" class="pricelist" style="cursor: pointer;">
             Распродажа
           </a>
-          <a id="top" class="pricelist">
+          <a id="top" class="pricelist" style="cursor: pointer;">
             Новинки
           </a>
         </div>
