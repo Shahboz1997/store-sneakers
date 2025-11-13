@@ -2,7 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-
 header{
   background-color: #3498DB;
 }
@@ -161,5 +160,5 @@ header{
 }
 header{
   position: fixed;
-
+  color: #ffffff;
 }

@@ -75,7 +75,7 @@ let productData = [
         leftover:'90 штук осталось',
         description: 'Для бега и прогулок по городу',
         color:'Цвет ',
-        circle:'#c2b5b5ff',
+        circle:'#ffffff',
         // size:['36', '38', '40','42', '44', '46'],
         category:'adults',
         rating:3.4,
@@ -91,7 +91,7 @@ let productData = [
         leftover:'90 штук осталось',
         description: 'Для бега и прогулок по городу',
         color:'Цвет ',
-        circle:'#a9a9a9',
+        circle:'#c2b5b5ff',
         // size:['36', '38', '40','42', '44', '46'],
         category:'everyday',
         rating:4.9,
@@ -298,7 +298,7 @@ function renderProducts() {
 document.addEventListener('DOMContentLoaded', renderProducts);
 
 // Поисковик
-const copyProductData = productData.slice();
+let copyProductData = productData.slice();
 
 const search = document.querySelector(".input-cnt");
 
@@ -462,16 +462,25 @@ collectionInputColor.forEach((item) => {
     const filterColorLabel = filterColorContainer.querySelector(".filter-color-label");
 
     const colorValue = filterColorLabel.id;
+    const svg = filterColorContainer.querySelector("svg");
+    console.log("svg", svg);
     if (inputElement.checked) {
+      inputElement.classList.remove("bg-white");
       colorArray.push(colorValue);
+      svg.style.fill = inputElement.dataset.color;
+      svg.style.stroke = inputElement.dataset.color;
     }
     else{
       let copyArray = colorArray.slice();
-      copyArray = [...colorArray.filter(item => item != colorValue)];
+      copyArray = [...colorArray.filter(item => item == colorValue)];
       colorArray = [...copyArray];
     }
-      // Нужно фильтровать массив продуктов: Цвет продукта = одному из элементов colorArray 
-      // Нужно использовать методы filter и includes.
+
+    copyProductData = copyProductData.filter(item => colorArray.includes(item.circle));
+    productData = [...copyProductData];
+    renderProducts();
+    // Нужно фильтровать массив продуктов: Цвет продукта = одному из элементов colorArray 
+    // Нужно использовать методы filter и includes.
   });
 })
 const categoryButton = document.querySelector("#category-button");
