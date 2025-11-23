@@ -159,12 +159,20 @@
                           <div class="filter-color-container flex gap-3 hover:bg-gray-200  px-2 py-2 rounded-2xl">
                             <div class="flex h-5 shrink-0 items-center">
                               <div class="group grid size-4 grid-cols-1">
+                                <!-- <input 
+                                  id="filter-color-1" 
+                                  type="checkbox" 
+                                  name="color[]" 
+                                  data-color="#008000"
+                                  class="filter-color-collection-item appearance-none rounded-sm border border-gray-300 bg-white checked:border-indigo-600 checked:bg-indigo-600 indeterminate:border-indigo-600 indeterminate:bg-indigo-600 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 disabled:border-gray-300 disabled:bg-gray-100 disabled:checked:bg-gray-100 forced-colors:appearance-auto"
+                                > -->
                                 <input 
                                   id="filter-color-1" 
                                   type="checkbox" 
                                   name="color[]" 
                                   data-color="#008000"
-                                  class=" filter-color-collection-item appearance-none" >                     
+                                  class=" filter-color-collection-item appearance-none" 
+                                >                     
                                 <svg 
                                   width="14" 
                                   height="14" 
@@ -174,7 +182,7 @@
                                   <rect x="0.5" y="0.5" 
                                   width="13" 
                                   height="13" 
-                                  fill="" 
+                                  fill="008000" 
                                   stroke="#303030"/>
                                 </svg>
                               </div>
@@ -322,15 +330,14 @@
                       </h3>
                       <div id="filter-section-category" class="pt-6">
                         <div class="gap-3">
-                          <div class="flex gap-3 hover:bg-gray-200  px-2 py-2 rounded-2xl">
+                          <div class="filter-category-container flex gap-3 hover:bg-gray-200  px-2 py-2 rounded-2xl">
                             <div class="flex h-5 shrink-0 items-center">
                               <div class="group grid size-4 grid-cols-1">
                                 <input 
                                   id="filter-category-0" 
                                   type="checkbox" 
                                   name="category[]" 
-                                  value="new-arrivals" 
-                                  class="col-start-1 row-start-1 appearance-none rounded-sm border border-gray-300 bg-white checked:border-indigo-600 checked:bg-indigo-600 indeterminate:border-indigo-600 indeterminate:bg-indigo-600 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 disabled:border-gray-300 disabled:bg-gray-100 disabled:checked:bg-gray-100 forced-colors:appearance-auto"
+                                  class="filter-category-item col-start-1 row-start-1 appearance-none rounded-sm border border-gray-300 bg-white checked:border-indigo-600 checked:bg-indigo-600 indeterminate:border-indigo-600 indeterminate:bg-indigo-600 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 disabled:border-gray-300 disabled:bg-gray-100 disabled:checked:bg-gray-100 forced-colors:appearance-auto"
                                 >
                                <svg   
                                     viewBox="0 0 14 14" 
@@ -346,17 +353,16 @@
                                 </svg>
                               </div>
                             </div>
-                            <label id="new" for="filter-category-0" class="text-sm text-gray-600">Новые поступления</label>
+                            <label id="new" for="filter-category-0" class="filter-category-label text-sm text-gray-600">Новые поступления</label>
                           </div>
-                          <div class="flex gap-3 hover:bg-gray-200  px-2 py-2 rounded-2xl">
+                          <div class="filter-category-container flex gap-3 hover:bg-gray-200  px-2 py-2 rounded-2xl">
                             <div class="flex h-5 shrink-0 items-center">
                               <div class="group grid size-4 grid-cols-1">
                                 <input 
                                   id="filter-category-1" 
                                   type="checkbox" 
                                   name="category[]" 
-                                  value="new-arrivals" 
-                                  class="col-start-1 row-start-1 appearance-none rounded-sm border border-gray-300 bg-white checked:border-indigo-600 checked:bg-indigo-600 indeterminate:border-indigo-600 indeterminate:bg-indigo-600 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 disabled:border-gray-300 disabled:bg-gray-100 disabled:checked:bg-gray-100 forced-colors:appearance-auto"
+                                  class="filter-category-item col-start-1 row-start-1 appearance-none rounded-sm border border-gray-300 bg-white checked:border-indigo-600 checked:bg-indigo-600 indeterminate:border-indigo-600 indeterminate:bg-indigo-600 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 disabled:border-gray-300 disabled:bg-gray-100 disabled:checked:bg-gray-100 forced-colors:appearance-auto"
                                 >
                                  <svg   
                                     viewBox="0 0 14 14" 
@@ -372,17 +378,16 @@
                                 </svg>
                               </div>
                             </div>
-                            <label for="filter-category-1" class="text-sm text-gray-600" id="adults">Кроссовки для взрослых</label>
+                            <label for="filter-category-1" class="filter-category-label text-sm text-gray-600" id="adults">Кроссовки для взрослых</label>
                           </div>
-                          <div class="flex gap-3 hover:bg-gray-200  px-2 py-2 rounded-2xl">
+                          <div class="filter-category-container flex gap-3 hover:bg-gray-200  px-2 py-2 rounded-2xl">
                             <div class="flex h-5 shrink-0 items-center">
                               <div class="group grid size-4 grid-cols-1">
                                 <input 
                                   id="filter-category-2" 
                                   type="checkbox" 
                                   name="category[]" 
-                                  value="new-arrivals" 
-                                  class="col-start-1 row-start-1 appearance-none rounded-sm border border-gray-300 bg-white checked:border-indigo-600 checked:bg-indigo-600 indeterminate:border-indigo-600 indeterminate:bg-indigo-600 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 disabled:border-gray-300 disabled:bg-gray-100 disabled:checked:bg-gray-100 forced-colors:appearance-auto"
+                                  class="filter-category-item col-start-1 row-start-1 appearance-none rounded-sm border border-gray-300 bg-white checked:border-indigo-600 checked:bg-indigo-600 indeterminate:border-indigo-600 indeterminate:bg-indigo-600 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 disabled:border-gray-300 disabled:bg-gray-100 disabled:checked:bg-gray-100 forced-colors:appearance-auto"
                                 >
                                 <svg   
                                     viewBox="0 0 14 14" 
@@ -398,17 +403,16 @@
                                 </svg>
                               </div>
                             </div>
-                            <label for="filter-category-2" class="text-sm text-gray-600" id="children">Кроссовки для детей</label>
+                            <label for="filter-category-2" class="filter-category-label text-sm text-gray-600" id="children">Кроссовки для детей</label>
                           </div>
-                          <div class="flex gap-3 hover:bg-gray-200  px-2 py-2 rounded-2xl">
+                          <div class="filter-category-container flex gap-3 hover:bg-gray-200  px-2 py-2 rounded-2xl">
                             <div class="flex h-5 shrink-0 items-center">
                               <div class="group grid size-4 grid-cols-1">
                                 <input 
                                   id="filter-category-3" 
                                   type="checkbox" 
-                                  name="category[]" 
-                                  value="new-arrivals" 
-                                  class="col-start-1 row-start-1 appearance-none rounded-sm border border-gray-300 bg-white checked:border-indigo-600 checked:bg-indigo-600 indeterminate:border-indigo-600 indeterminate:bg-indigo-600 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 disabled:border-gray-300 disabled:bg-gray-100 disabled:checked:bg-gray-100 forced-colors:appearance-auto"
+                                  name="category[]"                             
+                                  class="filter-category-item col-start-1 row-start-1 appearance-none rounded-sm border border-gray-300 bg-white checked:border-indigo-600 checked:bg-indigo-600 indeterminate:border-indigo-600 indeterminate:bg-indigo-600 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 disabled:border-gray-300 disabled:bg-gray-100 disabled:checked:bg-gray-100 forced-colors:appearance-auto"
                                 >
                                  <svg   
                                     viewBox="0 0 14 14" 
@@ -425,17 +429,16 @@
                                 </svg>
                               </div>
                             </div>
-                            <label for="filter-category-3" class="text-sm text-gray-600" id="abroad">Из-за рубежа</label>
+                            <label for="filter-category-3" class="filter-category-label text-sm text-gray-600" id="abroad">Из-за рубежа</label>
                           </div>
-                          <div class="flex gap-3 hover:bg-gray-200  px-2 py-2 rounded-2xl">
+                          <div class="filter-category-container flex gap-3 hover:bg-gray-200  px-2 py-2 rounded-2xl">
                             <div class="flex h-5 shrink-0 items-center">
                               <div class="group grid size-4 grid-cols-1">
                                 <input 
                                   id="filter-category-4" 
                                   type="checkbox" 
                                   name="category[]" 
-                                  value="sale" 
-                                  class="col-start-1 row-start-1 appearance-none rounded-sm border border-gray-300 bg-white checked:border-indigo-600 checked:bg-indigo-600 indeterminate:border-indigo-600 indeterminate:bg-indigo-600 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 disabled:border-gray-300 disabled:bg-gray-100 disabled:checked:bg-gray-100 forced-colors:appearance-auto"
+                                  class="filter-category-item col-start-1 row-start-1 appearance-none rounded-sm border border-gray-300 bg-white checked:border-indigo-600 checked:bg-indigo-600 indeterminate:border-indigo-600 indeterminate:bg-indigo-600 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 disabled:border-gray-300 disabled:bg-gray-100 disabled:checked:bg-gray-100 forced-colors:appearance-auto"
                                 >
                                  <svg   
                                     viewBox="0 0 14 14" 
@@ -451,17 +454,16 @@
                                 </svg>
                               </div>
                             </div>
-                            <label for="filter-category-4" class="text-sm text-gray-600" id="sale">Распродажа</label>
+                            <label for="filter-category-4" class="filter-category-label text-sm text-gray-600" id="sale">Распродажа</label>
                           </div>
-                          <div class="flex gap-3 hover:bg-gray-200  px-2 py-2 rounded-2xl">
+                          <div class="filter-category-container flex gap-3 hover:bg-gray-200  px-2 py-2 rounded-2xl">
                             <div class="flex h-5 shrink-0 items-center">
                               <div class="group grid size-4 grid-cols-1">
                                 <input 
                                   id="filter-category-5" 
                                   type="checkbox" 
-                                  name="category[]" 
-                                  value="new-arrivals" 
-                                  class="col-start-1 row-start-1 appearance-none rounded-sm border border-gray-300 bg-white checked:border-indigo-600 checked:bg-indigo-600 indeterminate:border-indigo-600 indeterminate:bg-indigo-600 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 disabled:border-gray-300 disabled:bg-gray-100 disabled:checked:bg-gray-100 forced-colors:appearance-auto"
+                                  name="category[]"                  
+                                  class="filter-category-item col-start-1 row-start-1 appearance-none rounded-sm border border-gray-300 bg-white checked:border-indigo-600 checked:bg-indigo-600 indeterminate:border-indigo-600 indeterminate:bg-indigo-600 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 disabled:border-gray-300 disabled:bg-gray-100 disabled:checked:bg-gray-100 forced-colors:appearance-auto"
                                 >
                                  <svg   
                                     viewBox="0 0 14 14" 
@@ -477,17 +479,16 @@
                                 </svg>
                               </div>
                             </div>
-                            <label for="filter-category-5" class="text-sm text-gray-600" id="everyday">Повседневные</label>
+                            <label for="filter-category-5" class="filter-category-label text-sm text-gray-600" id="everyday">Повседневные</label>
                           </div>
-                          <div id="fitness" class="flex gap-3 hover:bg-gray-200  px-2 py-2 rounded-2xl">
+                          <div class="filter-category-container flex gap-3 hover:bg-gray-200  px-2 py-2 rounded-2xl">
                             <div class="flex h-5 shrink-0 items-center">
                               <div class="group grid size-4 grid-cols-1">
                                 <input 
                                   id="filter-category-6" 
                                   type="checkbox" 
-                                  name="category[]" 
-                                  value="new-arrivals" 
-                                  class="col-start-1 row-start-1 appearance-none rounded-sm border border-gray-300 bg-white checked:border-indigo-600 checked:bg-indigo-600 indeterminate:border-indigo-600 indeterminate:bg-indigo-600 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 disabled:border-gray-300 disabled:bg-gray-100 disabled:checked:bg-gray-100 forced-colors:appearance-auto"
+                                  name="category[]"                              
+                                  class="filter-category-item col-start-1 row-start-1 appearance-none rounded-sm border border-gray-300 bg-white checked:border-indigo-600 checked:bg-indigo-600 indeterminate:border-indigo-600 indeterminate:bg-indigo-600 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 disabled:border-gray-300 disabled:bg-gray-100 disabled:checked:bg-gray-100 forced-colors:appearance-auto"
                                 >
                                  <svg   
                                     viewBox="0 0 14 14" 
@@ -503,18 +504,16 @@
                                 </svg>
                               </div>
                             </div>
-                            <label for="filter-category-6" class="text-sm text-gray-600" id="fitness">Фитнес</label>
+                            <label for="filter-category-6" class="filter-category-label text-sm text-gray-600" id="fitness">Фитнес</label>
                           </div>
-                          <div class="flex gap-3 hover:bg-gray-200  px-2 py-2 rounded-2xl">
+                          <div class="filter-category-container flex gap-3 hover:bg-gray-200  px-2 py-2 rounded-2xl">
                             <div class="flex h-5 shrink-0 items-center">
                               <div class="group grid size-4 grid-cols-1">
                                 <input 
                                   id="filter-category-7" 
                                   type="checkbox" 
-                                  name="category[]" 
-                                  value="travel" 
-                                 
-                                  class="col-start-1 row-start-1 appearance-none rounded-sm border border-gray-300 bg-white checked:border-indigo-600 checked:bg-indigo-600 indeterminate:border-indigo-600 indeterminate:bg-indigo-600 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 disabled:border-gray-300 disabled:bg-gray-100 disabled:checked:bg-gray-100 forced-colors:appearance-auto"
+                                  name="category[]"                                             
+                                  class="filter-category-item col-start-1 row-start-1 appearance-none rounded-sm border border-gray-300 bg-white checked:border-indigo-600 checked:bg-indigo-600 indeterminate:border-indigo-600 indeterminate:bg-indigo-600 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 disabled:border-gray-300 disabled:bg-gray-100 disabled:checked:bg-gray-100 forced-colors:appearance-auto"
                                 >
                                 <svg   
                                     viewBox="0 0 14 14" 
@@ -530,17 +529,16 @@
                                 </svg>
                               </div>
                             </div>
-                            <label for="filter-category-7" class="text-sm text-gray-600" id="travel">Путешествие</label>
+                            <label for="filter-category-7" class="filter-category-label text-sm text-gray-600" id="travel">Путешествие</label>
                           </div>
-                          <div class="flex gap-3 hover:bg-gray-200  px-2 py-2 rounded-2xl">
+                          <div class="filter-category-container flex gap-3 hover:bg-gray-200  px-2 py-2 rounded-2xl">
                             <div class="flex h-5 shrink-0 items-center">
                               <div class="group grid size-4 grid-cols-1">
                                 <input 
                                   id="filter-category-8" 
                                   type="checkbox" 
-                                  name="category[]"
-                                  value="organization" 
-                                  class="col-start-1 row-start-1 appearance-none rounded-sm border border-gray-300 bg-white checked:bg-indigo-600 indeterminate:border-indigo-600 indeterminate:bg-indigo-600 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 disabled:border-gray-300 disabled:bg-gray-100 disabled:checked:bg-gray-100 forced-colors:appearance-auto"
+                                  name="category[]"                               
+                                  class="filter-category-item col-start-1 row-start-1 appearance-none rounded-sm border border-gray-300 bg-white checked:bg-indigo-600 indeterminate:border-indigo-600 indeterminate:bg-indigo-600 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 disabled:border-gray-300 disabled:bg-gray-100 disabled:checked:bg-gray-100 forced-colors:appearance-auto"
                                 >
                                 <svg   
                                     viewBox="0 0 14 14" 
@@ -556,17 +554,16 @@
                                 </svg>
                               </div>
                             </div>
-                            <label for="filter-category-8" class="text-sm text-gray-600" id="office">Организация</label>
+                            <label for="filter-category-8" class="filter-category-label text-sm text-gray-600" id="office">Организация</label>
                           </div>
-                          <div class="flex gap-3 hover:bg-gray-200  px-2 py-2 rounded-2xl">
+                          <div class="filter-category-container flex gap-3 hover:bg-gray-200  px-2 py-2 rounded-2xl">
                             <div class="flex h-5 shrink-0 items-center">
                               <div class="group grid size-4 grid-cols-1">
                                 <input 
                                   id="filter-category-9" 
                                   type="checkbox" 
                                   name="category[]" 
-                                  value="accessories" 
-                                  class="col-start-1 row-start-1 appearance-none rounded-sm border border-gray-300 bg-white checked:border-indigo-600 checked:bg-indigo-600 indeterminate:border-indigo-600 indeterminate:bg-indigo-600 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 disabled:border-gray-300 disabled:bg-gray-100 disabled:checked:bg-gray-100 forced-colors:appearance-auto"
+                                  class="filter-category-item col-start-1 row-start-1 appearance-none rounded-sm border border-gray-300 bg-white checked:border-indigo-600 checked:bg-indigo-600 indeterminate:border-indigo-600 indeterminate:bg-indigo-600 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 disabled:border-gray-300 disabled:bg-gray-100 disabled:checked:bg-gray-100 forced-colors:appearance-auto"
                                 >
                                  <svg   
                                     viewBox="0 0 14 14" 
@@ -582,7 +579,7 @@
                                 </svg>
                               </div>
                             </div>
-                            <label for="filter-category-9" class="text-sm text-gray-600" id="accessories">Аксессуары</label>
+                            <label for="filter-category-9" class="filter-category-label text-sm text-gray-600" id="accessories">Аксессуары</label>
                           </div>
                         </div>
                       </div>

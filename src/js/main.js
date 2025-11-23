@@ -25,7 +25,7 @@ let productData = [
         description: 'Для бега и прогулок по городу',
         color:'Цвет ',
         circle:"#ff0000",
-        // size:['36', '38', '40','42', '44', '46'],
+        size:['36', '38', '40','42', '44', '46'],
         category:'new',
         rating:4,
         overview:'Достоинства: Очень красивые. лучше, чем на фото.',
@@ -42,7 +42,7 @@ let productData = [
         description: 'Для бега и прогулок по городу',
         color:'Цвет ',
         circle:'#008000',
-        // size:['36', '38', '40','42', '44', '46'],
+        size:['36', '38', '40','42', '44', '46'],
         category:'abroad',
         rating:4.5,
         overview:'Достоинства: Очень красивые. лучше, чем на фото.',
@@ -59,7 +59,7 @@ let productData = [
         description: 'Для бега и прогулок по городу',
         color:'Цвет ',
         circle:'#2c2929ff',
-        // size:['36', '38', '40','42', '44', '46'],
+        size:['36', '38', '40','42', '44', '46'],
         category:'children',
         rating:4.6,
         overview:'Достоинства: Очень красивые. лучше, чем на фото.',
@@ -76,7 +76,7 @@ let productData = [
         description: 'Для бега и прогулок по городу',
         color:'Цвет ',
         circle:'#ffffff',
-        // size:['36', '38', '40','42', '44', '46'],
+        size:['36', '38', '40','42', '44', '46'],
         category:'adults',
         rating:3.4,
         review: '51 отзыв',
@@ -92,7 +92,7 @@ let productData = [
         description: 'Для бега и прогулок по городу',
         color:'Цвет ',
         circle:'#c2b5b5ff',
-        // size:['36', '38', '40','42', '44', '46'],
+        size:['36', '38', '40','42', '44', '46'],
         category:'everyday',
         rating:4.9,
         review: '51 отзыв',
@@ -109,7 +109,7 @@ let productData = [
         description: 'Для бега и прогулок по городу',
         color:'Цвет ',
         circle:'#ffff00',
-        // size:['36', '38', '40','42', '44', '46'],
+        size:['36', '38', '40','42', '44', '46'],
         category:'fitness',
         rating:5,
         review: '51 отзыв',
@@ -126,7 +126,7 @@ let productData = [
         description: 'Для бега и прогулок по городу',
         color:'Цвет ',
         circle:'#0a0a63ff',
-        // size:['36', '38', '40','42', '44', '46'],
+        size:['36', '38', '40','42', '44', '46'],
         category:'accessories',
         rating:4.8,
         review: '51 отзыв',
@@ -142,7 +142,7 @@ let productData = [
         description: 'Для бега и прогулок по городу',
         color:'Цвет ',
         circle:'#f3ebe3ff',
-        // size:['36', '38', '40','42', '44', '46'],
+        size:['36', '38', '40','42', '44', '46'],
         category:'office',
         rating:3.4,
         review: '51 отзыв',
@@ -158,7 +158,7 @@ let productData = [
         description: 'Для бега и прогулок по городу',
         color:'Цвет ',
         circle:'#706f67ff',
-        // size:['36', '38', '40','42', '44', '46'],
+        size:['36', '38', '40','42', '44', '46'],
         category:'travel',
         rating:2.4,  
         review: '51 отзыв',  
@@ -174,7 +174,7 @@ let productData = [
         description: 'Для бега и прогулок по городу',
         color:'Цвет ',
         circle:'#d84e65ff',
-        // size:['36', '38', '40','42', '44', '46'],
+        size:['36', '38', '40','42', '44', '46'],
         category:'sale',
         rating:2.5,
         review:'51 отзыв',
@@ -190,7 +190,7 @@ let productData = [
         description: 'Для бега и прогулок по городу',
         color:'Цвет ',
         circle:'#000000',
-        // size:['36', '38', '40','42', '44', '46'],
+        size:['36', '38', '40','42', '44', '46'],
         category:'sale',
         rating:1.3,
         review:'51 отзыв',
@@ -206,7 +206,7 @@ let productData = [
         description: 'Для бега и прогулок по городу',
         color:'Цвет ',
         circle:'#000000',
-        // size:['36', '38', '40','42', '44', '46'],
+        size:['36', '38', '40','42', '44', '46'],
         category:'sale',
         rating:2,
         review:'51 отзыв',
@@ -222,7 +222,7 @@ let productData = [
         description: 'Для бега и прогулок по городу',
         color:'Цвет ',
         circle:'#000000',
-        // size:['36', '38', '40','42', '44', '46'],
+        size:['36', '38', '40','42', '44', '46'],
         category:'sale',
         rating:2,
         review:'51 отзыв',
@@ -238,7 +238,7 @@ let productData = [
         description: 'Для бега и прогулок по городу',
         color:'Цвет ',
         circle:'#000000',
-        // size:['36', '38', '40','42', '44', '46'],
+        size:['36', '38', '40','42', '44', '46'],
         category:'sale',
         rating:2,
         review:'51 отзыв',
@@ -254,7 +254,7 @@ let productData = [
         description: 'Для бега и прогулок по городу',
         color:'Цвет ',
         circle:'#000000',
-        // size:['36', '38', '40','42', '44', '46'],
+        size:['36', '38', '40','42', '44', '46'],
         category:'sale',
         rating:2,
         review:'51 отзыв',
@@ -300,13 +300,14 @@ document.addEventListener('DOMContentLoaded', renderProducts);
 // Поисковик
 let copyProductData = productData.slice();
 
+
 const search = document.querySelector(".input-cnt");
 
 const productsList = document.getElementById("productData");
-console.log(productsList);
+
 
 const searchInput = search.querySelector("#search-input");
-console.log(searchInput);
+
 const searchIcon = search.querySelector(".material-icons");
 
 let query = null;
@@ -333,11 +334,10 @@ searchIcon.addEventListener("click", function (){
         resultArray.push(item);
        }
     });
-    console.log("resultArray", resultArray);
+
     productData = [...resultArray];
     renderProducts();
 });
-
 
 const dropdownBtn = document.getElementById("btn");
 const dropdownMenu = document.getElementById("dropdown");
@@ -346,7 +346,7 @@ const toggleArrow = document.getElementById("arrow");
 const categoryArrow = document.getElementById("category");
 // const categorySection =categoryArrow.getElementById("filter-section-category");
 const categoryNew = document.getElementById("new");
-console.log(categoryNew, "Новые поступления");
+
 
 
 const priceListCollection = dropdownMenu.querySelectorAll(".pricelist");
@@ -373,7 +373,7 @@ document.documentElement.addEventListener("click", function () {
 //Сортировка
 function sortProducts(sortType) {
   let copyArray = copyProductData.slice();
-  console.log(sortType);
+
   switch (sortType) {
     case "notchoice":
       break;
@@ -414,13 +414,13 @@ priceListCollection.forEach(item => {
 
 //Левые фильтры
 const leftFiltersContainer = document.querySelector("#left-filters-container");
-console.log("leftFiltersContainer", leftFiltersContainer );
+
 
 const leftFiltersButton = leftFiltersContainer.querySelector("#left-filters-button");
-console.log("leftFilters",leftFiltersButton);
+
 
 const dropLeftFilters = leftFiltersContainer.querySelector("#drop-left-filters");
-console.log("dropLeftFilters", dropLeftFilters);
+
 
 const arrow = leftFiltersContainer.querySelector("#arrow-list");
 
@@ -436,7 +436,8 @@ leftFiltersButton.addEventListener("click", function (element) {
   leftFiltersShow();
 });
 
-
+//Фильтры цвета 
+let initialProductData = productData.slice();
 const colorButton = document.querySelector("#color-button");
 const colorCollection = document.querySelector("#color-collection");
 
@@ -463,7 +464,6 @@ collectionInputColor.forEach((item) => {
 
     const colorValue = filterColorLabel.id;
     const svg = filterColorContainer.querySelector("svg");
-    console.log("svg", svg);
     if (inputElement.checked) {
       inputElement.classList.remove("bg-white");
       colorArray.push(colorValue);
@@ -471,20 +471,30 @@ collectionInputColor.forEach((item) => {
       svg.style.stroke = inputElement.dataset.color;
     }
     else{
-      let copyArray = colorArray.slice();
-      copyArray = [...colorArray.filter(item => item == colorValue)];
-      colorArray = [...copyArray];
+      svg.style.fill = "";
+      svg.style.stroke = "";
+      inputElement.classList.remove("bg-white");
+      const index = colorArray.indexOf(colorValue);
+      colorArray.splice(index, 1);
     }
-
-    copyProductData = copyProductData.filter(item => colorArray.includes(item.circle));
+    if(colorArray.length > 0) {
+      copyProductData = initialProductData.filter(item => colorArray.includes(item.circle));
+    }else{
+      copyProductData = [...initialProductData];
+    }
     productData = [...copyProductData];
     renderProducts();
-    // Нужно фильтровать массив продуктов: Цвет продукта = одному из элементов colorArray 
-    // Нужно использовать методы filter и includes.
   });
 })
+
+//Категория/Фильтр
+let saveProductData = productData.slice();
 const categoryButton = document.querySelector("#category-button");
 const filterSectionCategory= document.querySelector("#filter-section-category");
+
+const collectionInputCategory = filterSectionCategory.querySelectorAll(".filter-category-item");
+
+let categoryArray = [];
 
 categoryButton.addEventListener("click", function(element){
   if(filterSectionCategory.style.display === "none"){
@@ -493,7 +503,37 @@ categoryButton.addEventListener("click", function(element){
   else{
     filterSectionCategory.style.display ="none";
   }
-})
+});
+
+collectionInputCategory.forEach((item) => {
+  item.addEventListener("change", function(element){
+    const inputElement = element.target;
+    const inputElementId = inputElement.id;
+    console.log(inputElementId, "input");
+    const filterCategoryContainer = inputElement.closest(".filter-category-container");
+    
+    const filterCategoryLabel = filterCategoryContainer.querySelector(".filter-category-label");
+
+    const categoryValue = filterCategoryLabel.id;
+    console.log(categoryValue, "category");
+
+    if (inputElement.checked) {
+      categoryArray.push(categoryValue);
+    }
+    else{
+      const index = categoryArray.indexOf(categoryValue);
+      categoryArray.splice(index, 1);
+    }
+    if(categoryArray.length > 0) {
+      copyProductData = saveProductData.filter(item => categoryArray.includes(item.category));
+    }else{
+      copyProductData = [...saveProductData];
+    }
+    productData = [...copyProductData];
+    renderProducts();
+  });
+});
+
 
 const sizeSneakers = document.querySelector("#size-sneakers");
 const filterSectionSize= document.querySelector("#filter-section-size");
