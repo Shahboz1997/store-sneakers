@@ -13,7 +13,7 @@ header{
       min-width: 20px; 
       padding: 10px; 
       text-align: center; 
-      background: #fff;
+       background-color: black;
       border-top-left-radius: 20px;
       border-bottom-left-radius: 20px;
       cursor: pointer;
@@ -33,10 +33,10 @@ header{
       border: 2px solid rgb(37 99 235 / var(--tw-bg-opacity, 1));
       width: 60%;
     }
-    /* .input-cnt:hover > i {
-      background: rgb(37 99 235 / var(--tw-bg-opacity, 1));
+    .input-cnt:hover > i {
+      background-color: rgb(37 99 235 / var(--tw-bg-opacity, 1));
       color: white; 
-    }  */
+    } 
      /* .swiper {
       width: 200px;
       height: 100%;

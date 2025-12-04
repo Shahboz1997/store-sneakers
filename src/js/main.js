@@ -25,8 +25,7 @@ let productData = [
         description: 'Для бега и прогулок по городу',
         color:'Цвет ',
         circle:"#ff0000",
-        size:['36', '38', '40','42', '44', '46'],
-        category:'new',
+        size:['36', '38'],
         rating:4,
         overview:'Достоинства: Очень красивые. лучше, чем на фото.',
         review: '51 отзыв',
@@ -42,7 +41,7 @@ let productData = [
         description: 'Для бега и прогулок по городу',
         color:'Цвет ',
         circle:'#008000',
-        size:['36', '38', '40','42', '44', '46'],
+        size:['40'],
         category:'abroad',
         rating:4.5,
         overview:'Достоинства: Очень красивые. лучше, чем на фото.',
@@ -59,7 +58,7 @@ let productData = [
         description: 'Для бега и прогулок по городу',
         color:'Цвет ',
         circle:'#2c2929ff',
-        size:['36', '38', '40','42', '44', '46'],
+        size:['44', '38'],
         category:'children',
         rating:4.6,
         overview:'Достоинства: Очень красивые. лучше, чем на фото.',
@@ -76,7 +75,7 @@ let productData = [
         description: 'Для бега и прогулок по городу',
         color:'Цвет ',
         circle:'#ffffff',
-        size:['36', '38', '40','42', '44', '46'],
+        size:['36', '46', '36'],
         category:'adults',
         rating:3.4,
         review: '51 отзыв',
@@ -92,12 +91,11 @@ let productData = [
         description: 'Для бега и прогулок по городу',
         color:'Цвет ',
         circle:'#c2b5b5ff',
-        size:['36', '38', '40','42', '44', '46'],
+        size:['38', '46'],
         category:'everyday',
         rating:4.9,
         review: '51 отзыв',
         new: true,
-        
     },
     {
         id: 5,
@@ -109,7 +107,7 @@ let productData = [
         description: 'Для бега и прогулок по городу',
         color:'Цвет ',
         circle:'#ffff00',
-        size:['36', '38', '40','42', '44', '46'],
+        size:['40', '44','36'],
         category:'fitness',
         rating:5,
         review: '51 отзыв',
@@ -126,7 +124,7 @@ let productData = [
         description: 'Для бега и прогулок по городу',
         color:'Цвет ',
         circle:'#0a0a63ff',
-        size:['36', '38', '40','42', '44', '46'],
+        size:['46', '44'],
         category:'accessories',
         rating:4.8,
         review: '51 отзыв',
@@ -142,7 +140,7 @@ let productData = [
         description: 'Для бега и прогулок по городу',
         color:'Цвет ',
         circle:'#f3ebe3ff',
-        size:['36', '38', '40','42', '44', '46'],
+        size:['44', '40'],
         category:'office',
         rating:3.4,
         review: '51 отзыв',
@@ -158,7 +156,7 @@ let productData = [
         description: 'Для бега и прогулок по городу',
         color:'Цвет ',
         circle:'#706f67ff',
-        size:['36', '38', '40','42', '44', '46'],
+        size:['46', '36'],
         category:'travel',
         rating:2.4,  
         review: '51 отзыв',  
@@ -174,7 +172,7 @@ let productData = [
         description: 'Для бега и прогулок по городу',
         color:'Цвет ',
         circle:'#d84e65ff',
-        size:['36', '38', '40','42', '44', '46'],
+        size:['46', '38'],
         category:'sale',
         rating:2.5,
         review:'51 отзыв',
@@ -190,7 +188,7 @@ let productData = [
         description: 'Для бега и прогулок по городу',
         color:'Цвет ',
         circle:'#000000',
-        size:['36', '38', '40','42', '44', '46'],
+        size:['38', '40'],
         category:'sale',
         rating:1.3,
         review:'51 отзыв',
@@ -206,7 +204,7 @@ let productData = [
         description: 'Для бега и прогулок по городу',
         color:'Цвет ',
         circle:'#000000',
-        size:['36', '38', '40','42', '44', '46'],
+        size:['38', '40', '42', '44'],
         category:'sale',
         rating:2,
         review:'51 отзыв',
@@ -222,7 +220,7 @@ let productData = [
         description: 'Для бега и прогулок по городу',
         color:'Цвет ',
         circle:'#000000',
-        size:['36', '38', '40','42', '44', '46'],
+        size:['38', '40'],
         category:'sale',
         rating:2,
         review:'51 отзыв',
@@ -238,7 +236,7 @@ let productData = [
         description: 'Для бега и прогулок по городу',
         color:'Цвет ',
         circle:'#000000',
-        size:['36', '38', '40','42', '44', '46'],
+        size:['38', '40'],
         category:'sale',
         rating:2,
         review:'51 отзыв',
@@ -254,7 +252,7 @@ let productData = [
         description: 'Для бега и прогулок по городу',
         color:'Цвет ',
         circle:'#000000',
-        size:['36', '38', '40','42', '44', '46'],
+        size: ['38', '40'],
         category:'sale',
         rating:2,
         review:'51 отзыв',
@@ -509,13 +507,11 @@ collectionInputCategory.forEach((item) => {
   item.addEventListener("change", function(element){
     const inputElement = element.target;
     const inputElementId = inputElement.id;
-    console.log(inputElementId, "input");
     const filterCategoryContainer = inputElement.closest(".filter-category-container");
     
     const filterCategoryLabel = filterCategoryContainer.querySelector(".filter-category-label");
 
     const categoryValue = filterCategoryLabel.id;
-    console.log(categoryValue, "category");
 
     if (inputElement.checked) {
       categoryArray.push(categoryValue);
@@ -525,7 +521,7 @@ collectionInputCategory.forEach((item) => {
       categoryArray.splice(index, 1);
     }
     if(categoryArray.length > 0) {
-      copyProductData = saveProductData.filter(item => categoryArray.includes(item.category));
+      copyProductData = saveProductData.filter(item => categoryArray.includes(item.category));//?
     }else{
       copyProductData = [...saveProductData];
     }
@@ -534,19 +530,57 @@ collectionInputCategory.forEach((item) => {
   });
 });
 
-
-const sizeSneakers = document.querySelector("#size-sneakers");
+//фильтр размера
+//Копия массива
+let saveProductSize = productData.slice();
+//Кнопка открытия фильтров размера
+const sizeButton= document.querySelector("#size-sneakers");
+//Блок с фильтрами размера 
 const filterSectionSize= document.querySelector("#filter-section-size");
+// Коллекция фильтров размера
+const collectionFilterSize = filterSectionSize.querySelectorAll(".filter-size-item");
+//Массив размеров выбранных пользователем
+let sizeArray = [];
 
-sizeSneakers.addEventListener("click", function(element){
+sizeButton.addEventListener("click", function(element){
   if(filterSectionSize.style.display === "none"){
     filterSectionSize.style.display = "block";
   }
   else{
     filterSectionSize.style.display ="none";
   }
+});
 
-})
+// Работа с фильтрами размера
+collectionFilterSize.forEach((item) => {
+  //Добавляем каждому слушатель изменения
+  item.addEventListener("change", function(element){
+    //Выясняем на какой элемент нажал user 
+    const inputElement = element.target;
+    //Выясняем к какому контейнеру принадлежит этот элемент 
+    const filterSizeContainer = inputElement.closest(".filter-size-container");
+    // Ищем внутри этого контейнера Label
+    const filterSizeLabel = filterSizeContainer.querySelector(".filter-size-label");
+   // Определяем значение
+    const sizeValue = filterSizeLabel.id;
+    
+    if (inputElement.checked) {
+      //Добавляем в массив выбранных элементов
+      sizeArray.push(sizeValue);
+    }
+    else{
+    //Удаляем: Определяем индекс и удаляем по индексу
+      const index = sizeArray.indexOf(sizeValue);
+      sizeArray.splice(index, 1);
+    }
+    console.log("okey",sizeArray);
+    // Нужна сверять массивы: массив выбранных размеров сверять с каждым массивом размеров у товаров
+    // Нужны такие карточки, где есть хотя бы одно совпадение.
+    // Пример: юзер выбрал 38 и 40, нам нужны все карточки, где в поле размер в массиве есть 38 или 40. 
+  });
+});
+
+// Фильтр цены
 const priceButton = document.querySelector("#price-button");
 const priceCollection = document.querySelector("#price-collection");
 
