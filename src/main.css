@@ -61,17 +61,17 @@ header{
       position: relative;
     }
     .btn {
-  background-color: white;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  column-gap: var(--gap);
-  padding: 0.6rem;
-  cursor: pointer;
-  border-radius: var(--radius);
-  border: none;
-  box-shadow: var(--shadow);
-  position: relative;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    column-gap: var(--gap);
+    padding: 0.6rem;
+    cursor: pointer;
+    border-radius: var(--radius);
+    border: none;
+    box-shadow: var(--shadow);
+    position: relative;
 }
 
 .bx {
@@ -162,3 +162,44 @@ header{
   position: fixed;
   color: #ffffff;
 }
+.hidden {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+.pagination {
+  text-align: center;
+  margin-top:10px;
+}
+.pagination button{
+  padding: 5px 10px;
+  margin: 0 5px;
+  cursor: pointer;
+  background-color: hsla(191, 92%, 45%, 0.5); 
+  border-radius: 1px;
+  border: none;
+  color:#007bff;
+  font-size: 1rem;
+  font-weight: bold;
+}
+.button-pagination{
+  background-color:none;
+}
+.pagination .active {
+  background-color: #007bff;
+  color: white;
+}
+
+#next,  #prev{
+  font-size: 1.8rem;
+  padding: 5px 10px;
+  margin: 0 5px;
+  cursor: pointer;
+  color:#007bff;
+  font-weight: bold;
+} 
+
