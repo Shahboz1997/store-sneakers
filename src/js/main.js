@@ -75,7 +75,7 @@ let productData = [
         description: 'Для бега и прогулок по городу',
         color:'Цвет ',
         circle:'#ffffff',
-        size:['36', '46', '36'],
+        size:['38', '46', '36'],
         category:'adults',
         rating:3.4,
         review: '51 отзыв',
@@ -140,7 +140,7 @@ let productData = [
         description: 'Для бега и прогулок по городу',
         color:'Цвет ',
         circle:'#f3ebe3ff',
-        size:['44', '40'],
+        size:['44', '40', '42'],
         category:'office',
         rating:3.4,
         review: '51 отзыв',
@@ -567,13 +567,24 @@ collectionFilterSize.forEach((item) => {
     if (inputElement.checked) {
       //Добавляем в массив выбранных элементов
       sizeArray.push(sizeValue);
+      console.log("sizeArray", sizeArray);
     }
     else{
     //Удаляем: Определяем индекс и удаляем по индексу
       const index = sizeArray.indexOf(sizeValue);
       sizeArray.splice(index, 1);
+      console.log("sizeArray", sizeArray);
     }
-    console.log("okey",sizeArray);
+  if(sizeArray.length > 0) {
+      copyProductSize = saveProductSize.filter(item => 
+        item.size.some(element => sizeArray.includes(element))
+      );
+    } else{
+      copyProductSize = [...saveProductData];
+}
+    productData = [...copyProductSize];
+    renderProducts();
+
     // Нужна сверять массивы: массив выбранных размеров сверять с каждым массивом размеров у товаров
     // Нужны такие карточки, где есть хотя бы одно совпадение.
     // Пример: юзер выбрал 38 и 40, нам нужны все карточки, где в поле размер в массиве есть 38 или 40. 
@@ -581,8 +592,13 @@ collectionFilterSize.forEach((item) => {
 });
 
 // Фильтр цены
+
 const priceButton = document.querySelector("#price-button");
 const priceCollection = document.querySelector("#price-collection");
+const priceInputContainer = document.querySelector(".price-filters-container");
+const priceInputCollection = priceInputContainer.querySelectorAll(".price-item");
+
+let copyPriceProduct = productData.slice();
 
 priceButton.addEventListener("click", function(element){
   if(priceCollection.style.display === "none"){
@@ -591,11 +607,25 @@ priceButton.addEventListener("click", function(element){
   else{
     priceCollection.style.display ="none";
   }
-
 })
 
-
-
+priceInputCollection.forEach(item => {
+  item.addEventListener("change", event => {
+    const element = event.target;
+    const elementType = element.id;
+    const elementValue = Number(element.value);
+    if(elementValue > 0 && elementType === "price-item-min" ){
+      console.log("price");
+      copyPriceProduct = copyPriceProduct.filter(item => item.price >= elementValue);
+    }
+    if(elementValue > 0 && elementType === "price-item-max" ){
+      console.log("1");
+      copyPriceProduct = copyPriceProduct.filter(item => item.price <= elementValue);
+    }
+     productData = [...copyPriceProduct];
+     renderProducts();
+  });
+})
 
 
 

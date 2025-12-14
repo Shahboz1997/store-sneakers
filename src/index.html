@@ -36,9 +36,17 @@
             </div>
            
             <div class="category"></div>
-            <div class="flex gap-2">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 64 64">
-                  <path fill="#ffce31" d="M62 25.2H39.1L32 3l-7.1 22.2H2l18.5 13.7l-7 22.1L32 47.3L50.5 61l-7.1-22.2z"></path>
+             <div class="flex gap-2">
+              <svg 
+                xmlns="http://www.w3.org/2000/svg"
+                width="24" 
+                height="24" 
+                viewBox="0 0 64 64">
+                <path 
+                fill="#ffce31" 
+                d="M62 25.2H39.1L32 3l-7.1 22.2H2l18.5 13.7l-7 22.1L32 47.3L50.5 61l-7.1-22.2z"
+              >
+                </path>
               </svg>
               <div class="rating"></div>
                 <svg 
@@ -71,6 +79,7 @@
               </button>
         </div>
       </div>
+      
   </template>
 <div>
   <header class="absolute inset-x-0 top-0 z-50" style="position: fixed;">
@@ -745,7 +754,7 @@
                       </div>
                       </div>
                     </div>
-                    <div id="price-filters" class="border-b border-gray-200 rounded-lg pt-6">
+                    <div class="border-b border-gray-200 rounded-lg pt-6">
                         <div class="-my-3 flow-root">
                           <h3 class="-my-3 flow-root">
                             <button type="button" command="--toggle" commandfor="filter-section-size" class="flex hover:bg-gray-200 w-full items-center justify-between bg-white py-3 text-sm text-gray-400 hover:text-gray-500">
@@ -753,13 +762,26 @@
                             </button>
                           </h3>
                         </div>
-                        <div class="flex pt-4 gap-2 pb-4" id="price-collection">
-                          <input class="hover:bg-gray-200 outline-gray-200 px-2 py-2 rounded-xl max-w-24" min="500" max="1400" placeholder="от 500">
-                          <input class="hover:bg-gray-200 outline-gray-200 px-2 py-2 rounded-xl max-w-24" min="500" max="1400" placeholder="до 1400">
+                        <div class="price-filters-container flex pt-4 gap-2 pb-4" id="price-collection">
+                          <input 
+                            class="price-item hover:bg-gray-200 outline-gray-200 px-2 py-2 rounded-xl max-w-24" 
+                            min="500" 
+                            max="1400" 
+                            placeholder="от 500"
+                            value=""
+                            id="price-item-min"
+                          >
+                          <input 
+                            class="price-item hover:bg-gray-200 outline-gray-200 px-2 py-2 rounded-xl max-w-24" 
+                            min="500" 
+                            max="1400" 
+                            placeholder="до 1400"
+                            value=""
+                            id="price-item-max"
+                          >
                         </div>
                     </div>
-                    
-                       <div id="price-filters" class="border-b border-gray-200  rounded-lg pt-4">
+                       <div class="border-b border-gray-200  rounded-lg pt-4">
                         <div class="text-center button-filter demo font-bold px-10 py-2 rounded-2xl bg-blue-200 hover:bg-blue-800 focus:outline-2 focus:outline-offset-2 focus:outline-violet-500 active:bg-gray-700" style="background-color: #3498DB;">
                       <button type="button">Применить</button>
                     </div>
@@ -805,7 +827,6 @@
           <!-- Your content -->
             <div class="products-container flex justify-center gap-10 flex-wrap mx-auto">   
             </div>
-        </div>
       </div>
   </section>
 </main>  
