@@ -1559,6 +1559,7 @@ review:'51 отзыв',
 new: true,
 },
 ]
+
 const productsContainer = document.querySelector(".products-container");
 const productsTemplate = document.querySelector(".product-card-template");
 const fragment = document.createDocumentFragment();
@@ -1585,12 +1586,14 @@ function renderProducts() {
             productInfo.querySelector('.rating').textContent = product.rating;   
             productInfo.querySelector('.re-view').textContent = product. review;   
 
-                
-            fragment.appendChild(card);             
+        
+            fragment.appendChild(card); 
+
         });              
                   
         productsContainer.innerHTML = '';             
-        productsContainer.appendChild(fragment);         
+        productsContainer.appendChild(fragment);  
+             
     }          
 
 document.addEventListener('DOMContentLoaded', renderProducts);
@@ -1921,52 +1924,131 @@ item.addEventListener("change", event => {
     renderProducts();
 });
 })
-document.addEventListener('DOMContentLoaded', function () {
-  const productContainer = document.querySelector('.products-container'); 
-  console.log("pagination")
-  const itemsPerPage = 10;
-  let currentPage = 0;
-  const items = Array.from(productContainer.querySelectorAll('.product-card')).slice(0);
+
+
+// document.addEventListener('DOMContentLoaded', function () {
+//   const productContainer = document.querySelector('.products-container'); 
+//   const itemsPerPage = 10;
+//   let currentPage = 0;
+//   const items = Array.from(productContainer.querySelectorAll('.product-card')).slice(0);
+  
+//   function showPage(page) {
+//     const startIndex = (page-1)*10 + itemsPerPage;
+//     const endIndex = startIndex + itemsPerPage;
+//     items.forEach((item, index) => {
+//       item.classList.toggle('hidden', index < startIndex || index >= endIndex);
+//     });
+//     updateActiveButtonStates();
+//   }
+
+//   function createPageButtons() {
+//     const totalPages = Math.ceil(items.length / itemsPerPage);
+//     const paginationNumbers = document.querySelector('.pagination-numbers');
+//     console.log("paginationNumbers", paginationNumbers);
+//     const paginationContainer = document.createElement('div');
+//     const paginationDiv = paginationNumbers.appendChild(paginationContainer);
+//     paginationContainer.classList.add('pagination');
+
+//     // Add page buttons
+//     for (let i = 0; i < totalPages; i++) {
+//       const pageButton = document.createElement('button');
+//       pageButton.textContent = i + 1;
+//       pageButton.addEventListener('click', () => {
+//         currentPage = i;
+//         showPage(currentPage);
+//         updateActiveButtonStates();
+//     });
+//         paginationNumbers.appendChild(paginationContainer);
+//         paginationDiv.appendChild(pageButton);
+//       }
+//   }
+
+//   function updateActiveButtonStates() {
+//     const pageButtons = document.querySelectorAll('.pagination button');
+//     pageButtons.forEach((button, index) => {
+//       if (index === currentPage) {
+//         button.classList.add('active');
+//       } else {
+//         button.classList.remove('active');
+//       }
+//     });
+//   }
+
+  // const arrowPrev = paginationNumbers.querySelector("#prev");
+  // const arrowNext = paginationNumbers.querySelector("#next");
+
+  // arrowPrev.addEventListener("click", (evt) => {
+  //   const element = evt.target;
+  //   const arrowElement = element.closest(".button-pagination");
+  //   console.log("-1");
+  // })
+
+  // arrowNext.addEventListener("click", (evt) => {
+  //   const element = evt.target;
+  //   const arrowElement = element.closest(".button-pagination");
+  //   console.log("+1");
+  // })
+
+//   createPageButtons(); 
+//   showPage(currentPage);
+// });
+const ITEMS_PER_PAGE = 10;
+let currentPage = 0;
+let items = [];
+let productContainer = null;
+
+function initializePagination() {
+  productContainer = document.querySelector('.products-container');
+  items = Array.from(productContainer.querySelectorAll('.product-card'));
+  
+  createPageButtons();
+  showPage(currentPage);
+}
+
 function showPage(page) {
-  const startIndex = (page-1)*10 + itemsPerPage;
-  const endIndex = startIndex + itemsPerPage;
-  items.forEach((item, index) => {
- item.classList.toggle('hidden', index < startIndex || index >= endIndex);
-  });
-  updateActiveButtonStates();
+  const startIndex = page * ITEMS_PER_PAGE;
+  const endIndex = startIndex + ITEMS_PER_PAGE;
+  
+  items.forEach((item, index) => {
+    item.classList.toggle('hidden', index < startIndex || index >= endIndex);
+  });
+  
+  updateActiveButtonStates();
 }
 function createPageButtons() {
-  const totalPages = Math.ceil(items.length / itemsPerPage);
-  const paginationContainer = document.createElement('div');
-  const paginationDiv = document.body.appendChild(paginationContainer);
-  paginationContainer.classList.add('pagination');
+  const totalPages = Math.ceil(items.length / ITEMS_PER_PAGE);
+  const paginationNumbers = document.querySelector('.pagination-numbers');
+  
+  if (!paginationNumbers) return;
+  
+  const paginationContainer = document.createElement('div');
+  paginationContainer.classList.add('pagination');
+  
+  for (let i = 0; i < totalPages; i++) {
+    const pageButton = document.createElement('button');
+    pageButton.textContent = i + 1;
+     pageButton.addEventListener('click', () => {
+      currentPage = i;
+      showPage(currentPage);
+    });
+     paginationContainer.appendChild(pageButton);
+  }
+   paginationNumbers.appendChild(paginationContainer);
+}
 
-  // Add page buttons
-  for (let i = 0; i < totalPages; i++) {
-    const pageButton = document.createElement('button');
-    pageButton.textContent = i + 1;
-    pageButton.addEventListener('click', () => {
-      currentPage = i;
-      showPage(currentPage);
-      updateActiveButtonStates();
-  });
-      productContainer.appendChild(paginationContainer);
-      paginationDiv.appendChild(pageButton);
-    }
-}
 function updateActiveButtonStates() {
-  const pageButtons = document.querySelectorAll('.pagination button');
-  pageButtons.forEach((button, index) => {
-    if (index === currentPage) {
-      button.classList.add('active');
-    } else {
-      button.classList.remove('active');
-    }
-  });
+  const pageButtons = document.querySelectorAll('.pagination button');
+  
+  pageButtons.forEach((button, index) => {
+    if (index === currentPage) {
+      button.classList.add('active');
+    } else {
+      button.classList.remove('active');
+    }
+  });
 }
-  createPageButtons(); 
-  showPage(currentPage);
-});
+
+document.addEventListener('DOMContentLoaded', initializePagination);
 
 
 

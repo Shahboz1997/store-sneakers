@@ -188,13 +188,13 @@ header{
 }
 .button-pagination{
   background-color:none;
+  height: 43px;
 }
 .pagination .active {
   background-color: #007bff;
   color: white;
 }
-
-#next,  #prev{
+#next, #prev{
   font-size: 1.8rem;
   padding: 5px 10px;
   margin: 0 5px;
