@@ -828,736 +828,6 @@ let productData = [
   review:'51 отзыв',
   new: true,
 },
-{
-  id: 0,
-  img: 'img/5.webp',
-  name: 'Nike',
-  price: 500,
-  stock:'9222 ₽',
-  leftover:'90 штук осталось',
-  description: 'Для бега и прогулок по городу',
-  color:'Цвет ',
-  circle:"#ff0000",
-  size:['36', '38'],
-  category:'abroad',
-  rating:4,
-  overview:'Достоинства: Очень красивые. лучше, чем на фото.',
-  review: '51 отзыв',
-  new: true,
-},
-{
-  id: 1,
-  img:'img/11.webp',
-  name: 'Nike',
-  price: 300,
-  stock:'8222 ₽',
-  leftover:'90 штук осталось',
-  description: 'Для бега и прогулок по городу',
-  color:'Цвет ',
-  circle:'#008000',
-  size:['40'],
-  category:'abroad',
-  rating:4.5,
-  overview:'Достоинства: Очень красивые. лучше, чем на фото.',
-  review: '51 отзыв',
-  new: false,
-},
-{
-  id: 2,
-  img: 'img/15.webp',
-  name: 'Nike',
-  price: 4000,
-  stock:'9092 ₽',
-  leftover:'90 штук осталось',
-  description: 'Для бега и прогулок по городу',
-  color:'Цвет ',
-  circle:'#2c2929ff',
-  size:['44', '38'],
-  category:'children',
-  rating:4.6,
-  overview:'Достоинства: Очень красивые. лучше, чем на фото.',
-  review: '51 отзыв',
-  new: true,
-},
-{
-  id: 3,
-  img:'img/19.webp',
-  name: 'Nike',
-  price: 800,
-  stock:'7222 ₽',
-  leftover:'90 штук осталось',
-  description: 'Для бега и прогулок по городу',
-  color:'Цвет ',
-  circle:'#ffffff',
-  size:['38', '46', '36'],
-  category:'adults',
-  rating:3.4,
-  review: '51 отзыв',
-  new: false,
-},
-{
-  id: 4,
-  img: 'img/100.JPG',
-  name: 'Nike',
-  price: 909,
-  stock:'6222 ₽',
-  leftover:'90 штук осталось',
-  description: 'Для бега и прогулок по городу',
-  color:'Цвет ',
-  circle:'#c2b5b5ff',
-  size:['38', '46'],
-  category:'everyday',
-  rating:4.9,
-  review: '51 отзыв',
-  new: true,
-},
-{
-  id: 5,
-  img: 'img/23.webp',
-  name: 'Nike',
-  price: 1000,
-  stock:'11222 ₽',
-  leftover:'90 штук осталось',
-  description: 'Для бега и прогулок по городу',
-  color:'Цвет ',
-  circle:'#ffff00',
-  size:['40', '44','36'],
-  category:'fitness',
-  rating:5,
-  review: '51 отзыв',
-  new: true,
-
-},
-{
-  id: 6,
-  img: 'img/27.webp',
-  name: 'Nike',
-  price: 1100,
-  stock:'6222 ₽',
-  leftover:'90 штук осталось',
-  description: 'Для бега и прогулок по городу',
-  color:'Цвет ',
-  circle:'#0a0a63ff',
-  size:['46', '44'],
-  category:'accessories',
-  rating:4.8,
-  review: '51 отзыв',
-  new: true,
-},
-{
-  id: 7,
-  img: 'img/114.jpg',
-  name: 'Nike',
-  price: 1200,
-  stock:'1922 ₽',
-  leftover: '90 штук осталось',
-  description: 'Для бега и прогулок по городу',
-  color:'Цвет ',
-  circle:'#f3ebe3ff',
-  size:['44', '40', '42'],
-  category:'office',
-  rating:3.4,
-  review: '51 отзыв',
-  new: true,
-},
-{
-  id: 8,
-  img: 'img/2.jpg',
-  name: 'Nike',
-  price: 1300,
-  stock:'10222 ₽',
-  leftover:'90 штук осталось',
-  description: 'Для бега и прогулок по городу',
-  color:'Цвет ',
-  circle:'#706f67ff',
-  size:['46', '36'],
-  category:'travel',
-  rating:2.4,  
-  review: '51 отзыв',  
-  new: true,
-},
-{
-  id: 9,
-  img: 'img/114.webp',
-  name: 'Nike',
-  price: 1400,
-  stock:'9322 ₽',
-  leftover:'90 штук осталось',
-  description: 'Для бега и прогулок по городу',
-  color:'Цвет ',
-  circle:'#d84e65ff',
-  size:['46', '38'],
-  category:'sale',
-  rating:2.5,
-  review:'51 отзыв',
-  new: true,
-},
-      {
-    id: 10,
-    img: 'img/31.webp',
-    name: 'Nike',
-    price: 1400,
-    stock:'13222 ₽',
-    leftover:'90 штук осталось',
-    description: 'Для бега и прогулок по городу',
-    color:'Цвет ',
-    circle:'#000000',
-    size:['38', '40'],
-    category:'sale',
-    rating:1.3,
-    review:'51 отзыв',
-    new: false,
-},
-  {
-    id: 11,
-    img: 'img/23.webp',
-    name: 'Nike',
-    price: 1000,
-    stock:'11222 ₽',
-    leftover:'90 штук осталось',
-    description: 'Для бега и прогулок по городу',
-    color:'Цвет ',
-    circle:'#ffff00',
-    size:['40', '44','36'],
-    category:'fitness',
-    rating:5,
-    review: '51 отзыв',
-    new: true,
-
-},
-  {
-    id: 12,
-    img: 'img/27.webp',
-    name: 'Nike',
-    price: 1100,
-    stock:'6222 ₽',
-    leftover:'90 штук осталось',
-    description: 'Для бега и прогулок по городу',
-    color:'Цвет ',
-    circle:'#0a0a63ff',
-    size:['46', '44'],
-    category:'accessories',
-    rating:4.8,
-    review: '51 отзыв',
-    new: true,
-},
-        {
-    id: 13,
-    img: 'img/113.webp',
-    name: 'Nike',
-    price: 1400,
-    stock:'14222 ₽',
-    leftover:'90 штук осталось',
-    description: 'Для бега и прогулок по городу',
-    color:'Цвет ',
-    circle:'#000000',
-    size:['38', '40'],
-    category:'sale',
-    rating:2,
-    review:'51 отзыв',
-    new: true,
-},
-    {
-    id: 14,
-    img: 'img/113.webp',
-    name: 'Nike',
-    price: 1400,
-    stock:'14222 ₽',
-    leftover:'90 штук осталось',
-    description: 'Для бега и прогулок по городу',
-    color:'Цвет ',
-    circle:'#000000',
-    size:['38', '40'],
-    category:'sale',
-    rating:2,
-    review:'51 отзыв',
-    new: true,
-},
-    {
-    id: 15,
-    img: 'img/113.webp',
-    name: 'Nike',
-    price: 1400,
-    stock:'14222 ₽',
-    leftover:'90 штук осталось',
-    description: 'Для бега и прогулок по городу',
-    color:'Цвет ',
-    circle:'#000000',
-    size: ['38', '40'],
-    category:'sale',
-    rating:2,
-    review:'51 отзыв',
-    new: true,
-},
-{
-    id: 16,
-    img: 'img/31.webp',
-    name: 'Nike',
-    price: 1400,
-    stock:'13222 ₽',
-    leftover:'90 штук осталось',
-    description: 'Для бега и прогулок по городу',
-    color:'Цвет ',
-    circle:'#000000',
-    size:['38', '40'],
-    category:'sale',
-    rating:1.3,
-    review:'51 отзыв',
-    new: false,
-},
-      {
-    id: 17,
-    img: 'img/113.webp',
-    name: 'Nike',
-    price: 1400,
-    stock:'14222 ₽',
-    leftover:'90 штук осталось',
-    description: 'Для бега и прогулок по городу',
-    color:'Цвет ',
-    circle:'#000000',
-    size:['38', '40', '42', '44'],
-    category:'sale',
-    rating:2,
-    review:'51 отзыв',
-    new: true,
-},
-    {
-    id: 18,
-    img: 'img/113.webp',
-    name: 'Nike',
-    price: 1400,
-    stock:'14222 ₽',
-    leftover:'90 штук осталось',
-    description: 'Для бега и прогулок по городу',
-    color:'Цвет ',
-    circle:'#000000',
-    size:['38', '40'],
-    category:'sale',
-    rating:2,
-    review:'51 отзыв',
-    new: true,
-},
-    {
-    id: 19,
-    img: 'img/113.webp',
-    name: 'Nike',
-    price: 1400,
-    stock:'14222 ₽',
-    leftover:'90 штук осталось',
-    description: 'Для бега и прогулок по городу',
-    color:'Цвет ',
-    circle:'#000000',
-    size:['38', '40'],
-    category:'sale',
-    rating:2,
-    review:'51 отзыв',
-    new: true,
-},
-    {
-    id: 20,
-    img: 'img/113.webp',
-    name: 'Nike',
-    price: 1400,
-    stock:'14222 ₽',
-    leftover:'90 штук осталось',
-    description: 'Для бега и прогулок по городу',
-    color:'Цвет ',
-    circle:'#000000',
-    size: ['38', '40'],
-    category:'sale',
-    rating:2,
-    review:'51 отзыв',
-    new: true,
-},
-    {
-    id: 21,
-    img: 'img/5.webp',
-    name: 'Nike',
-    price: 500,
-    stock:'9222 ₽',
-    leftover:'90 штук осталось',
-    description: 'Для бега и прогулок по городу',
-    color:'Цвет ',
-    circle:"#ff0000",
-    size:['36', '38'],
-    category:'abroad',
-    rating:4,
-    overview:'Достоинства: Очень красивые. лучше, чем на фото.',
-    review: '51 отзыв',
-    new: true,
-},
-{
-    id: 22,
-    img: 'img/113.webp',
-    name: 'Nike',
-    price: 1400,
-    stock:'14222 ₽',
-    leftover:'90 штук осталось',
-    description: 'Для бега и прогулок по городу',
-    color:'Цвет ',
-    circle:'#000000',
-    size:['38', '40'],
-    category:'sale',
-    rating:2,
-    review:'51 отзыв',
-    new: true,
-},
-    
-{
-    id: 23,
-    img: 'img/23.webp',
-    name: 'Nike',
-    price: 1000,
-    stock:'11222 ₽',
-    leftover:'90 штук осталось',
-    description: 'Для бега и прогулок по городу',
-    color:'Цвет ',
-    circle:'#ffff00',
-    size:['40', '44','36'],
-    category:'fitness',
-    rating:5,
-    review: '51 отзыв',
-    new: true,
-
-},
-  {
-    id: 24,
-    img: 'img/27.webp',
-    name: 'Nike',
-    price: 1100,
-    stock:'6222 ₽',
-    leftover:'90 штук осталось',
-    description: 'Для бега и прогулок по городу',
-    color:'Цвет ',
-    circle:'#0a0a63ff',
-    size:['46', '44'],
-    category:'accessories',
-    rating:4.8,
-    review: '51 отзыв',
-    new: true,
-},
-        {
-    id: 25,
-    img: 'img/113.webp',
-    name: 'Nike',
-    price: 1400,
-    stock:'14222 ₽',
-    leftover:'90 штук осталось',
-    description: 'Для бега и прогулок по городу',
-    color:'Цвет ',
-    circle:'#000000',
-    size:['38', '40'],
-    category:'sale',
-    rating:2,
-    review:'51 отзыв',
-    new: true,
-},
-    {
-    id: 26,
-    img: 'img/113.webp',
-    name: 'Nike',
-    price: 1400,
-    stock:'14222 ₽',
-    leftover:'90 штук осталось',
-    description: 'Для бега и прогулок по городу',
-    color:'Цвет ',
-    circle:'#000000',
-    size:['38', '40'],
-    category:'sale',
-    rating:2,
-    review:'51 отзыв',
-    new: true,
-},
-    {
-    id: 27,
-    img: 'img/113.webp',
-    name: 'Nike',
-    price: 1400,
-    stock:'14222 ₽',
-    leftover:'90 штук осталось',
-    description: 'Для бега и прогулок по городу',
-    color:'Цвет ',
-    circle:'#000000',
-    size: ['38', '40'],
-    category:'sale',
-    rating:2,
-    review:'51 отзыв',
-    new: true,
-},
-        {
-    id: 28,
-    img: 'img/113.webp',
-    name: 'Nike',
-    price: 1400,
-    stock:'14222 ₽',
-    leftover:'90 штук осталось',
-    description: 'Для бега и прогулок по городу',
-    color:'Цвет ',
-    circle:'#000000',
-    size:['38', '40'],
-    category:'sale',
-    rating:2,
-    review:'51 отзыв',
-    new: true,
-},
-    {
-    id: 29,
-    img: 'img/113.webp',
-    name: 'Nike',
-    price: 1400,
-    stock:'14222 ₽',
-    leftover:'90 штук осталось',
-    description: 'Для бега и прогулок по городу',
-    color:'Цвет ',
-    circle:'#000000',
-    size:['38', '40'],
-    category:'sale',
-    rating:2,
-    review:'51 отзыв',
-    new: true,
-},
-    {
-    id: 30,
-    img: 'img/113.webp',
-    name: 'Nike',
-    price: 1400,
-    stock:'14222 ₽',
-    leftover:'90 штук осталось',
-    description: 'Для бега и прогулок по городу',
-    color:'Цвет ',
-    circle:'#000000',
-    size: ['38', '40'],
-    category:'sale',
-    rating:2,
-    review:'51 отзыв',
-    new: true,
-},
-    {
-    id: 31,
-    img: 'img/5.webp',
-    name: 'Nike',
-    price: 500,
-    stock:'9222 ₽',
-    leftover:'90 штук осталось',
-    description: 'Для бега и прогулок по городу',
-    color:'Цвет ',
-    circle:"#ff0000",
-    size:['36', '38'],
-    category:'abroad',
-    rating:4,
-    overview:'Достоинства: Очень красивые. лучше, чем на фото.',
-    review: '51 отзыв',
-    new: true,
-},
-{
-    id: 32,
-    img:'img/11.webp',
-    name: 'Nike',
-    price: 300,
-    stock:'8222 ₽',
-    leftover:'90 штук осталось',
-    description: 'Для бега и прогулок по городу',
-    color:'Цвет ',
-    circle:'#008000',
-    size:['40'],
-    category:'abroad',
-    rating:4.5,
-    overview:'Достоинства: Очень красивые. лучше, чем на фото.',
-    review: '51 отзыв',
-    new: false,
-},
-{
-    id: 33,
-    img: 'img/31.webp',
-    name: 'Nike',
-    price: 1400,
-    stock:'13222 ₽',
-    leftover:'90 штук осталось',
-    description: 'Для бега и прогулок по городу',
-    color:'Цвет ',
-    circle:'#000000',
-    size:['38', '40'],
-    category:'sale',
-    rating:1.3,
-    review:'51 отзыв',
-    new: false,
-},
-{
-  id: 34,
-  img: 'img/113.webp',
-  name: 'Nike',
-  price: 1400,
-  stock:'14222 ₽',
-  leftover:'90 штук осталось',
-  description: 'Для бега и прогулок по городу',
-  color:'Цвет ',
-  circle:'#000000',
-  size:['38', '40', '42', '44'],
-  category:'sale',
-  rating:2,
-  review:'51 отзыв',
-  new: true,
-},
-{
-  id: 35,
-  img: 'img/113.webp',
-  name: 'Nike',
-  price: 1400,
-  stock:'14222 ₽',
-  leftover:'90 штук осталось',
-  description: 'Для бега и прогулок по городу',
-  color:'Цвет ',
-  circle:'#000000',
-  size:['38', '40'],
-  category:'sale',
-  rating:2,
-  review:'51 отзыв',
-  new: true,
-},
-{
-  id: 36,
-  img: 'img/113.webp',
-  name: 'Nike',
-  price: 1400,
-  stock:'14222 ₽',
-  leftover:'90 штук осталось',
-  description: 'Для бега и прогулок по городу',
-  color:'Цвет ',
-  circle:'#000000',
-  size:['38', '40'],
-  category:'sale',
-  rating:2,
-  review:'51 отзыв',
-  new: true,
-},
-{
-id: 34,
-img: 'img/113.webp',
-name: 'Nike',
-price: 1400,
-stock:'14222 ₽',
-leftover:'90 штук осталось',
-description: 'Для бега и прогулок по городу',
-color:'Цвет ',
-circle:'#000000',
-size:['38', '40', '42', '44'],
-category:'sale',
-rating:2,
-review:'51 отзыв',
-new: true,
-},
-{
-id: 35,
-img: 'img/113.webp',
-name: 'Nike',
-price: 1400,
-stock:'14222 ₽',
-leftover:'90 штук осталось',
-description: 'Для бега и прогулок по городу',
-color:'Цвет ',
-circle:'#000000',
-size:['38', '40'],
-category:'sale',
-rating:2,
-review:'51 отзыв',
-new: true,
-},
-{
-id: 36,
-img: 'img/113.webp',
-name: 'Nike',
-price: 1400,
-stock:'14222 ₽',
-leftover:'90 штук осталось',
-description: 'Для бега и прогулок по городу',
-color:'Цвет ',
-circle:'#000000',
-size:['38', '40'],
-category:'sale',
-rating:2,
-review:'51 отзыв',
-new: true,
-},
-{
-id: 35,
-img: 'img/113.webp',
-name: 'Nike',
-price: 1400,
-stock:'14222 ₽',
-leftover:'90 штук осталось',
-description: 'Для бега и прогулок по городу',
-color:'Цвет ',
-circle:'#000000',
-size:['38', '40'],
-category:'sale',
-rating:2,
-review:'51 отзыв',
-new: true,
-},
-{
-id: 36,
-img: 'img/113.webp',
-name: 'Nike',
-price: 1400,
-stock:'14222 ₽',
-leftover:'90 штук осталось',
-description: 'Для бега и прогулок по городу',
-color:'Цвет ',
-circle:'#000000',
-size:['38', '40'],
-category:'sale',
-rating:2,
-review:'51 отзыв',
-new: true,
-},
-{
-  id: 34,
-  img: 'img/113.webp',
-  name: 'Nike',
-  price: 1400,
-  stock:'14222 ₽',
-  leftover:'90 штук осталось',
-  description: 'Для бега и прогулок по городу',
-  color:'Цвет ',
-  circle:'#000000',
-  size:['38', '40', '42', '44'],
-  category:'sale',
-  rating:2,
-  review:'51 отзыв',
-  new: true,
-},
-{
-id: 35,
-img: 'img/113.webp',
-name: 'Nike',
-price: 1400,
-stock:'14222 ₽',
-leftover:'90 штук осталось',
-description: 'Для бега и прогулок по городу',
-color:'Цвет ',
-circle:'#000000',
-size:['38', '40'],
-category:'sale',
-rating:2,
-review:'51 отзыв',
-new: true,
-},
-{
-id: 36,
-img: 'img/113.webp',
-name: 'Nike',
-price: 1400,
-stock:'14222 ₽',
-leftover:'90 штук осталось',
-description: 'Для бега и прогулок по городу',
-color:'Цвет ',
-circle:'#000000',
-size:['38', '40'],
-category:'sale',
-rating:2,
-review:'51 отзыв',
-new: true,
-},
 ]
 
 const productsContainer = document.querySelector(".products-container");
@@ -1925,77 +1195,12 @@ item.addEventListener("change", event => {
 });
 })
 
-
-// document.addEventListener('DOMContentLoaded', function () {
-//   const productContainer = document.querySelector('.products-container'); 
-//   const itemsPerPage = 10;
-//   let currentPage = 0;
-//   const items = Array.from(productContainer.querySelectorAll('.product-card')).slice(0);
-  
-//   function showPage(page) {
-//     const startIndex = (page-1)*10 + itemsPerPage;
-//     const endIndex = startIndex + itemsPerPage;
-//     items.forEach((item, index) => {
-//       item.classList.toggle('hidden', index < startIndex || index >= endIndex);
-//     });
-//     updateActiveButtonStates();
-//   }
-
-//   function createPageButtons() {
-//     const totalPages = Math.ceil(items.length / itemsPerPage);
-//     const paginationNumbers = document.querySelector('.pagination-numbers');
-//     console.log("paginationNumbers", paginationNumbers);
-//     const paginationContainer = document.createElement('div');
-//     const paginationDiv = paginationNumbers.appendChild(paginationContainer);
-//     paginationContainer.classList.add('pagination');
-
-//     // Add page buttons
-//     for (let i = 0; i < totalPages; i++) {
-//       const pageButton = document.createElement('button');
-//       pageButton.textContent = i + 1;
-//       pageButton.addEventListener('click', () => {
-//         currentPage = i;
-//         showPage(currentPage);
-//         updateActiveButtonStates();
-//     });
-//         paginationNumbers.appendChild(paginationContainer);
-//         paginationDiv.appendChild(pageButton);
-//       }
-//   }
-
-//   function updateActiveButtonStates() {
-//     const pageButtons = document.querySelectorAll('.pagination button');
-//     pageButtons.forEach((button, index) => {
-//       if (index === currentPage) {
-//         button.classList.add('active');
-//       } else {
-//         button.classList.remove('active');
-//       }
-//     });
-//   }
-
-  // const arrowPrev = paginationNumbers.querySelector("#prev");
-  // const arrowNext = paginationNumbers.querySelector("#next");
-
-  // arrowPrev.addEventListener("click", (evt) => {
-  //   const element = evt.target;
-  //   const arrowElement = element.closest(".button-pagination");
-  //   console.log("-1");
-  // })
-
-  // arrowNext.addEventListener("click", (evt) => {
-  //   const element = evt.target;
-  //   const arrowElement = element.closest(".button-pagination");
-  //   console.log("+1");
-  // })
-
-//   createPageButtons(); 
-//   showPage(currentPage);
-// });
 const ITEMS_PER_PAGE = 10;
 let currentPage = 0;
 let items = [];
 let productContainer = null;
+const arrowLeft = document.querySelector("#prev");
+const arrowRight = document.querySelector("#next");
 
 function initializePagination() {
   productContainer = document.querySelector('.products-container');
@@ -2006,9 +1211,13 @@ function initializePagination() {
 }
 
 function showPage(page) {
+  console.log("showPage page", page);
   const startIndex = page * ITEMS_PER_PAGE;
   const endIndex = startIndex + ITEMS_PER_PAGE;
-  
+  console.log("startIndex", startIndex);
+  console.log("endIndex", endIndex);
+  
+
   items.forEach((item, index) => {
     item.classList.toggle('hidden', index < startIndex || index >= endIndex);
   });
@@ -2018,7 +1227,8 @@ function showPage(page) {
 function createPageButtons() {
   const totalPages = Math.ceil(items.length / ITEMS_PER_PAGE);
   const paginationNumbers = document.querySelector('.pagination-numbers');
-  
+  const paginationArrows = document.querySelectorAll('.button-pagination');
+  
   if (!paginationNumbers) return;
   
   const paginationContainer = document.createElement('div');
@@ -2029,11 +1239,50 @@ function createPageButtons() {
     pageButton.textContent = i + 1;
      pageButton.addEventListener('click', () => {
       currentPage = i;
+    if (currentPage > 0 ){
+      arrowLeft.removeAttribute("disabled");
+    }
+    if (currentPage === 0){
+        arrowLeft.setAttribute("disabled", "disabled");
+    }
+    if (currentPage === totalPages - 1){
+      arrowRight.setAttribute("disabled", "disabled");
+    }
+    if (currentPage < totalPages - 1){
+      arrowRight.removeAttribute("disabled");
+    }
       showPage(currentPage);
     });
      paginationContainer.appendChild(pageButton);
   }
    paginationNumbers.appendChild(paginationContainer);
+
+  paginationArrows.forEach(arrow => {
+      arrow.addEventListener("click",(evt) => {
+        const element = evt.target;
+        const buttonArrow = element.closest('.button-pagination');
+        const arrowType = buttonArrow.id;
+        if (arrowType === 'prev') {
+          currentPage = currentPage - 1;
+          showPage(currentPage);
+          if (currentPage === 0){
+            arrowLeft.setAttribute("disabled", "disabled");
+          }
+          if (currentPage < totalPages - 1){
+            arrowRight.removeAttribute("disabled");
+         }
+        } else {
+          currentPage = currentPage + 1;
+           showPage(currentPage);
+            if (currentPage > 0 ){
+              arrowLeft.removeAttribute("disabled");
+            }
+            if (currentPage === totalPages - 1){
+              arrowRight.setAttribute("disabled", "disabled");
+             }
+        }
+      });
+  })
 }
 
 function updateActiveButtonStates() {

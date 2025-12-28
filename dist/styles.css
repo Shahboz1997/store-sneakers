@@ -1047,7 +1047,7 @@ header{
       min-width: 20px; 
       padding: 10px; 
       text-align: center; 
-      background: #fff;
+       background-color: black;
       border-top-left-radius: 20px;
       border-bottom-left-radius: 20px;
       cursor: pointer;
@@ -1067,10 +1067,10 @@ header{
       border: 2px solid rgb(37 99 235 / var(--tw-bg-opacity, 1));
       width: 60%;
     }
-    /* .input-cnt:hover > i {
-      background: rgb(37 99 235 / var(--tw-bg-opacity, 1));
+    .input-cnt:hover > i {
+      background-color: rgb(37 99 235 / var(--tw-bg-opacity, 1));
       color: white; 
-    }  */
+    } 
      /* .swiper {
       width: 200px;
       height: 100%;
@@ -1095,18 +1095,18 @@ header{
       position: relative;
     }
     .btn {
-  background-color: white;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  -moz-column-gap: var(--gap);
-       column-gap: var(--gap);
-  padding: 0.6rem;
-  cursor: pointer;
-  border-radius: var(--radius);
-  border: none;
-  box-shadow: var(--shadow);
-  position: relative;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    -moz-column-gap: var(--gap);
+         column-gap: var(--gap);
+    padding: 0.6rem;
+    cursor: pointer;
+    border-radius: var(--radius);
+    border: none;
+    box-shadow: var(--shadow);
+    position: relative;
 }
 
 .bx {
@@ -1197,6 +1197,46 @@ header{
 header{
   position: fixed;
   color: #ffffff;
+}
+.hidden {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+.pagination {
+  text-align: center;
+  margin-top:10px;
+}
+.pagination button{
+  padding: 5px 10px;
+  margin: 0 5px;
+  cursor: pointer;
+  background-color: hsla(191, 92%, 45%, 0.5); 
+  border-radius: 1px;
+  border: none;
+  color:#007bff;
+  font-size: 1rem;
+  font-weight: bold;
+}
+.button-pagination{
+  background-color:none;
+  height: 43px;
+}
+.pagination .active {
+  background-color: #007bff;
+  color: white;
+}
+#next, #prev{
+  font-size: 1.8rem;
+  padding: 5px 10px;
+  margin: 0 5px;
+  cursor: pointer;
+  color:#007bff;
+  font-weight: bold;
 }
 .checked\:border-indigo-600:checked {
   --tw-border-opacity: 1;
@@ -1312,10 +1352,6 @@ header{
     align-items: center;
   }
 
-  .sm\:justify-center {
-    justify-content: center;
-  }
-
   .sm\:justify-between {
     justify-content: space-between;
   }
@@ -1374,4 +1410,6 @@ header{
        -moz-appearance: auto;
             appearance: auto;
   }
-}
+} 
+
+

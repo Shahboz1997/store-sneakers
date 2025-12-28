@@ -13,7 +13,7 @@ header{
       min-width: 20px; 
       padding: 10px; 
       text-align: center; 
-       background-color: black;
+      background-color: black;
       border-top-left-radius: 20px;
       border-bottom-left-radius: 20px;
       cursor: pointer;
@@ -35,7 +35,7 @@ header{
     }
     .input-cnt:hover > i {
       background-color: rgb(37 99 235 / var(--tw-bg-opacity, 1));
-      color: white; 
+      
     } 
      /* .swiper {
       width: 200px;
@@ -61,7 +61,7 @@ header{
       position: relative;
     }
     .btn {
-    background-color: white;
+    background-color: white; 
     display: flex;
     align-items: center;
     justify-content: flex-start;
@@ -202,4 +202,7 @@ header{
   color:#007bff;
   font-weight: bold;
 } 
-
+.button-pagination:disabled {
+  opacity: 0.3;
+  /* cursor: inherit; */
+}
