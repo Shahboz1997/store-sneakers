@@ -1296,8 +1296,22 @@ function updateActiveButtonStates() {
     }
   });
 }
-
 document.addEventListener('DOMContentLoaded', initializePagination);
 
+// get data db.json 
+fetch('http://localhost:3004/productData')
+  .then(response => {
+    if (!response.ok) {
+      throw new Error(`HTTP error! Status: ${response.status}`);
+    }
+    return response.json();
+  })
+  .then(data => {
+    console.log('Данные получены:', data);
+    // Здесь работаем с данными
+  })
+  .catch(error => {
+    console.error('Ошибка при получении данных:', error);
+  });
 
 
